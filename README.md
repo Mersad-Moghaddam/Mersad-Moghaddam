@@ -5,15 +5,13 @@
 
 - 🌱 I’m currently learning **Android and Kotlin**
 
-- 👨‍💻 All of my projects are available at [https://github.com/Mersad-Moghaddam?tab=repositories](https://github.com/Mersad-Moghaddam?tab=repositories)
+- 👨‍💻 All of my projects are available at [My Repositories](My Repositories)
 
 - 💬 Ask me about **Python and Java**
 
 - 📫 How to reach me **nickmersad81@gmail.com**
 
-- 📄 Know about my experiences [https://www.linkedin.com/in/mersad-moghaddam/](https://www.linkedin.com/in/mersad-moghaddam/)
-
-- ⚡ fact **I am so curious and eager to learn**
+- ⚡ **I'm so curious and eager to learn**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
