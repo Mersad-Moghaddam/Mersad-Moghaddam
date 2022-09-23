@@ -1,7 +1,5 @@
 <h1 align="center">Hi 👋, I'm Mersad Moghaddam</h1>
-<h3 align="center">A passionate Programmer _ I'm a student at Sadjad University of Technology</h3>
-
-<p align="left"> <img src="https://komarev.com/ghpvc/?username=mersad-moghaddam&label=Profile%20views&color=0e75b6&style=flat" alt="mersad-moghaddam" /> </p>
+<h3 align="center">A passionate Programmer student at Sadjad University of Technology</h3>
 
 <p align="left"> <a href="https://twitter.com/mersadmoghadam" target="blank"><img src="https://img.shields.io/twitter/follow/mersadmoghadam?logo=twitter&style=for-the-badge" alt="mersadmoghadam" /></a> </p>
 
@@ -14,6 +12,8 @@
 - 📫 How to reach me **nickmersad81@gmail.com**
 
 - 📄 Know about my experiences [https://www.linkedin.com/in/mersad-moghaddam/](https://www.linkedin.com/in/mersad-moghaddam/)
+
+- ⚡ fact **I am so curious and eager to learn**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
