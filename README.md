@@ -3,11 +3,11 @@
 
 <p align="left"> <a href="https://twitter.com/mersadmoghadam" target="blank"><img src="https://img.shields.io/twitter/follow/mersadmoghadam?logo=twitter&style=for-the-badge" alt="mersadmoghadam" /></a> </p>
 
-- 🌱 I’m currently learning **Android and Kotlin**
+- 🌐 I'm living in **Mashhad, Razavi Khorasan, Iran**
 
-- 👨‍💻 All of my projects are available at [My Repositories](My Repositories)
+- 👨‍💻 All of my projects are available at [https://github.com/Mersad-Moghaddam](https://github.com/Mersad-Moghaddam)
 
-- 💬 Ask me about **Python and Java**
+- 🎂 I was Born on **March 26, 2002**
 
 - 📫 How to reach me **nickmersad81@gmail.com**
 
