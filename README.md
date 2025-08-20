@@ -1,7 +1,7 @@
 # 💫 About Me:
 <br>Hi, My name is Mersad,<br> <br>I'm a passionate Computer Engineer with strong expertise in software design and development<br>
 <br>I enjoy building reliable, concurrent, and maintainable services that scale effectively.<br>
-<br>🌐 I'm living in Mashhad, Razavi Khorasan, Iran<br><br>🎂 I was Born on March 26, 2002<br><br>📫 How to reach me nickmersad81@gmail.com<br><br>⚡ I'm so curious and eager to learn<br><br>🔭 I’m  working on Backend Development<br><br>🌱 I’m currently Learning  GOLANG <br>
+<br>🌐 I'm living in Mashhad, Razavi Khorasan, Iran<br><br>🎂 I was Born on March 26, 2002<br><br>📫 How to reach me nickmersad81@gmail.com<br><br>⚡ I'm so curious and eager to learn<br><br>🔭 I’m  working on Backend Development<br><br>🌱 I’m currently Learning  GO <br>
 
 
 ## 🌐 Socials:
