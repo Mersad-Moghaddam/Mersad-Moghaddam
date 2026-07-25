@@ -97,13 +97,13 @@ flowchart LR
 
 <br>
 
-## `tail -f incident.log` — live replay
+## Incident replay
 
 <div align="center">
-
-[![Incident Replay](https://readme-typing-svg.demolab.com/?font=Fira+Code&size=15&duration=2600&pause=700&color=3DDC97&background=0D1117FF&center=false&vCenter=true&multiline=true&repeat=true&width=640&height=170&lines=%24+tail+-f+%2Fvar%2Flog%2Fapi.log;%5BALERT%5D+p99+latency+4.2s+%C2%B7+error+rate+12%25;%5BTRACE%5D+unbounded+retry+loop+on+priceFetcher;%24+patch+--jitter+--max-attempts%3D3;%5BOK%5D+circuit+breaker%3A+CLOSED;%24+kubectl+rollout+status+deployment%2Fapi;%5BOK%5D+p99+142ms+%C2%B7+production+saved+%E2%9C%93)](https://git.io/typing-svg)
-
+<img src="https://raw.githubusercontent.com/Mersad-Moghaddam/Mersad-Moghaddam/main/assets/incident-replay.svg" alt="Animated terminal replay: tailing a log, spotting a retry storm, patching it, and confirming the fix" width="97%">
 </div>
+
+<div align="center"><sub>Self-hosted, hand-built SVG — no external API, so it never breaks with someone else's rate limit.</sub></div>
 
 No staged screenshots — that's the actual shape of most incidents I've closed: read the trace before touching the dashboard, cap the retries, roll forward instead of restarting blind.
 
