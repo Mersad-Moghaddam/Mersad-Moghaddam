@@ -1,4 +1,4 @@
-name: Generate contribution snake
+name: Generate contribution arcade
 
 on:
   schedule:
@@ -14,7 +14,7 @@ permissions:
   contents: write
 
 concurrency:
-  group: contribution-snake-${{ github.repository }}
+  group: contribution-arcade-${{ github.repository }}
   cancel-in-progress: true
 
 jobs:
@@ -27,13 +27,13 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
 
-      - name: Generate light and dark SVGs
+      - name: Generate custom light and dark arcade SVGs
         uses: Platane/snk/svg-only@d8f6715049803e982ee5ff501b6b9b7d5deeb09b # v3.5.0
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-snake.svg
-            dist/github-snake-dark.svg?palette=github-dark
+            dist/arcade-snake-light.svg?color_snake=#7c3aed&color_dots=#f6f8fa,#dbeafe,#93c5fd,#38bdf8,#0284c7
+            dist/arcade-snake-dark.svg?color_snake=#22d3ee&color_dots=#0d1117,#172033,#233453,#5b5bd6,#a78bfa
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
@@ -44,4 +44,4 @@ jobs:
           folder: dist
           clean: true
           force: false
-          commit-message: "chore(profile): refresh contribution snake"
+          commit-message: "chore(profile): refresh contribution arcade"
