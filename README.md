@@ -1,63 +1,83 @@
 <div align="center">
 
-# Mersad Moghaddam
+# Hi, I'm Mersad 👋
 
-### Backend Engineer · Go Developer · Systems Thinker
+[![Typing SVG](https://readme-typing-svg.demolab.com/?font=Fira+Code&size=22&pause=1000&color=58A6FF&center=true&vCenter=true&width=600&lines=Backend+Engineer+%C2%B7+Go+Developer;I+build+systems+that+stay+up+at+3am;Simple+paths+%C2%B7+Explicit+costs+%C2%B7+Dependable+production)](https://git.io/typing-svg)
 
-I build reliable backend systems with explicit boundaries, deliberate
-concurrency, and observability that stays useful when production gets noisy.
-
-[Email](mailto:nickmersad81@gmail.com)
-· [LinkedIn](https://www.linkedin.com/in/mersad-moghaddam)
-· [X](https://x.com/mersadmoghaddam)
-· [GitHub](https://github.com/Mersad-Moghaddam)
+[![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:nickmersad81@gmail.com)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mersad-moghaddam)
+[![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/mersadmoghaddam)
+[![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Mersad-Moghaddam)
 
 </div>
 
 ---
 
+### `whoami`
+
 ```go
-focus := []string{"Go", "distributed systems", "storage", "observability"}
-rule  := "simple paths · explicit costs · dependable production"
+package main
+
+type engineer struct {
+    focus []string
+    rule  string
+}
+
+func main() {
+    me := engineer{
+        focus: []string{"Go", "distributed systems", "storage", "observability"},
+        rule:  "simple paths · explicit costs · dependable production",
+    }
+    // ships backend services that are still boring at 3am
+}
 ```
 
-## GitHub signal
+- 🔭 Building **TetherYaab**, a real-time USDT price-aggregation & fintech platform, and **Boshra**, a Go/Redis-backed news & chat content platform.
+- 🎮 Side-questing on **Crownfall** — an online multiplayer social-deduction fantasy game, scaffolded state-machine-first with PixiJS + WebRTC voice.
+- 🧠 Perpetually re-learning the machine underneath the code: CPU architecture, concurrency, memory management.
+- 🛠️ Recent obsessions: feature-first modular monoliths, structured JSON logging that survives production noise, and killing "admin catch-all" packages one bounded context at a time.
+- 💬 Ask me about: Go concurrency patterns, Redis-backed queues, or why your retry loop is quietly DDoSing you.
+
+---
+
+### Stack
 
 <div align="center">
 
-<picture>
-  <source
-    media="(prefers-color-scheme: dark)"
-    srcset="https://raw.githubusercontent.com/Mersad-Moghaddam/Mersad-Moghaddam/output/github-signal-dark.svg">
-  <source
-    media="(prefers-color-scheme: light)"
-    srcset="https://raw.githubusercontent.com/Mersad-Moghaddam/Mersad-Moghaddam/output/github-signal-light.svg">
-  <img
-    src="https://raw.githubusercontent.com/Mersad-Moghaddam/Mersad-Moghaddam/output/github-signal-light.svg"
-    alt="Mersad Moghaddam's GitHub statistics"
-    width="100%">
-</picture>
+![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+![Fiber](https://img.shields.io/badge/Fiber-00ACD7?style=for-the-badge&logo=go&logoColor=white)
+![GORM](https://img.shields.io/badge/GORM-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
+![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
+![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
+![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
 
 </div>
 
-## Contribution arcade
+---
+
+### GitHub signal
 
 <div align="center">
-
-<picture>
-  <source
-    media="(prefers-color-scheme: dark)"
-    srcset="https://raw.githubusercontent.com/Mersad-Moghaddam/Mersad-Moghaddam/output/arcade-snake-dark.svg">
-  <source
-    media="(prefers-color-scheme: light)"
-    srcset="https://raw.githubusercontent.com/Mersad-Moghaddam/Mersad-Moghaddam/output/arcade-snake-light.svg">
-  <img
-    src="https://raw.githubusercontent.com/Mersad-Moghaddam/Mersad-Moghaddam/output/arcade-snake-light.svg"
-    alt="Animated snake eating Mersad Moghaddam's contribution graph"
-    width="100%">
-</picture>
-
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=Mersad-Moghaddam&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="Mersad's GitHub stats" />
+<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mersad-Moghaddam&layout=compact&theme=tokyonight&hide_border=true" alt="Top languages" />
 </div>
+
+<div align="center">
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=Mersad-Moghaddam&theme=tokyonight&hide_border=true" alt="GitHub streak stats" />
+</div>
+
+<div align="center">
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=Mersad-Moghaddam&theme=tokyo-night&hide_border=true" alt="Contribution activity graph" />
+</div>
+
+<div align="center">
+<img src="https://github-profile-trophy.vercel.app/?username=Mersad-Moghaddam&theme=tokyonight&no-frame=true&row=1&column=6" alt="GitHub trophies" />
+</div>
+
+---
 
 ## `/play` — save production
 
@@ -71,10 +91,9 @@ Last deploy          7 minutes ago
 ```
 
 <details>
-<summary><b>01 · Inspect traces and compare the last deploy</b></summary>
+<summary><b>01 · Inspect traces and compare against the last deploy</b></summary>
 <br>
-You find an unbounded retry loop amplifying one slow dependency. Add jittered
-backoff, cap the attempts, and roll forward.
+You find an unbounded retry loop amplifying one slow dependency. Add jittered backoff, cap the attempts, roll forward.
 <br><br>
 <b>CRITICAL HIT · +100 reliability · Production saved.</b>
 </details>
@@ -82,7 +101,7 @@ backoff, cap the attempts, and roll forward.
 <details>
 <summary><b>02 · Restart every service</b></summary>
 <br>
-The graphs turn green for 90 seconds. The retry storm returns with friends.
+The graphs turn green for 90 seconds. The retry storm returns, and it brought friends.
 <br><br>
 <b>FALSE VICTORY · +5 confidence · −40 sleep.</b>
 </details>
@@ -90,17 +109,19 @@ The graphs turn green for 90 seconds. The retry storm returns with friends.
 <details>
 <summary><b>03 · Ship another deploy on Friday</b></summary>
 <br>
-Bold move. The incident now has a sequel and its own Slack channel.
+Bold move. The incident now has a sequel, and its own Slack channel.
 <br><br>
-<b>GAME OVER · Achievement unlocked: chaos engineer.</b>
+<b>GAME OVER · Achievement unlocked: Chaos Engineer.</b>
 </details>
 
-## Words I keep close
+---
 
-> “Simplicity is prerequisite for reliability.”
+### Words I keep close
+
+> "Simplicity is a prerequisite for reliability."
 > — **Edsger W. Dijkstra**
 
-> “Do not communicate by sharing memory; instead, share memory by communicating.”
+> "Do not communicate by sharing memory; instead, share memory by communicating."
 > — **The Go proverb**
 
 ---
@@ -109,9 +130,7 @@ Bold move. The incident now has a sequel and its own Slack channel.
 
 ### Building something that needs to stay up?
 
-**[Let’s talk](mailto:nickmersad81@gmail.com)**
-
-<br>
+**[Let's talk](mailto:nickmersad81@gmail.com)**
 
 <sub>Correctness first. Measurement second. Optimization when the data earns it.</sub>
 
