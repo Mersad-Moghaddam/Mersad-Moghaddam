@@ -38,28 +38,7 @@ rule  := "simple paths · explicit costs · dependable production"
     width="100%">
 </picture>
 
-<picture>
-  <source
-    media="(prefers-color-scheme: dark)"
-    srcset="https://streak-stats.demolab.com?user=Mersad-Moghaddam&theme=github-dark-blue&hide_border=true">
-  <source
-    media="(prefers-color-scheme: light)"
-    srcset="https://streak-stats.demolab.com?user=Mersad-Moghaddam&theme=default&hide_border=true">
-  <img
-    src="https://streak-stats.demolab.com?user=Mersad-Moghaddam&theme=default&hide_border=true"
-    alt="Mersad Moghaddam's contribution streak"
-    height="185">
-</picture>
-
 </div>
-
-## Developer wisdom
-
-> “Simplicity is prerequisite for reliability.”
-> — **Edsger W. Dijkstra**
-
-> “Do not communicate by sharing memory; instead, share memory by communicating.”
-> — **The Go proverb**
 
 ## Contribution arcade
 
@@ -82,36 +61,47 @@ rule  := "simple paths · explicit costs · dependable production"
 
 ## `/play` — save production
 
+Choose one move. No peeking at the postmortem.
+
 ```text
-INCIDENT #503
-API latency   4.2s
-Error rate    12%
-Last deploy   7 minutes ago
+INCIDENT #503        STATUS: DEGRADED
+API latency          4.2s
+Error rate           12%
+Last deploy          7 minutes ago
 ```
 
 <details>
-<summary><b>🔭 Inspect traces and compare the last deploy</b></summary>
+<summary><b>01 · Inspect traces and compare the last deploy</b></summary>
 <br>
-You found one unbounded retry loop. Add backoff, cap the attempts, roll forward.
+You find an unbounded retry loop amplifying one slow dependency. Add jittered
+backoff, cap the attempts, and roll forward.
 <br><br>
-<b>+100 reliability · Production saved.</b>
+<b>CRITICAL HIT · +100 reliability · Production saved.</b>
 </details>
 
 <details>
-<summary><b>🔄 Restart every service</b></summary>
+<summary><b>02 · Restart every service</b></summary>
 <br>
 The graphs turn green for 90 seconds. The retry storm returns with friends.
 <br><br>
-<b>+5 confidence · −40 sleep.</b>
+<b>FALSE VICTORY · +5 confidence · −40 sleep.</b>
 </details>
 
 <details>
-<summary><b>🚀 Ship another deploy on Friday</b></summary>
+<summary><b>03 · Ship another deploy on Friday</b></summary>
 <br>
 Bold move. The incident now has a sequel and its own Slack channel.
 <br><br>
-<b>Achievement unlocked: chaos engineer.</b>
+<b>GAME OVER · Achievement unlocked: chaos engineer.</b>
 </details>
+
+## Words I keep close
+
+> “Simplicity is prerequisite for reliability.”
+> — **Edsger W. Dijkstra**
+
+> “Do not communicate by sharing memory; instead, share memory by communicating.”
+> — **The Go proverb**
 
 ---
 

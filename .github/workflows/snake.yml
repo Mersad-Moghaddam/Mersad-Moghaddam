@@ -59,6 +59,15 @@ jobs:
                     totalIssueContributions
                     totalPullRequestContributions
                     totalPullRequestReviewContributions
+                    contributionCalendar {
+                      totalContributions
+                      weeks {
+                        contributionDays {
+                          contributionCount
+                          date
+                        }
+                      }
+                    }
                   }
                 }
               }
