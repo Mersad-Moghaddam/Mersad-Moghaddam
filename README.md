@@ -63,7 +63,7 @@ without a 48-slide deck.
 
 > I optimize for software that is calm in production—even when the humans are not.
 
-## 🕹️ Mission control
+## 🎮 Mission control
 
 Five public systems, five different engineering problems.
 
