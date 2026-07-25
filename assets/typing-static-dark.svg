@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="104" viewBox="0 0 960 104" role="img" aria-labelledby="title desc">
+  <title id="title">Engineering focus</title>
+  <desc id="desc">Building reliable backend systems. Go, concurrency, observability, and performance.</desc>
+  <rect x="1" y="1" width="958" height="102" rx="14" fill="#0a1424" stroke="#263853" stroke-width="2"/>
+  <circle cx="28" cy="26" r="5" fill="#ff6b81"/>
+  <circle cx="46" cy="26" r="5" fill="#f2c94c"/>
+  <circle cx="64" cy="26" r="5" fill="#57d39b"/>
+  <text x="28" y="63" fill="#00add8" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="23" font-weight="700">&gt; Building reliable backend systems</text>
+  <text x="28" y="88" fill="#8ea1be" font-family="DejaVu Sans Mono, Liberation Mono, monospace" font-size="15">Go · concurrency · observability · performance</text>
+</svg>

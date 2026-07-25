@@ -1,12 +1,24 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=250&section=header&text=Hey%2C%20I'm%20Mersad%20%F0%9F%91%8B&fontSize=44&fontColor=ffffff&animation=twinkling&fontAlignY=32&desc=Go%20Backend%20Developer%20%F0%9F%90%B9%20%7C%20Building%20Fast%2C%20Reliable%2C%20Concurrent%20Systems&descAlignY=52&descSize=16" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/hero-light.svg">
+  <img src="./assets/hero-light.svg"
+       alt="Mersad Moghaddam — Backend Engineer and Go Developer"
+       width="1200">
+</picture>
 
-<a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&weight=700&size=24&duration=2600&pause=900&color=00ADD8&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=90&lines=go+run+mersad.go+%F0%9F%9A%80;Concurrency+is+a+lifestyle%2C+not+a+trick+%F0%9F%98%84;Building+scalable+backends+in+Go+%E2%9A%A1;Currently+shipping+TetherYaab+%26+Boshra+%F0%9F%9B%A0%EF%B8%8F" />
-</a>
-
-<img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="100%" />
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)"
+          srcset="./assets/typing-static-dark.svg">
+  <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: light)"
+          srcset="./assets/typing-static-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/typing-dark.gif">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/typing-light.gif">
+  <img src="./assets/typing-static-light.svg"
+       alt="Engineering focus: reliable backends, concurrent Go, observable architecture, and measured optimization"
+       width="960">
+</picture>
 
 </div>
 
@@ -144,7 +156,5 @@
 [![Visitor Count](https://visitcount.itsvg.in/api?id=Mersad-Moghaddam&icon=9&color=6)](https://visitcount.itsvg.in)
 
 **Thanks for stopping by — let's build something great together 🚀**
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer" />
 
 </div>
