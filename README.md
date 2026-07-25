@@ -1,281 +1,189 @@
-````md
-<!-- ========================= HEADER ========================= -->
-
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:00C9FF,45:7B2FF7,100:F107A3&height=220&section=header&text=Mersad%20Moghaddam&fontSize=48&fontColor=FFFFFF&animation=fadeIn&fontAlignY=35&desc=Backend%20Engineer%20%E2%80%A2%20Go%20Developer%20%E2%80%A2%20Systems%20Thinker&descAlignY=58&descSize=18" alt="Mersad Moghaddam header" />
-
 <div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=260&section=header&text=Hey%2C%20I'm%20Mersad%20%F0%9F%91%8B&fontSize=46&fontColor=ffffff&animation=twinkling&fontAlignY=32&desc=Go%20Backend%20Developer%20%F0%9F%90%B9%20%7C%20Building%20Fast%2C%20Reliable%2C%20Concurrent%20Systems&descAlignY=52&descSize=17"/>
 
 <a href="https://git.io/typing-svg">
-  <img
-    src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=22&pause=900&color=8B5CF6&center=true&vCenter=true&width=750&lines=Building+reliable+backend+services;Writing+concurrent+and+maintainable+Go;Designing+systems+that+scale;Turning+coffee+into+clean+code+%E2%98%95;Always+learning%2C+always+shipping+%F0%9F%9A%80"
-    alt="Typing introduction"
-  />
+  <img src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&weight=700&size=28&duration=2600&pause=900&color=00ADD8&center=true&vCenter=true&multiline=true&repeat=true&width=750&height=100&lines=go+run+mersad.go+%F0%9F%9A%80;Concurrency+is+not+parallelism+%2C+it's+a+lifestyle+%F0%9F%98%84;Building+scalable+backends+in+Go+%E2%9A%A1;Currently+shipping+TetherYaab+%26+Boshra+%F0%9F%9B%A0%EF%B8%8F" />
 </a>
 
-<br>
+<br/>
 
-<a href="mailto:nickmersad81@gmail.com">
-  <img src="https://img.shields.io/badge/Email-Let's%20Talk-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email">
-</a>
-<a href="https://linkedin.com/in/mersad-moghaddam">
-  <img src="https://img.shields.io/badge/LinkedIn-Connect-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn">
-</a>
-<a href="https://instagram.com/mersad.moghaddam">
-  <img src="https://img.shields.io/badge/Instagram-Follow-E4405F?style=for-the-badge&logo=instagram&logoColor=white" alt="Instagram">
-</a>
-<a href="https://twitter.com/mersadmoghaddam">
-  <img src="https://img.shields.io/badge/X-Follow-000000?style=for-the-badge&logo=x&logoColor=white" alt="X">
-</a>
-
-<br><br>
-
-<img src="https://komarev.com/ghpvc/?username=Mersad-Moghaddam&label=PROFILE+VIEWS&color=7B2FF7&style=for-the-badge" alt="Profile views">
-<img src="https://img.shields.io/github/followers/Mersad-Moghaddam?label=FOLLOWERS&style=for-the-badge&color=00C9FF&labelColor=0D1117" alt="GitHub followers">
+<img src="https://raw.githubusercontent.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/main/assets/2b74259c-9c48-4986-a52a-3ba9946d0a4b.gif" width="100%" height="3px">
 
 </div>
 
-<br>
+<br/>
 
-<!-- ========================= ABOUT ========================= -->
+<table align="center">
+<tr>
+<td width="55%" valign="top">
 
-## `> whoami`
+## 🐹 whoami
 
-```go
-package main
+\`\`\`bash
+$ curl -s https://api.mersad.dev/whoami | jq
 
-import "fmt"
-
-type Developer struct {
-    Name       string
-    Role       string
-    Location   string
-    Focus      []string
-    Superpower string
-    Status     string
+{
+  "name": "Mersad Moghaddam",
+  "role": "Go Backend Developer",
+  "based_in": "Mashhad, Iran 🇮🇷",
+  "focus": ["concurrency", "clean architecture", "scalability"],
+  "currently_building": [
+    "TetherYaab-Backend  // feature-first modular monolith",
+    "Boshra (apiGolang)  // news ordering platform"
+  ],
+  "currently_learning": "go concurrency patterns++",
+  "fun_fact": "pairs with AI coding agents to ship faster 🤖",
+  "status": "compiling... 🛠️"
 }
+\`\`\`
 
-func main() {
-    mersad := Developer{
-        Name:     "Mersad Moghaddam",
-        Role:     "Backend Engineer",
-        Location: "Mashhad, Iran",
-        Focus: []string{
-            "Go",
-            "Concurrent Systems",
-            "Scalable APIs",
-            "Software Architecture",
-        },
-        Superpower: "Turning complex problems into maintainable services",
-        Status:     "Learning, building and improving every day",
-    }
+- ⚡ I design **reliable, concurrent, and maintainable** backend services in **Go**
+- 🏗️ Big fan of **feature-first architecture** over tangled layers
+- 🤝 I love pairing with autonomous AI coding agents to move fast without breaking things
+- 🌱 Forever curious — always deep-diving into the next \`goroutine\` rabbit hole
+- 📫 **nickmersad81@gmail.com**
 
-    fmt.Printf("%+v\n", mersad)
-}
-````
+</td>
+<td width="45%" align="center">
 
-I am a passionate **Computer Engineer and Backend Developer** focused on designing reliable, concurrent and maintainable software.
+<img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="100%"/>
+<img src="https://user-images.githubusercontent.com/74038190/212284100-561aa473-3905-4a80-b561-0d28506553ee.gif" width="100%"/>
 
-I enjoy exploring how systems behave under load, how services communicate and how thoughtful architecture can keep a codebase understandable as it grows.
+</td>
+</tr>
+</table>
 
-* 🔭 Currently building backend services and APIs
-* 🐹 Deepening my knowledge of Go and its concurrency model
-* 🧠 Interested in system design, distributed systems and clean architecture
-* ⚙️ Exploring observability, performance and reliable deployment
-* 🌍 Based in Mashhad, Razavi Khorasan, Iran
-* 💬 Happy to discuss backend engineering, Go and software architecture
-* ⚡ Fun fact: I usually create three solutions before choosing the simplest one
+<div align="center">
+<img src="https://raw.githubusercontent.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/main/assets/2b74259c-9c48-4986-a52a-3ba9946d0a4b.gif" width="100%" height="3px">
+</div>
 
-<br>
-
-<!-- ========================= FOCUS ========================= -->
-
-## 🎯 Current Focus
+## 🛠️ What I'm Shipping Right Now
 
 <div align="center">
 
-|          Area         | What I am working on                                        |
-| :-------------------: | :---------------------------------------------------------- |
-| 🐹 **Go Engineering** | Idiomatic Go, concurrency, memory and error handling        |
-|  🏗️ **Architecture** | Clean boundaries, maintainable modules and design decisions |
-|   ⚡ **Performance**   | Efficient APIs, database queries, caching and profiling     |
-|  🔭 **Observability** | Structured logs, metrics, monitoring and debugging          |
-|    🚀 **Delivery**    | Docker, CI/CD and reliable production deployments           |
+| Project | What it is |
+|---|---|
+| 🔗 **TetherYaab-Backend** | A feature-first modular Go monolith — 30+ well-organized packages, built for clarity at scale |
+| 📰 **Boshra (apiGolang)** | A Go-powered news ordering platform connecting reporters, customers & moderators |
 
 </div>
-
-<br>
-
-<!-- ========================= TECH STACK ========================= -->
-
-## 🧰 Tech Arsenal
-
-### Backend and Systems
 
 <div align="center">
-  <img src="https://skillicons.dev/icons?i=go,c,cpp,cs,java,python&theme=dark&perline=6" alt="Backend technologies">
+<img src="https://raw.githubusercontent.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/main/assets/2b74259c-9c48-4986-a52a-3ba9946d0a4b.gif" width="100%" height="3px">
 </div>
 
-### Mobile and Application Development
-
-<div align="center">
-  <img src="https://skillicons.dev/icons?i=dart,flutter,kotlin,androidstudio,apple,firebase&theme=dark&perline=6" alt="Application technologies">
-</div>
-
-### Data, Infrastructure and Tools
-
-<div align="center">
-  <img src="https://skillicons.dev/icons?i=mysql,redis,sqlite,docker,linux,git,githubactions,grafana,postman,figma&theme=dark&perline=10" alt="Infrastructure and tools">
-</div>
-
-<br>
+## 🌐 Let's Connect
 
 <div align="center">
 
-![Go](https://img.shields.io/badge/Go-Primary%20Language-00ADD8?style=flat-square\&logo=go\&logoColor=white)
-![Backend](https://img.shields.io/badge/Focus-Backend%20Engineering-7B2FF7?style=flat-square)
-![Architecture](https://img.shields.io/badge/Interest-Software%20Architecture-F107A3?style=flat-square)
-![Learning](https://img.shields.io/badge/Mode-Always%20Learning-00C9FF?style=flat-square)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/mersad.moghaddam)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/mersad-moghaddam)
+[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/mersadmoghaddam)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:nickmersad81@gmail.com)
 
 </div>
 
-<br>
+<div align="center">
+<img src="https://raw.githubusercontent.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/main/assets/2b74259c-9c48-4986-a52a-3ba9946d0a4b.gif" width="100%" height="3px">
+</div>
 
-<!-- ========================= ENGINEERING PHILOSOPHY ========================= -->
-
-## 🧠 Engineering Philosophy
-
-> Correctness first. Clarity second. Performance where it matters.
-
-```text
-Reliable software
-    = clear responsibilities
-    + predictable behavior
-    + meaningful tests
-    + useful observability
-    + continuous improvement
-```
-
-I believe good software is not only code that works today. It should remain understandable, testable and adaptable for the people who work on it tomorrow.
-
-<br>
-
-<!-- ========================= TROPHIES ========================= -->
-
-## 🏆 GitHub Achievements
+## 💻 Tech Stack
 
 <div align="center">
 
-<img src="https://github-profile-trophy.vercel.app/?username=Mersad-Moghaddam&theme=tokyonight&no-frame=true&no-bg=true&margin-w=8&margin-h=8&column=6" alt="GitHub trophies">
+### ⭐ Primary
+![Go](https://img.shields.io/badge/GO-00ADD8?style=for-the-badge&logo=go&logoColor=white)
+
+### Languages
+![C++](https://img.shields.io/badge/c++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
+![C#](https://img.shields.io/badge/c%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
+![Dart](https://img.shields.io/badge/dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
+![Java](https://img.shields.io/badge/java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
+![Kotlin](https://img.shields.io/badge/kotlin-0095D5?style=for-the-badge&logo=kotlin&logoColor=white)
+![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
+
+### Frameworks, Platforms & Tools
+![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=Flutter&logoColor=white)
+![Android](https://img.shields.io/badge/android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
+![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=apple&logoColor=white)
+![Firebase](https://img.shields.io/badge/firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
+![SQLite](https://img.shields.io/badge/sqlite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
+![Git](https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white)
+![Figma](https://img.shields.io/badge/figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
+![Claude](https://img.shields.io/badge/Claude%20Code-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
 
 </div>
 
-<br>
+<div align="center">
+<img src="https://raw.githubusercontent.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/main/assets/2b74259c-9c48-4986-a52a-3ba9946d0a4b.gif" width="100%" height="3px">
+</div>
 
-<!-- ========================= STATS ========================= -->
-
-## 📊 GitHub Analytics
+## 📊 GitHub Stats
 
 <div align="center">
 
-<img width="49%" height="195" src="https://github-readme-stats.vercel.app/api?username=Mersad-Moghaddam&show_icons=true&include_all_commits=true&count_private=true&hide_border=true&bg_color=0D1117&title_color=C77DFF&text_color=FFFFFF&icon_color=00E7FF&ring_color=C77DFF" alt="Mersad's GitHub stats">
+<img height="180em" src="https://github-readme-stats.vercel.app/api?username=Mersad-Moghaddam&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&rank_icon=github&custom_title=Mersad's%20GitHub%20Stats"/>
+<img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mersad-Moghaddam&layout=compact&theme=tokyonight&hide_border=true&langs_count=8"/>
 
-<img width="49%" height="195" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mersad-Moghaddam&layout=compact&langs_count=8&hide_border=true&bg_color=0D1117&title_color=C77DFF&text_color=FFFFFF" alt="Most used languages">
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=Mersad-Moghaddam&theme=tokyonight&hide_border=true" width="70%"/>
 
-<br>
-
-<img width="70%" src="https://streak-stats.demolab.com?user=Mersad-Moghaddam&theme=tokyonight&hide_border=true&background=0D1117&ring=C77DFF&fire=00E7FF&currStreakLabel=C77DFF" alt="GitHub streak">
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=Mersad-Moghaddam&theme=tokyo-night&hide_border=true" width="100%"/>
 
 </div>
 
-> The language card represents languages detected in public repositories. It does not necessarily describe overall proficiency.
-
-<br>
-
-<!-- ========================= ACTIVITY GRAPH ========================= -->
-
-## 📈 Contribution Activity
+## 🏆 Trophy Room
 
 <div align="center">
 
-[![Mersad's GitHub activity graph](https://github-readme-activity-graph.vercel.app/graph?username=Mersad-Moghaddam\&bg_color=0D1117\&color=C77DFF\&line=00E7FF\&point=FFFFFF\&area=true\&area_color=7B2FF7\&hide_border=true\&custom_title=Mersad's%20Contribution%20Graph)](https://github.com/Mersad-Moghaddam)
+![](https://github-profile-trophy.vercel.app/?username=Mersad-Moghaddam&theme=tokyonight&no-frame=true&row=1&margin-w=15&column=7)
 
 </div>
 
-<br>
+<div align="center">
+<img src="https://raw.githubusercontent.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/main/assets/2b74259c-9c48-4986-a52a-3ba9946d0a4b.gif" width="100%" height="3px">
+</div>
 
-<!-- ========================= SNAKE ========================= -->
-
-## 🐍 My Contributions, but Make It a Game
+## 🐍 Contribution Snake
 
 <div align="center">
 
-<picture>
-  <source
-    media="(prefers-color-scheme: dark)"
-    srcset="https://raw.githubusercontent.com/Mersad-Moghaddam/Mersad-Moghaddam/output/github-contribution-grid-snake-dark.svg"
-  >
-  <source
-    media="(prefers-color-scheme: light)"
-    srcset="https://raw.githubusercontent.com/Mersad-Moghaddam/Mersad-Moghaddam/output/github-contribution-grid-snake.svg"
-  >
-  <img
-    alt="GitHub contribution snake animation"
-    src="https://raw.githubusercontent.com/Mersad-Moghaddam/Mersad-Moghaddam/output/github-contribution-grid-snake.svg"
-  >
-</picture>
+<img src="https://raw.githubusercontent.com/Mersad-Moghaddam/Mersad-Moghaddam/output/github-contribution-grid-snake-dark.svg" width="100%"/>
+
+<sub>🔧 one-time setup needed — add the <a href="https://github.com/Platane/snk">Platane/snk</a> GitHub Action to this repo (~5 min), then it auto-updates daily 🐍</sub>
 
 </div>
 
-<br>
+<div align="center">
+<img src="https://raw.githubusercontent.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/main/assets/2b74259c-9c48-4986-a52a-3ba9946d0a4b.gif" width="100%" height="3px">
+</div>
 
-<!-- ========================= FUN ZONE ========================= -->
-
-## 🕹️ Developer Runtime
-
-```text
-while (alive) {
-    learn();
-    build();
-    breakThingsSafely();
-    debug();
-    improve();
-    ship();
-}
-```
+## ✍️ Random Dev Wisdom
 
 <div align="center">
 
-<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" alt="Random developer quote">
+![](https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight)
 
 </div>
 
-<br>
-
-<!-- ========================= CONTACT ========================= -->
-
-## 🤝 Let's Build Something Reliable
-
-I am interested in backend engineering, collaborative projects and conversations about building maintainable software.
+<div align="center">
+<img src="https://raw.githubusercontent.com/Anmol-Baranwal/Cool-GIFs-For-GitHub/main/assets/2b74259c-9c48-4986-a52a-3ba9946d0a4b.gif" width="100%" height="3px">
+</div>
 
 <div align="center">
 
-### Have an interesting idea or engineering challenge?
+### 👀 Profile Visitors
 
-<a href="mailto:nickmersad81@gmail.com">
-  <img src="https://img.shields.io/badge/Send%20Me%20an%20Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Send email">
-</a>
+[![](https://visitcount.itsvg.in/api?id=Mersad-Moghaddam&icon=9&color=6)](https://visitcount.itsvg.in)
 
-<a href="https://linkedin.com/in/mersad-moghaddam">
-  <img src="https://img.shields.io/badge/Connect%20on%20LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="Connect on LinkedIn">
-</a>
+<br/><br/>
 
-<br><br>
+<img src="https://user-images.githubusercontent.com/74038190/216122041-518ac897-8d92-4c6b-9b3f-ca01dcaf38ee.png" width="80"/>
 
-**Stay curious. Build carefully. Ship continuously.**
+### Thanks for stopping by! Let's build something great together 🚀
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer"/>
 
 </div>
 
-<!-- ========================= FOOTER ========================= -->
-
-<img width="100%" src="https://capsule-render.vercel.app/api?type=waving&color=0:F107A3,50:7B2FF7,100:00C9FF&height=130&section=footer" alt="Footer">
-```
+<!-- Made with 🐹 and a lot of goroutines -->
