@@ -61,8 +61,8 @@ func main() {
 ### GitHub signal
 
 <div align="center">
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=Mersad-Moghaddam&show_icons=true&theme=tokyonight&hide_border=true&count_private=true" alt="Mersad's GitHub stats" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mersad-Moghaddam&layout=compact&theme=tokyonight&hide_border=true" alt="Top languages" />
+<img height="165" src="https://github-readme-stats.vercel.app/api?username=Mersad-Moghaddam&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&cache_seconds=1800" alt="Mersad's GitHub stats" />
+<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mersad-Moghaddam&layout=compact&theme=tokyonight&hide_border=true&cache_seconds=1800" alt="Top languages" />
 </div>
 
 <div align="center">
@@ -79,40 +79,27 @@ func main() {
 
 ---
 
-## `/play` — save production
+### `tail -f incident.log` — live replay
 
-Choose one move. No peeking at the postmortem.
+<div align="center">
 
-```text
-INCIDENT #503        STATUS: DEGRADED
-API latency          4.2s
-Error rate           12%
-Last deploy          7 minutes ago
-```
+[![Incident Replay](https://readme-typing-svg.demolab.com/?font=Fira+Code&size=15&duration=2600&pause=700&color=3DDC97&background=0D1117FF&center=false&vCenter=true&multiline=true&repeat=true&width=640&height=170&lines=%24+tail+-f+%2Fvar%2Flog%2Fapi.log;%5BALERT%5D+p99+latency+4.2s+%C2%B7+error+rate+12%25;%5BTRACE%5D+unbounded+retry+loop+on+priceFetcher;%24+patch+--jitter+--max-attempts%3D3;%5BOK%5D+circuit+breaker%3A+CLOSED;%24+kubectl+rollout+status+deployment%2Fapi;%5BOK%5D+p99+142ms+%C2%B7+production+saved+%E2%9C%93)](https://git.io/typing-svg)
 
-<details>
-<summary><b>01 · Inspect traces and compare against the last deploy</b></summary>
-<br>
-You find an unbounded retry loop amplifying one slow dependency. Add jittered backoff, cap the attempts, roll forward.
-<br><br>
-<b>CRITICAL HIT · +100 reliability · Production saved.</b>
-</details>
+</div>
 
-<details>
-<summary><b>02 · Restart every service</b></summary>
-<br>
-The graphs turn green for 90 seconds. The retry storm returns, and it brought friends.
-<br><br>
-<b>FALSE VICTORY · +5 confidence · −40 sleep.</b>
-</details>
+No staged screenshots — that's the actual shape of most incidents I've closed: read the trace before touching the dashboard, cap the retries, roll forward instead of restarting blind.
 
-<details>
-<summary><b>03 · Ship another deploy on Friday</b></summary>
-<br>
-Bold move. The incident now has a sequel, and its own Slack channel.
-<br><br>
-<b>GAME OVER · Achievement unlocked: Chaos Engineer.</b>
-</details>
+### Snake fed by real commits
+
+<div align="center">
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/Mersad-Moghaddam/Mersad-Moghaddam/output/github-contribution-grid-snake-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="https://raw.githubusercontent.com/Mersad-Moghaddam/Mersad-Moghaddam/output/github-contribution-grid-snake.svg">
+  <img alt="A snake eating my contribution graph" src="https://raw.githubusercontent.com/Mersad-Moghaddam/Mersad-Moghaddam/output/github-contribution-grid-snake.svg" width="100%">
+</picture>
+</div>
+
+<sub>Generated nightly by <a href="https://github.com/Platane/snk">Platane/snk</a> from real commit history.</sub>
 
 ---
 
