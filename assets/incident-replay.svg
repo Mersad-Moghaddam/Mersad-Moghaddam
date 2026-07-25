@@ -1,0 +1,52 @@
+<svg viewBox="0 0 680 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Terminal replay of an incident being resolved">
+  <title>incident.log — live tail</title>
+  <style>
+    text { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
+    .bar-top    { fill:#161B22; }
+    .win-body   { fill:#0D1117; stroke:#30363D; stroke-width:1; }
+    .title      { fill:#8B949E; font-size:12px; }
+    .ln         { font-size:14px; opacity:0; animation: reveal 9s ease-in-out infinite; }
+    .prompt     { fill:#58A6FF; }
+    .alert      { fill:#F85149; }
+    .trace      { fill:#D29922; }
+    .ok         { fill:#3FB950; }
+    .l1 { animation-delay: 0s; }
+    .l2 { animation-delay: 1.1s; }
+    .l3 { animation-delay: 2.2s; }
+    .l4 { animation-delay: 3.3s; }
+    .l5 { animation-delay: 4.4s; }
+    .l6 { animation-delay: 5.5s; }
+    .l7 { animation-delay: 6.6s; }
+    .cursor { fill:#58A6FF; animation: blink 1s step-end infinite; }
+    @keyframes reveal {
+      0%   { opacity: 0; }
+      5%   { opacity: 1; }
+      84%  { opacity: 1; }
+      95%  { opacity: 0; }
+      100% { opacity: 0; }
+    }
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50%      { opacity: 0; }
+    }
+  </style>
+
+  <rect class="win-body" x="1" y="1" width="678" height="248" rx="10" />
+  <rect class="bar-top"  x="1" y="1" width="678" height="34" rx="10" />
+  <rect class="bar-top"  x="1" y="18" width="678" height="17" />
+
+  <circle cx="22" cy="18" r="6" fill="#FF5F56" />
+  <circle cx="42" cy="18" r="6" fill="#FFBD2E" />
+  <circle cx="62" cy="18" r="6" fill="#27C93F" />
+  <text x="340" y="23" text-anchor="middle" class="title">incident.log — live tail</text>
+
+  <text class="ln l1 prompt" x="24" y="66">$ tail -f /var/log/api.log</text>
+  <text class="ln l2 alert"  x="24" y="94">[ALERT] p99 latency 4.2s · error rate 12%</text>
+  <text class="ln l3 trace"  x="24" y="122">[TRACE] unbounded retry loop on priceFetcher</text>
+  <text class="ln l4 prompt" x="24" y="150">$ patch --jitter --max-attempts=3</text>
+  <text class="ln l5 ok"     x="24" y="178">[OK] circuit breaker: CLOSED</text>
+  <text class="ln l6 prompt" x="24" y="206">$ kubectl rollout status deployment/api</text>
+  <text class="ln l7 ok"     x="24" y="228">[OK] p99 142ms · production saved ✓</text>
+
+  <rect class="cursor" x="24" y="232" width="8" height="13" />
+</svg>
