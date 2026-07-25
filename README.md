@@ -1,19 +1,21 @@
 <div align="center">
 
-# Hi, I'm Mersad 👋
+![Header](https://capsule-render.vercel.app/api?type=waving&color=0:0D1117,100:58A6FF&height=220&section=header&text=Mersad%20Moghaddam&fontSize=46&fontColor=FFFFFF&animation=fadeIn&fontAlignY=38&desc=Backend%20Engineer%20%C2%B7%20Go%20Developer%20%C2%B7%20Systems%20Thinker&descAlignY=55&descSize=18&descColor=C9D1D9)
 
-[![Typing SVG](https://readme-typing-svg.demolab.com/?font=Fira+Code&size=22&pause=1000&color=58A6FF&center=true&vCenter=true&width=600&lines=Backend+Engineer+%C2%B7+Go+Developer;I+build+systems+that+stay+up+at+3am;Simple+paths+%C2%B7+Explicit+costs+%C2%B7+Dependable+production)](https://git.io/typing-svg)
+[![Typing SVG](https://readme-typing-svg.demolab.com/?font=Fira+Code&size=20&pause=1000&color=58A6FF&center=true&vCenter=true&width=650&lines=Simple+paths+%C2%B7+Explicit+costs+%C2%B7+Dependable+production;I+build+backend+systems+that+are+boring+at+3am;Go+%C2%B7+Redis+%C2%B7+MySQL+%C2%B7+distributed+systems)](https://git.io/typing-svg)
 
 [![Email](https://img.shields.io/badge/Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:nickmersad81@gmail.com)
 [![LinkedIn](https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/mersad-moghaddam)
 [![X](https://img.shields.io/badge/X-000000?style=for-the-badge&logo=x&logoColor=white)](https://x.com/mersadmoghaddam)
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white)](https://github.com/Mersad-Moghaddam)
 
+<img src="https://komarev.com/ghpvc/?username=Mersad-Moghaddam&color=58A6FF&style=flat-square&label=Profile+Views" alt="Profile views" />
+
 </div>
 
----
+<br>
 
-### `whoami`
+## `whoami`
 
 ```go
 package main
@@ -32,33 +34,49 @@ func main() {
 }
 ```
 
-- 🔭 Building **TetherYaab**, a real-time USDT price-aggregation & fintech platform, and **Boshra**, a Go/Redis-backed news & chat content platform.
-- 🎮 Side-questing on **Crownfall** — an online multiplayer social-deduction fantasy game, scaffolded state-machine-first with PixiJS + WebRTC voice.
+- 🔭 Building **TetherYaab** — a real-time USDT price-aggregation & fintech platform — and **Boshra**, a Go/Redis-backed news & chat content platform.
+- 🎮 Side-questing on **Crownfall**, an online multiplayer social-deduction fantasy game, scaffolded state-machine-first with PixiJS + WebRTC voice.
 - 🧠 Perpetually re-learning the machine underneath the code: CPU architecture, concurrency, memory management.
-- 🛠️ Recent obsessions: feature-first modular monoliths, structured JSON logging that survives production noise, and killing "admin catch-all" packages one bounded context at a time.
+- 🛠️ Recent obsessions: feature-first modular monoliths, structured JSON logging that survives production noise, and retiring "admin catch-all" packages one bounded context at a time.
 - 💬 Ask me about: Go concurrency patterns, Redis-backed queues, or why your retry loop is quietly DDoSing you.
 
----
+<br>
 
-### Stack
+## Stack
 
 <div align="center">
 
-![Go](https://img.shields.io/badge/Go-00ADD8?style=for-the-badge&logo=go&logoColor=white)
-![Fiber](https://img.shields.io/badge/Fiber-00ACD7?style=for-the-badge&logo=go&logoColor=white)
-![GORM](https://img.shields.io/badge/GORM-00ADD8?style=for-the-badge&logo=go&logoColor=white)
-![Redis](https://img.shields.io/badge/Redis-DC382D?style=for-the-badge&logo=redis&logoColor=white)
-![MySQL](https://img.shields.io/badge/MySQL-4479A1?style=for-the-badge&logo=mysql&logoColor=white)
-![Docker](https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white)
-![TypeScript](https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white)
-![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white)
-![Linux](https://img.shields.io/badge/Linux-FCC624?style=for-the-badge&logo=linux&logoColor=black)
+<img src="https://skillicons.dev/icons?i=go,redis,mysql,docker,ts,nextjs,linux,git,githubactions,vscode" alt="Skill icons" />
+
+<br><br>
+
+![Fiber](https://img.shields.io/badge/Fiber-00ACD7?style=flat-square&logo=go&logoColor=white)
+![GORM](https://img.shields.io/badge/GORM-00ADD8?style=flat-square&logo=go&logoColor=white)
+![Asynq](https://img.shields.io/badge/Asynq-DC382D?style=flat-square&logo=redis&logoColor=white)
+![Fiber](https://img.shields.io/badge/PixiJS-E91E63?style=flat-square&logo=webgl&logoColor=white)
 
 </div>
 
----
+<br>
 
-### GitHub signal
+## How I actually think about it
+
+```mermaid
+flowchart LR
+    A[Simple paths] --> B[Explicit costs]
+    B --> C[Boring production]
+    C --> D[Everyone sleeps at night]
+    D -. feeds back into .-> A
+
+    style A fill:#0D1117,stroke:#58A6FF,color:#C9D1D9
+    style B fill:#0D1117,stroke:#58A6FF,color:#C9D1D9
+    style C fill:#0D1117,stroke:#58A6FF,color:#C9D1D9
+    style D fill:#0D1117,stroke:#58A6FF,color:#C9D1D9
+```
+
+<br>
+
+## GitHub signal
 
 <div align="center">
 <img height="165" src="https://github-readme-stats.vercel.app/api?username=Mersad-Moghaddam&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&cache_seconds=1800" alt="Mersad's GitHub stats" />
@@ -70,16 +88,16 @@ func main() {
 </div>
 
 <div align="center">
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Mersad-Moghaddam&theme=tokyo-night&hide_border=true" alt="Contribution activity graph" />
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=Mersad-Moghaddam&theme=tokyo-night&hide_border=true" alt="Contribution activity graph" width="97%" />
 </div>
 
 <div align="center">
 <img src="https://github-profile-trophy.vercel.app/?username=Mersad-Moghaddam&theme=tokyonight&no-frame=true&row=1&column=6" alt="GitHub trophies" />
 </div>
 
----
+<br>
 
-### `tail -f incident.log` — live replay
+## `tail -f incident.log` — live replay
 
 <div align="center">
 
@@ -89,7 +107,7 @@ func main() {
 
 No staged screenshots — that's the actual shape of most incidents I've closed: read the trace before touching the dashboard, cap the retries, roll forward instead of restarting blind.
 
-### Snake fed by real commits
+## Snake fed by real commits
 
 <div align="center">
 <picture>
@@ -99,11 +117,11 @@ No staged screenshots — that's the actual shape of most incidents I've closed:
 </picture>
 </div>
 
-<sub>Generated nightly by <a href="https://github.com/Platane/snk">Platane/snk</a> from real commit history.</sub>
+<div align="center"><sub>Generated nightly by <a href="https://github.com/Platane/snk">Platane/snk</a> from real commit history.</sub></div>
 
----
+<br>
 
-### Words I keep close
+## Words I keep close
 
 > "Simplicity is a prerequisite for reliability."
 > — **Edsger W. Dijkstra**
@@ -111,7 +129,7 @@ No staged screenshots — that's the actual shape of most incidents I've closed:
 > "Do not communicate by sharing memory; instead, share memory by communicating."
 > — **The Go proverb**
 
----
+<br>
 
 <div align="center">
 
@@ -122,3 +140,5 @@ No staged screenshots — that's the actual shape of most incidents I've closed:
 <sub>Correctness first. Measurement second. Optimization when the data earns it.</sub>
 
 </div>
+
+![Footer](https://capsule-render.vercel.app/api?type=waving&color=0:58A6FF,100:0D1117&height=120&section=footer)
