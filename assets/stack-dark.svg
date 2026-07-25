@@ -1,0 +1,90 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="600" viewBox="0 0 900 600" role="img" aria-labelledby="title desc">
+  <title id="title">Mersad Moghaddam systems toolbox</title>
+  <desc id="desc">Go and Linux; MySQL, Redis, and Redis Streams; Docker, GitHub Actions, Prometheus, and Grafana; REST, SSE, and OpenAPI.</desc>
+  <defs>
+    <linearGradient id="edge" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#00add8"/>
+      <stop offset="1" stop-color="#8b7cf6"/>
+    </linearGradient>
+    <pattern id="grid" width="28" height="28" patternUnits="userSpaceOnUse">
+      <path d="M28 0H0V28" fill="none" stroke="#2a3b59" stroke-width="1" opacity=".18"/>
+    </pattern>
+  </defs>
+  <rect width="900" height="600" rx="28" fill="#081321"/>
+  <rect x="1" y="1" width="898" height="598" rx="27" fill="none" stroke="#263853"/>
+  <rect x="1" y="1" width="898" height="598" rx="27" fill="url(#grid)"/>
+
+  <g font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, monospace">
+    <text x="42" y="52" fill="#00add8" font-size="14" font-weight="700" letter-spacing="2">SYSTEMS TOOLBOX / VERIFIED FROM PUBLIC WORK</text>
+    <rect x="42" y="70" width="816" height="3" rx="1.5" fill="url(#edge)"/>
+
+    <g transform="translate(42 104)">
+      <rect width="394" height="204" rx="18" fill="#0e1c2e" stroke="#29405e"/>
+      <text x="24" y="40" fill="#8599b7" font-size="13" font-weight="700" letter-spacing="1.5">01 / CORE BACKEND</text>
+      <text x="24" y="79" fill="#eff5ff" font-size="28" font-weight="700">Go</text>
+      <text x="95" y="79" fill="#526782" font-size="20">+</text>
+      <text x="125" y="79" fill="#eff5ff" font-size="28" font-weight="700">Linux</text>
+      <text x="24" y="112" fill="#90a4c2" font-size="15">concurrency · HTTP · kernel interfaces</text>
+      <g transform="translate(24 138)" font-size="14" font-weight="700">
+        <rect width="101" height="38" rx="19" fill="#0b3040" stroke="#11627a"/>
+        <circle cx="18" cy="19" r="5" fill="#00add8"/>
+        <text x="32" y="24" fill="#bcecff">GOROUTINES</text>
+        <rect x="113" width="102" height="38" rx="19" fill="#15243a" stroke="#3b5271"/>
+        <text x="133" y="24" fill="#c5d2e6">NETLINK</text>
+        <rect x="227" width="126" height="38" rx="19" fill="#15243a" stroke="#3b5271"/>
+        <text x="247" y="24" fill="#c5d2e6">PROC / SYS</text>
+      </g>
+    </g>
+
+    <g transform="translate(464 104)">
+      <rect width="394" height="204" rx="18" fill="#0e1c2e" stroke="#29405e"/>
+      <text x="24" y="40" fill="#8599b7" font-size="13" font-weight="700" letter-spacing="1.5">02 / DATA + MESSAGING</text>
+      <text x="24" y="79" fill="#eff5ff" font-size="24" font-weight="700">MySQL</text>
+      <text x="113" y="79" fill="#526782" font-size="20">·</text>
+      <text x="140" y="79" fill="#eff5ff" font-size="24" font-weight="700">Redis</text>
+      <text x="24" y="112" fill="#90a4c2" font-size="15">durability · caching · asynchronous flow</text>
+      <g transform="translate(24 138)" font-size="14" font-weight="700">
+        <rect width="105" height="38" rx="19" fill="#17203b" stroke="#534c84"/>
+        <circle cx="18" cy="19" r="5" fill="#8b7cf6"/>
+        <text x="32" y="24" fill="#d6d1ff">STREAMS</text>
+        <rect x="117" width="96" height="38" rx="19" fill="#15243a" stroke="#3b5271"/>
+        <text x="137" y="24" fill="#c5d2e6">OUTBOX</text>
+        <rect x="225" width="127" height="38" rx="19" fill="#15243a" stroke="#3b5271"/>
+        <text x="245" y="24" fill="#c5d2e6">MIGRATIONS</text>
+      </g>
+    </g>
+
+    <g transform="translate(42 328)">
+      <rect width="394" height="230" rx="18" fill="#0e1c2e" stroke="#29405e"/>
+      <text x="24" y="40" fill="#8599b7" font-size="13" font-weight="700" letter-spacing="1.5">03 / DELIVERY + SIGNALS</text>
+      <text x="24" y="76" fill="#eff5ff" font-size="21" font-weight="700">Docker · GitHub Actions</text>
+      <text x="24" y="107" fill="#90a4c2" font-size="15">repeatable builds and automated delivery</text>
+      <g transform="translate(24 129)" font-size="14" font-weight="700">
+        <rect width="151" height="38" rx="19" fill="#0b3040" stroke="#11627a"/>
+        <circle cx="18" cy="19" r="5" fill="#00add8"/>
+        <text x="32" y="24" fill="#bcecff">PROMETHEUS</text>
+        <rect x="163" width="104" height="38" rx="19" fill="#17203b" stroke="#534c84"/>
+        <circle cx="181" cy="19" r="5" fill="#8b7cf6"/>
+        <text x="195" y="24" fill="#d6d1ff">GRAFANA</text>
+      </g>
+      <text x="24" y="199" fill="#7085a4" font-size="14">metrics · readiness · structured logs</text>
+    </g>
+
+    <g transform="translate(464 328)">
+      <rect width="394" height="230" rx="18" fill="#0e1c2e" stroke="#29405e"/>
+      <text x="24" y="40" fill="#8599b7" font-size="13" font-weight="700" letter-spacing="1.5">04 / INTERFACES</text>
+      <text x="24" y="76" fill="#eff5ff" font-size="21" font-weight="700">REST · SSE · OpenAPI</text>
+      <text x="24" y="107" fill="#90a4c2" font-size="15">small contracts, observable behavior</text>
+      <g transform="translate(24 129)" font-size="14" font-weight="700">
+        <rect width="96" height="38" rx="19" fill="#15243a" stroke="#3b5271"/>
+        <text x="76" y="24" fill="#c5d2e6" text-anchor="end">JSON</text>
+        <rect x="108" width="96" height="38" rx="19" fill="#15243a" stroke="#3b5271"/>
+        <text x="184" y="24" fill="#c5d2e6" text-anchor="end">YAML</text>
+        <rect x="216" width="136" height="38" rx="19" fill="#17203b" stroke="#534c84"/>
+        <circle cx="234" cy="19" r="5" fill="#8b7cf6"/>
+        <text x="248" y="24" fill="#d6d1ff">GRACEFUL</text>
+      </g>
+      <text x="24" y="199" fill="#7085a4" font-size="14">validation · timeouts · shutdown</text>
+    </g>
+  </g>
+</svg>

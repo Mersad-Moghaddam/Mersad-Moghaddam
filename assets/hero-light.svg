@@ -26,7 +26,7 @@
       <circle cx="40" cy="25" r="5" fill="#d7a500"/>
       <circle cx="58" cy="25" r="5" fill="#238b62"/>
       <text x="86" y="32" fill="#5f7189" font-size="17">$</text>
-      <text x="108" y="32" fill="#24354c" font-size="17">go run ./cmd/mersad</text>
+      <text x="108" y="32" fill="#24354c" font-size="17">go test ./...</text>
       <rect x="300" y="17" width="10" height="20" rx="2" fill="#008eb2"/>
     </g>
 
