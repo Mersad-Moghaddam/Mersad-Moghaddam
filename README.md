@@ -1,150 +1,180 @@
 <div align="center">
 
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=250&section=header&text=Hey%2C%20I'm%20Mersad%20%F0%9F%91%8B&fontSize=44&fontColor=ffffff&animation=twinkling&fontAlignY=32&desc=Go%20Backend%20Developer%20%F0%9F%90%B9%20%7C%20Building%20Fast%2C%20Reliable%2C%20Concurrent%20Systems&descAlignY=52&descSize=16" />
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/hero-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/hero-light.svg">
+  <img src="./assets/hero-light.svg"
+       alt="Mersad Moghaddam — Backend Engineer and Go Developer"
+       width="1200">
+</picture>
 
-<a href="https://git.io/typing-svg">
-  <img src="https://readme-typing-svg.demolab.com/?font=JetBrains+Mono&weight=700&size=24&duration=2600&pause=900&color=00ADD8&center=true&vCenter=true&multiline=true&repeat=true&width=700&height=90&lines=go+run+mersad.go+%F0%9F%9A%80;Concurrency+is+a+lifestyle%2C+not+a+trick+%F0%9F%98%84;Building+scalable+backends+in+Go+%E2%9A%A1;Currently+shipping+TetherYaab+%26+Boshra+%F0%9F%9B%A0%EF%B8%8F" />
-</a>
+<picture>
+  <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)"
+          srcset="./assets/typing-static-dark.svg">
+  <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: light)"
+          srcset="./assets/typing-static-light.svg">
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/typing-dark.gif">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/typing-light.gif">
+  <img src="./assets/typing-static-light.svg"
+       alt="Engineering focus: reliable backends, concurrent Go, observable architecture, and measured optimization"
+       width="960">
+</picture>
 
-<img src="https://raw.githubusercontent.com/MartinHeinz/MartinHeinz/master/wave.gif" width="100%" />
+<br>
+
+<a href="mailto:nickmersad81@gmail.com">Email</a>
+&nbsp;·&nbsp;
+<a href="https://www.linkedin.com/in/mersad-moghaddam">LinkedIn</a>
+&nbsp;·&nbsp;
+<a href="https://www.instagram.com/mersad.moghaddam">Instagram</a>
+&nbsp;·&nbsp;
+<a href="https://x.com/mersadmoghaddam">X</a>
 
 </div>
 
----
+## `whoami`
 
-## 🐹 whoami
+```text
+$ whoami
+Mersad Moghaddam — backend-focused Computer Engineer
 
-```json
-{
-  "name": "Mersad Moghaddam",
-  "role": "Go Backend Developer",
-  "based_in": "Mashhad, Iran 🇮🇷",
-  "focus": ["concurrency", "clean architecture", "scalability"],
-  "currently_building": [
-    "TetherYaab-Backend  // feature-first modular monolith",
-    "Boshra (apiGolang)  // news ordering platform"
-  ],
-  "currently_learning": "advanced Go concurrency patterns",
-  "fun_fact": "pairs with AI coding agents to ship faster 🤖",
-  "status": "compiling... 🛠️"
-}
+$ pwd
+Mashhad, Razavi Khorasan, Iran
+
+$ focus
+Go · concurrent systems · distributed architecture · observability
 ```
 
-- ⚡ I design **reliable, concurrent, and maintainable** backend services in **Go**
-- 🏗️ Big fan of **feature-first architecture** over tangled layers
-- 🤝 I love pairing with autonomous AI coding agents to move fast without breaking things
-- 🌱 Forever curious — always deep-diving into the next `goroutine` rabbit hole
-- 📫 Reach me at **nickmersad81@gmail.com**
+I build backend systems where correctness is visible, concurrency is deliberate,
+and operational behavior is easy to understand. Go is my primary language; the
+work I enjoy most sits around APIs, storage, asynchronous processing, system
+boundaries, and the trade-offs that appear when software meets production.
 
----
+### Current engineering focus
 
-## 🛠️ What I'm Shipping Right Now
+- Reading Linux state directly and turning it into predictable operator tooling.
+- Designing concurrent and event-driven Go services with explicit failure paths.
+- Treating metrics, structured logs, readiness, and graceful shutdown as design inputs.
+- Keeping interfaces small enough to reason about and systems boring enough to trust.
 
-| Project | Description |
-|:---|:---|
-| 🔗 **TetherYaab-Backend** | A feature-first modular Go monolith — dozens of well-organized packages, built for clarity at scale |
-| 📰 **Boshra** (`apiGolang`) | A Go-powered news ordering platform connecting reporters, customers & moderators |
+## Selected systems
 
----
+### [SysKit](https://github.com/Mersad-Moghaddam/syskit)
 
-## 🌐 Let's Connect
+> A read-only Linux intelligence CLI that inspects `/proc`, `/sys`, Netlink, and
+> cgroups directly—without shelling out to human-oriented system tools.
+
+**Engineering signal:** a stable Go CLI with layered collectors, structured
+table/JSON/YAML output, an interactive terminal dashboard, release automation,
+and explicit safety boundaries.
+
+`Go` · `Linux` · `Netlink` · `cgroups` · `terminal UI`
+
+### [Argus](https://github.com/Mersad-Moghaddam/Argus)
+
+> An uptime-monitoring service for HTTP status, keyword, heartbeat, and TLS-expiry
+> checks, with incidents, maintenance suppression, and status pages.
+
+**Engineering signal:** hexagonal architecture, MySQL migrations, Redis/Asynq
+workers, an outbox-based alert path with deduplication, API-key protection, and
+SSRF-aware outbound checks.
+
+`Go` · `MySQL` · `Redis` · `Asynq` · `outbox pattern`
+
+### [WhisperSocial Backend](https://github.com/Mersad-Moghaddam/WhisperSocial-Backend)
+
+> An event-driven social timeline backend split into authentication, post,
+> follow, timeline, moderation, and fan-out services.
+
+**Engineering signal:** posts are persisted before Redis Stream publication;
+a background worker fans them out to follower timelines while read services
+hydrate durable records from MySQL.
+
+`Go` · `microservices` · `Redis Streams` · `MySQL` · `Docker`
+
+### [AetherDB](https://github.com/Mersad-Moghaddam/AetherDB)
+
+> A compact embedded key-value storage experiment built around memory-mapped
+> files, an append-oriented data layout, and a lock-free hash index.
+
+**Engineering signal:** explores CAS-based concurrency, explicit durability
+trade-offs, `sendfile`-based zero-copy reads, recovery metadata, and benchmark
+scenarios with high goroutine counts.
+
+`Go` · `mmap` · `atomic CAS` · `sendfile` · `storage design`
+
+### [Negar](https://github.com/Mersad-Moghaddam/Negar)
+
+> A full-stack reading tracker with a Go/Fiber backend and a React/TypeScript
+> interface for libraries, sessions, goals, insights, and reminders.
+
+**Engineering signal:** MySQL and Redis readiness checks, structured Zap logs,
+Prometheus-format metrics, JWT access/refresh flows, migrations, CI, and
+production-style Docker/nginx deployment.
+
+`Go` · `Fiber` · `MySQL` · `Redis` · `Prometheus`
+
+## Systems toolbox
+
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="./assets/stack-dark.svg">
+  <source media="(prefers-color-scheme: light)" srcset="./assets/stack-light.svg">
+  <img src="./assets/stack-light.svg"
+       alt="Technology map: Go and Linux; MySQL and Redis; Docker, GitHub Actions, Prometheus, and Grafana; REST, SSE, and OpenAPI"
+       width="1200">
+</picture>
+
+## Engineering principles
+
+```text
+correctness     before cleverness
+measurement     before optimization
+observability   before the first incident
+clear contracts before broad abstractions
+simple paths    for the common case
+explicit costs  for every trade-off
+```
+
+I prefer software that fails loudly, recovers deliberately, exposes enough
+evidence to debug, and remains understandable after the requirements change.
+Fast is valuable; predictable is what lets fast systems stay useful.
+
+## Contribution stream
+
+The animation below is generated by this repository's own scheduled workflow
+and published from its `output` branch. Reduced-motion visitors receive a static
+local alternative.
 
 <div align="center">
 
-[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://instagram.com/mersad.moghaddam)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/in/mersad-moghaddam)
-[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/mersadmoghaddam)
-[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:nickmersad81@gmail.com)
+<a href="https://github.com/Mersad-Moghaddam">
+  <picture>
+    <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: dark)"
+            srcset="./assets/contributions-static-dark.svg">
+    <source media="(prefers-reduced-motion: reduce) and (prefers-color-scheme: light)"
+            srcset="./assets/contributions-static-light.svg">
+    <source media="(prefers-color-scheme: dark)"
+            srcset="https://raw.githubusercontent.com/Mersad-Moghaddam/Mersad-Moghaddam/output/github-snake-dark.svg">
+    <source media="(prefers-color-scheme: light)"
+            srcset="https://raw.githubusercontent.com/Mersad-Moghaddam/Mersad-Moghaddam/output/github-snake.svg">
+    <img src="https://raw.githubusercontent.com/Mersad-Moghaddam/Mersad-Moghaddam/output/github-snake.svg"
+         alt="Animated contribution graph for Mersad Moghaddam"
+         width="1200">
+  </picture>
+</a>
 
 </div>
 
----
+## Let’s build something dependable
 
-## 💻 Tech Stack
+If you are working on Go services, systems tooling, APIs, storage, or
+observability—and care about the trade-offs behind the implementation—I would
+be glad to compare notes.
 
-<div align="center">
-
-**Primary**
-
-![Go](https://img.shields.io/badge/GO-00ADD8?style=for-the-badge&logo=go&logoColor=white)
-
-**Languages**
-
-![C++](https://img.shields.io/badge/c++-00599C?style=for-the-badge&logo=c%2B%2B&logoColor=white)
-![C#](https://img.shields.io/badge/c%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
-![Dart](https://img.shields.io/badge/dart-0175C2?style=for-the-badge&logo=dart&logoColor=white)
-![Java](https://img.shields.io/badge/java-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white)
-![Kotlin](https://img.shields.io/badge/kotlin-0095D5?style=for-the-badge&logo=kotlin&logoColor=white)
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-
-**Frameworks, Platforms & Tools**
-
-![Flutter](https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=Flutter&logoColor=white)
-![Android](https://img.shields.io/badge/android-3DDC84?style=for-the-badge&logo=android&logoColor=white)
-![iOS](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=apple&logoColor=white)
-![Firebase](https://img.shields.io/badge/firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=black)
-![SQLite](https://img.shields.io/badge/sqlite-07405E?style=for-the-badge&logo=sqlite&logoColor=white)
-![Git](https://img.shields.io/badge/git-F05032?style=for-the-badge&logo=git&logoColor=white)
-![Figma](https://img.shields.io/badge/figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
-![Claude](https://img.shields.io/badge/Claude%20Code-D97757?style=for-the-badge&logo=anthropic&logoColor=white)
-
-</div>
-
----
-
-## 📊 GitHub Stats
+**[Start a conversation](mailto:nickmersad81@gmail.com)**
 
 <div align="center">
 
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=Mersad-Moghaddam&show_icons=true&theme=tokyonight&include_all_commits=true&count_private=true&hide_border=true&rank_icon=github" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mersad-Moghaddam&layout=compact&theme=tokyonight&hide_border=true&langs_count=8" />
-
-<br/>
-
-<img src="https://streak-stats.demolab.com/?user=Mersad-Moghaddam&theme=tokyonight&hide_border=true" width="65%" />
-
-<br/>
-
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Mersad-Moghaddam&theme=tokyo-night&hide_border=true" width="100%" />
-
-</div>
-
----
-
-## 🏆 Trophy Room
-
-<div align="center">
-
-<img src="https://github-profile-trophy.vercel.app/?username=Mersad-Moghaddam&theme=tokyonight&no-frame=true&row=1&column=7" />
-
-</div>
-
----
-
-## 🐍 Contribution Snake *(optional add-on)*
-
-> Add the [Platane/snk](https://github.com/Platane/snk) GitHub Action (~5 min setup) to your `Mersad-Moghaddam/Mersad-Moghaddam` repo to get an animated snake eating your contribution graph. Once it's set up, embed it here — I left it out for now so nothing shows as a broken image before you configure it.
-
----
-
-## ✍️ Random Dev Wisdom
-
-<div align="center">
-
-<img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=tokyonight" />
-
-</div>
-
----
-
-<div align="center">
-
-### 👀 Profile Visitors
-
-[![Visitor Count](https://visitcount.itsvg.in/api?id=Mersad-Moghaddam&icon=9&color=6)](https://visitcount.itsvg.in)
-
-**Thanks for stopping by — let's build something great together 🚀**
-
-<img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&customColorList=6,11,20&height=120&section=footer" />
+<sub>Explicit boundaries. Useful signals. Predictable production.</sub>
 
 </div>
