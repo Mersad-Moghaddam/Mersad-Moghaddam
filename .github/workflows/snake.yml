@@ -37,6 +37,40 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Fetch public GitHub signal
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          PROFILE_LOGIN: ${{ github.repository_owner }}
+        run: |
+          gh api graphql \
+            -f login="$PROFILE_LOGIN" \
+            -f query='
+              query($login: String!) {
+                user(login: $login) {
+                  repositories(first: 100, ownerAffiliations: OWNER, privacy: PUBLIC) {
+                    totalCount
+                    nodes {
+                      stargazerCount
+                    }
+                  }
+                  contributionsCollection {
+                    restrictedContributionsCount
+                    totalCommitContributions
+                    totalIssueContributions
+                    totalPullRequestContributions
+                    totalPullRequestReviewContributions
+                  }
+                }
+              }
+            ' > profile-stats.json
+
+      - name: Render light and dark GitHub signal cards
+        run: |
+          node .github/scripts/render-profile-stats.mjs \
+            profile-stats.json \
+            dist/github-signal-light.svg \
+            dist/github-signal-dark.svg
+
       - name: Publish to output branch
         uses: JamesIves/github-pages-deploy-action@d92aa235d04922e8f08b40ce78cc5442fcfbfa2f # v4.8.0
         with:
