@@ -23,6 +23,7 @@ import json
 import os
 import urllib.request
 import datetime
+import math
 
 API = "https://api.github.com"
 TOKEN = os.environ.get("GITHUB_TOKEN", "")
@@ -240,42 +241,75 @@ def build_highlights_svg(p):
 
 
 def build_github_signal_svg(p):
-    width, height = 1200, 280
-    rows = [
-        ("Public repos", p["public_repos"]),
-        ("Original repos", p["owned_repo_count"]),
-        ("Followers", p["followers"]),
-        ("Stars earned", p["stars"]),
-        ("Following", p["following"]),
-        ("Member since", p["member_since"]),
+    width, height = 1200, 300
+    primary_stats = [
+        ("PUBLIC REPOS", p["public_repos"], "#58A6FF"),
+        ("STARS EARNED", p["stars"], "#D2A8FF"),
+        ("FOLLOWERS", p["followers"], "#3FB950"),
     ]
+    cards = []
+    for (label, value, color), x in zip(primary_stats, (30, 200, 370)):
+        cards.extend([
+            f'  <rect x="{x}" y="94" width="155" height="82" rx="8" fill="#111820" stroke="#30363D" />',
+            f'  <path d="M{x + 10} 94H{x + 145}" stroke="{color}" stroke-width="2" />',
+            f'  <text x="{x + 16}" y="119" font-size="10" fill="#8B949E">{label}</text>',
+            f'  <text x="{x + 16}" y="156" font-size="28" font-weight="700" fill="{color}">{esc(value)}</text>',
+        ])
 
-    stats = []
-    positions = [(38, 120), (300, 120), (38, 165), (300, 165), (38, 210), (300, 210)]
-    for (label, value), (x, y) in zip(rows, positions):
-        stats.append(
-            f'  <text x="{x}" y="{y}" font-size="11" fill="#8B949E">{esc(label).upper()}</text>'
-            f'\n  <text x="{x}" y="{y + 23}" font-size="18" fill="#3FB950">{esc(value)}</text>'
-        )
+    metadata = [
+        ("ORIGINAL", p["owned_repo_count"]),
+        ("FOLLOWING", p["following"]),
+        ("SINCE", p["member_since"]),
+    ]
+    metadata_lines = []
+    for (label, value), x in zip(metadata, (30, 200, 370)):
+        metadata_lines.extend([
+            f'  <text x="{x}" y="211" font-size="9" fill="#6E7681">{label}</text>',
+            f'  <text x="{x}" y="233" font-size="14" fill="#C9D1D9">{esc(value)}</text>',
+        ])
 
     total = sum(p["lang_bytes"].values()) or 1
     top = sorted(p["lang_bytes"].items(), key=lambda item: -item[1])[:6]
-    langs = []
-    y = 86
-    for lang, count in top:
+    radius = 54
+    start_angle = -math.pi / 2
+    ring_segments = []
+    legend = []
+    for index, (lang, count) in enumerate(top):
         pct = count / total * 100
         color = LANG_COLORS.get(lang, DEFAULT_LANG_COLOR)
-        bar_width = max(4, 310 * pct / 100)
-        langs.extend([
-            f'  <text x="630" y="{y + 9}" font-size="11" fill="#C9D1D9">{esc(lang)}</text>',
-            f'  <rect x="760" y="{y}" width="310" height="10" rx="5" fill="#21262D" />',
-            f'  <rect x="760" y="{y}" width="{bar_width:.1f}" height="10" rx="5" fill="{color}" />',
-            f'  <text x="1148" y="{y + 9}" text-anchor="end" font-size="10" fill="#8B949E">{pct:4.1f}%</text>',
+        sweep = 2 * math.pi * pct / 100
+        end_angle = start_angle + sweep
+        start_x = 720 + radius * math.cos(start_angle)
+        start_y = 165 + radius * math.sin(start_angle)
+        end_x = 720 + radius * math.cos(end_angle)
+        end_y = 165 + radius * math.sin(end_angle)
+        large_arc = 1 if sweep > math.pi else 0
+        ring_segments.append(
+            f'  <path d="M{start_x:.2f} {start_y:.2f} A{radius} {radius} 0 {large_arc} 1 '
+            f'{end_x:.2f} {end_y:.2f}" fill="none" stroke="{color}" stroke-width="13" />'
+        )
+        start_angle = end_angle
+        y = 92 + index * 30
+        legend.extend([
+            f'  <circle cx="835" cy="{y - 4}" r="4" fill="{color}" />',
+            f'  <text x="848" y="{y}" font-size="11" fill="#C9D1D9">{esc(lang)}</text>',
+            f'  <text x="1155" y="{y}" text-anchor="end" font-size="10" fill="#8B949E">{pct:4.1f}%</text>',
         ])
-        y += 29
+
+    lead_language, lead_count = top[0] if top else ("NO DATA", 0)
+    lead_pct = lead_count / total * 100
 
     return f'''<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live GitHub profile and language telemetry for {esc(USER)}">
   <title>{esc(USER)} — live GitHub signal</title>
+  <defs>
+    <radialGradient id="signal-glow">
+      <stop offset="0" stop-color="#58A6FF" stop-opacity=".13" />
+      <stop offset="1" stop-color="#58A6FF" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="signal-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20 0H0V20" stroke="#30363D" stroke-opacity=".22" />
+    </pattern>
+  </defs>
   <style>
     text {{ font-family: "DejaVu Sans Mono", Consolas, "Liberation Mono", monospace; }}
     @media (prefers-reduced-motion: reduce) {{ animate {{ display:none; }} }}
@@ -283,18 +317,30 @@ def build_github_signal_svg(p):
   <rect width="{width}" height="{height}" fill="#0D1117" />
   <rect x="1" width="{width - 2}" height="{height}" fill="#0D1117" stroke="#30363D" stroke-width="2" />
   <path d="M1 42H1199" stroke="#30363D" />
-  <text x="22" y="26" fill="#8B949E" font-size="12">github.signal · live API telemetry</text>
-  <circle cx="1092" cy="21" r="5" fill="#3FB950">
+  <text x="22" y="26" fill="#C9D1D9" font-size="12">github.signal / engineering fingerprint</text>
+  <circle cx="1080" cy="21" r="4" fill="#3FB950">
     <animate attributeName="opacity" values=".45;1;.45" dur="2.5s" repeatCount="indefinite" />
   </circle>
-  <text x="1105" y="25" fill="#3FB950" font-size="10">REFRESH DAILY</text>
-  <path d="M590 62V254" stroke="#30363D" />
-  <text x="38" y="82" fill="#58A6FF" font-size="13">$ gh profile --user {esc(USER)}</text>
-  <text x="630" y="66" fill="#8B949E" font-size="10">LANGUAGES / PUBLIC ORIGINAL REPOSITORIES / BY BYTES</text>
-{chr(10).join(stats)}
-{chr(10).join(langs)}
-  <text x="38" y="258" fill="#8B949E" font-size="9">source: api.github.com · self-hosted by this repository</text>
-  <text x="1148" y="258" text-anchor="end" fill="#8B949E" font-size="9">shared rate limits: none</text>
+  <text x="1093" y="25" fill="#3FB950" font-size="10">LIVE / 24H</text>
+  <path d="M560 62V272" stroke="#30363D" />
+  <rect x="580" y="55" width="600" height="207" fill="url(#signal-grid)" />
+  <circle cx="720" cy="165" r="108" fill="url(#signal-glow)" />
+  <text x="30" y="70" fill="#58A6FF" font-size="13">$ gh signal --user {esc(USER)}</text>
+  <text x="30" y="85" fill="#6E7681" font-size="9">PROFILE PULSE / VERIFIED PUBLIC DATA</text>
+{chr(10).join(cards)}
+{chr(10).join(metadata_lines)}
+  <text x="600" y="70" fill="#8B949E" font-size="10">LANGUAGE FINGERPRINT / ORIGINAL REPOSITORIES</text>
+  <circle cx="720" cy="165" r="{radius}" fill="none" stroke="#21262D" stroke-width="13" />
+{chr(10).join(ring_segments)}
+  <g transform="translate(720 165)">
+    <circle cy="-77" r="3" fill="#58A6FF" />
+    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="9s" repeatCount="indefinite" additive="sum" />
+  </g>
+  <text x="720" y="160" text-anchor="middle" font-size="11" fill="#C9D1D9">{esc(lead_language)}</text>
+  <text x="720" y="180" text-anchor="middle" font-size="12" font-weight="700" fill="#58A6FF">{lead_pct:.1f}%</text>
+{chr(10).join(legend)}
+  <text x="30" y="278" fill="#6E7681" font-size="9">api.github.com → generated in-repo → refreshed daily</text>
+  <text x="1155" y="278" text-anchor="end" fill="#6E7681" font-size="9">signal stable · no shared counters</text>
 </svg>'''
 
 
