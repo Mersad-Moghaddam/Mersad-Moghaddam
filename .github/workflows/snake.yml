@@ -1,4 +1,4 @@
-name: generate contribution snake
+name: refresh profile telemetry
 
 on:
   schedule:
@@ -14,6 +14,15 @@ jobs:
     permissions:
       contents: write
     steps:
+      - name: check out profile source
+        uses: actions/checkout@v4
+
+      - name: generate GitHub telemetry cards
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TARGET_USER: Mersad-Moghaddam
+        run: python3 .github/scripts/generate_stats.py
+
       - name: generate snake svgs
         uses: Platane/snk@v3
         with:

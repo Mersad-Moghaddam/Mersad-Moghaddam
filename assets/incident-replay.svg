@@ -29,6 +29,10 @@
       0%, 100% { opacity: 1; }
       50%      { opacity: 0; }
     }
+    @media (prefers-reduced-motion: reduce) {
+      .ln { opacity: 1; animation: none; }
+      .cursor { animation: none; }
+    }
   </style>
 
   <rect class="win-body" x="1" y="1" width="678" height="248" rx="10" />
