@@ -1,7 +1,6 @@
 <div align="center">
 
 <div><img src="./assets/readme-hero.svg" width="100%" alt="Mersad Moghaddam — Go Backend Engineer"></div>
-<div><img src="./assets/about-console.svg" width="100%" alt="Current engineering focus: runtimes, storage, operations, bounded concurrency, predictable failures, and useful telemetry"></div>
 
 <div><a href="https://github.com/Mersad-Moghaddam/WhisperSocial-Backend"><img src="./assets/project-whisper.svg" width="50%" alt="Whisper Social — event-driven social timelines"></a><a href="https://github.com/Mersad-Moghaddam/AetherDB"><img src="./assets/project-aetherdb.svg" width="50%" alt="AetherDB — mmap-backed embedded key-value storage"></a></div>
 <div><a href="https://github.com/Mersad-Moghaddam/Argus"><img src="./assets/project-argus.svg" width="50%" alt="Argus — distributed uptime monitoring"></a><a href="https://github.com/Mersad-Moghaddam/syskit"><img src="./assets/project-syskit.svg" width="50%" alt="SysKit — native Linux system inspection and resource monitoring CLI"></a></div>
