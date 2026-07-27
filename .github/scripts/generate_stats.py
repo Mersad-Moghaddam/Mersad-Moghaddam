@@ -171,10 +171,7 @@ def terminal_shell(title, body_svg, width=460, height=230):
   <rect class="win-body" x="1" y="1" width="{width - 2}" height="{height - 2}" rx="10" />
   <rect class="bar-top"  x="1" y="1" width="{width - 2}" height="34" rx="10" />
   <rect class="bar-top"  x="1" y="18" width="{width - 2}" height="17" />
-  <circle cx="22" cy="18" r="6" fill="#FF5F56" />
-  <circle cx="42" cy="18" r="6" fill="#FFBD2E" />
-  <circle cx="62" cy="18" r="6" fill="#27C93F" />
-  <text x="{width / 2}" y="23" text-anchor="middle" class="title">{esc(title)}</text>
+  <text x="18" y="23" class="title">{esc(title)}</text>
 {body_svg}
 </svg>'''
 
@@ -284,12 +281,9 @@ def build_github_signal_svg(p):
     @media (prefers-reduced-motion: reduce) {{ animate {{ display:none; }} }}
   </style>
   <rect width="{width}" height="{height}" fill="#0D1117" />
-  <rect x="1" y="1" width="{width - 2}" height="{height - 2}" fill="#0D1117" stroke="#30363D" stroke-width="2" />
+  <rect x="1" width="{width - 2}" height="{height}" fill="#0D1117" stroke="#30363D" stroke-width="2" />
   <path d="M1 42H1199" stroke="#30363D" />
-  <circle cx="22" cy="21" r="6" fill="#FF5F56" />
-  <circle cx="42" cy="21" r="6" fill="#FFBD2E" />
-  <circle cx="62" cy="21" r="6" fill="#3FB950" />
-  <text x="600" y="26" text-anchor="middle" fill="#8B949E" font-size="12">github.signal · live API telemetry</text>
+  <text x="22" y="26" fill="#8B949E" font-size="12">github.signal · live API telemetry</text>
   <circle cx="1092" cy="21" r="5" fill="#3FB950">
     <animate attributeName="opacity" values=".45;1;.45" dur="2.5s" repeatCount="indefinite" />
   </circle>

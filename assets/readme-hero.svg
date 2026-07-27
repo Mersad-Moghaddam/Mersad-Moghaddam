@@ -27,7 +27,7 @@
   </style>
 
   <rect width="1200" height="400" fill="#0D1117"/>
-  <rect x="1" y="1" width="1198" height="398" rx="16" fill="url(#hero-bg)" stroke="#30363D" stroke-width="2"/>
+  <path d="M16 1H1184Q1199 1 1199 16V399H1V16Q1 1 16 1Z" fill="url(#hero-bg)" stroke="#30363D" stroke-width="2"/>
   <rect x="1" y="1" width="1198" height="398" rx="16" fill="url(#hero-grid)"/>
   <path d="M1 43H1199" stroke="#30363D"/>
 
