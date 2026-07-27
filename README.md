@@ -21,7 +21,7 @@
 <a href="https://github.com/Mersad-Moghaddam/AetherDB"><img src="./assets/project-aetherdb.svg" width="49%" alt="AetherDB — mmap-backed embedded key-value storage"></a>
 
 <a href="https://github.com/Mersad-Moghaddam/Argus"><img src="./assets/project-argus.svg" width="49%" alt="Argus — distributed uptime monitoring"></a>
-<a href="https://github.com/Mersad-Moghaddam/LinkPulse"><img src="./assets/project-linkpulse.svg" width="49%" alt="LinkPulse — real-time link analytics"></a>
+<a href="https://github.com/Mersad-Moghaddam/syskit"><img src="./assets/project-syskit.svg" width="49%" alt="SysKit — native Linux system inspection and resource monitoring CLI"></a>
 
 <br><br>
 
