@@ -9,74 +9,39 @@
 [**GitHub**](https://github.com/Mersad-Moghaddam) ·
 [**X / Twitter**](https://x.com/MersadMoghadam)
 
-</div>
+<br><br>
 
----
+<!-- ABOUT -->
+<img src="./assets/about-console.svg" width="100%" alt="About Mersad: backend engineer focused on Go, bounded concurrency, predictable failures, and useful telemetry">
 
-### `about`
+<br><br>
 
-I’m **Mersad**, a backend-focused software engineer from Mashhad, Iran. I design
-concurrent Go services, data-heavy APIs, and observable systems with simple
-boundaries, bounded work, and predictable failure modes.
+<!-- SELECTED SYSTEMS -->
+<a href="https://github.com/Mersad-Moghaddam/WhisperSocial-Backend"><img src="./assets/project-whisper.svg" width="49%" alt="Whisper Social — event-driven social timelines"></a>
+<a href="https://github.com/Mersad-Moghaddam/AetherDB"><img src="./assets/project-aetherdb.svg" width="49%" alt="AetherDB — mmap-backed embedded key-value storage"></a>
 
-### `selected work`
+<a href="https://github.com/Mersad-Moghaddam/Argus"><img src="./assets/project-argus.svg" width="49%" alt="Argus — distributed uptime monitoring"></a>
+<a href="https://github.com/Mersad-Moghaddam/LinkPulse"><img src="./assets/project-linkpulse.svg" width="49%" alt="LinkPulse — real-time link analytics"></a>
 
-| Project | Focus | Stack |
-| :--- | :--- | :--- |
-| [**Whisper Social**](https://github.com/Mersad-Moghaddam/WhisperSocial-Backend) | Event-driven social timelines and asynchronous fan-out | Go · Redis Streams · MySQL |
-| [**AetherDB**](https://github.com/Mersad-Moghaddam/AetherDB) | Embedded mmap-backed key-value storage | Go · mmap · CAS |
-| [**Argus**](https://github.com/Mersad-Moghaddam/Argus) | Distributed uptime monitoring and background probes | Go · Asynq · Redis |
-| [**LinkPulse**](https://github.com/Mersad-Moghaddam/LinkPulse) | Real-time link analytics and built-in observability | Go · SSE · Prometheus |
+<br><br>
 
-<div align="right">
+<!-- TOOLKIT -->
+<img src="./assets/toolkit-rack.svg" width="100%" alt="Backend production toolkit: Go, Fiber, Redis, MySQL, Asynq, Docker, Linux, Prometheus, and Grafana">
 
-[All repositories →](https://github.com/Mersad-Moghaddam?tab=repositories)
+<br><br>
 
-</div>
-
-### `toolkit`
-
-<div align="center">
-
-<code>Go</code>&nbsp;&nbsp;
-<code>Redis</code>&nbsp;&nbsp;
-<code>MySQL</code>&nbsp;&nbsp;
-<code>Docker</code>&nbsp;&nbsp;
-<code>Linux</code>&nbsp;&nbsp;
-<code>Prometheus</code>&nbsp;&nbsp;
-<code>Grafana</code>
-
-</div>
-
-### `github signal`
-
-<div align="center">
-
+<!-- LIVE GITHUB SIGNAL -->
 <img width="40%" src="https://raw.githubusercontent.com/Mersad-Moghaddam/Mersad-Moghaddam/output/stats-card.svg" alt="Live GitHub profile statistics">
 <img width="54%" src="https://raw.githubusercontent.com/Mersad-Moghaddam/Mersad-Moghaddam/output/top-langs.svg" alt="Languages detected across original public repositories">
 
-<br>
+<br><br>
 
-<sub>Generated daily from the GitHub API by this repository.</sub>
+<!-- GO IN PRODUCTION -->
+<img src="./assets/incident-replay.svg" width="100%" alt="Animated Go backend replay of diagnosing unbounded goroutines and stabilizing the service with a bounded worker pool">
 
-</div>
+<br><br>
 
-### `go in production`
-
-<div align="center">
-
-<img src="./assets/incident-replay.svg" width="96%" alt="Animated Go backend replay of diagnosing unbounded goroutines and stabilizing the service with a bounded worker pool">
-
-<sub>Bound the work · make failure visible · keep production boring</sub>
-
-</div>
-
----
-
-<div align="center">
-
-**Building something that needs to stay reliable?**
-
-[Let’s talk →](mailto:nickmersad81@gmail.com)
+<!-- CONTACT -->
+<a href="mailto:nickmersad81@gmail.com"><img src="./assets/contact-console.svg" width="100%" alt="Contact Mersad to build reliable backend systems"></a>
 
 </div>

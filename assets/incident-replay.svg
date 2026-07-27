@@ -66,9 +66,9 @@
     <g class="terminal-line">
       <text y="66"><tspan x="18" class="blue">$</tspan><tspan x="34" class="text">go test -race ./internal/worker/...</tspan></text>
       <g class="pulse-warning">
-        <rect x="12" y="78" width="622" height="26" rx="5" fill="#F85149" fill-opacity=".08" stroke="#F85149" stroke-opacity=".25"/>
+        <rect x="12" y="78" width="622" height="26" rx="5" fill="#2A1216" stroke="#F85149"/>
         <circle cx="24" cy="91" r="4" fill="#F85149"/>
-        <text x="36" y="96" class="bad">WARNING: goroutine count rising without bound</text>
+        <text x="36" y="96" fill="#F0F6FC">WARNING: goroutine count rising without bound</text>
       </g>
       <text y="126"><tspan x="18" class="warn">trace</tspan><tspan x="76" class="muted">jobs=18,421  goroutines=18,437  queue=unbounded</tspan></text>
       <text y="152"><tspan x="18" class="warn">cause</tspan><tspan x="76" class="text">go handle(job)</tspan><tspan x="204" class="muted">spawned per request</tspan></text>

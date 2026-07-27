@@ -1,0 +1,58 @@
+<svg width="580" height="250" viewBox="0 0 580 250" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="w-title w-desc">
+  <title id="w-title">Whisper Social</title>
+  <desc id="w-desc">Event-driven social timelines using Go, Redis Streams, and MySQL.</desc>
+  <defs>
+    <linearGradient id="w-bg" x1="12" y1="10" x2="560" y2="240" gradientUnits="userSpaceOnUse"><stop stop-color="#0D1117"/><stop offset="1" stop-color="#111A25"/></linearGradient>
+    <filter id="w-glow" x="-250%" y="-250%" width="600%" height="600%"><feGaussianBlur stdDeviation="4"/></filter>
+  </defs>
+  <style>
+    text { font-family:"DejaVu Sans Mono",Consolas,"Liberation Mono",monospace; }
+    @media (prefers-reduced-motion: reduce) { animate,animateMotion { display:none; } }
+  </style>
+  <rect x="1" y="1" width="578" height="248" rx="14" fill="url(#w-bg)" stroke="#30363D" stroke-width="2"/>
+  <path d="M1 38H579" stroke="#30363D"/>
+  <circle cx="20" cy="19" r="5" fill="#FF5F56"/><circle cx="37" cy="19" r="5" fill="#FFBD2E"/><circle cx="54" cy="19" r="5" fill="#3FB950"/>
+  <text x="290" y="24" text-anchor="middle" fill="#8B949E" font-size="11">01 / whisper.social</text>
+  <text x="558" y="24" text-anchor="end" fill="#3FB950" font-size="10">● ONLINE</text>
+
+  <text x="22" y="70" fill="#F0F6FC" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="700">Whisper Social</text>
+  <text x="558" y="69" text-anchor="end" fill="#58A6FF" font-size="10">EVENT-DRIVEN TIMELINES</text>
+
+  <g transform="translate(25 92)">
+    <path d="M48 32H144M208 32H296M366 32H472" stroke="#30363D" stroke-width="3" stroke-linecap="round"/>
+    <path d="M48 32H144M208 32H296M366 32H472" stroke="#58A6FF" stroke-width="1.5" stroke-dasharray="5 7">
+      <animate attributeName="stroke-dashoffset" values="24;0" dur="2.5s" repeatCount="indefinite"/>
+    </path>
+    <g>
+      <circle r="4" fill="#58A6FF"><animateMotion path="M48 32H144" dur="1.4s" repeatCount="indefinite"/></circle>
+      <circle r="4" fill="#00ADD8"><animateMotion path="M208 32H296" begin=".45s" dur="1.4s" repeatCount="indefinite"/></circle>
+      <circle r="4" fill="#3FB950"><animateMotion path="M366 32H472" begin=".9s" dur="1.4s" repeatCount="indefinite"/></circle>
+    </g>
+    <g transform="translate(0 4)">
+      <rect width="48" height="56" rx="9" fill="#161B22" stroke="#58A6FF"/>
+      <path d="M13 16H35M13 24H31M13 32H34" stroke="#58A6FF" stroke-width="2" stroke-linecap="round"/>
+      <text x="24" y="48" text-anchor="middle" fill="#58A6FF" font-size="9">POST</text>
+    </g>
+    <g transform="translate(144 4)">
+      <rect width="64" height="56" rx="9" fill="#161B22" stroke="#D29922"/>
+      <path d="M14 16H50M14 24H43M14 32H47" stroke="#D29922" stroke-width="2" stroke-linecap="round"/>
+      <text x="32" y="48" text-anchor="middle" fill="#D29922" font-size="9">STREAM</text>
+    </g>
+    <g transform="translate(296 0)">
+      <rect width="70" height="64" rx="10" fill="#161B22" stroke="#00ADD8"/>
+      <circle cx="20" cy="22" r="8" fill="#0D1117" stroke="#00ADD8"/><circle cx="49" cy="22" r="8" fill="#0D1117" stroke="#00ADD8"/>
+      <path d="M20 30V40M49 30V40M20 40H49" stroke="#00ADD8"/>
+      <text x="35" y="55" text-anchor="middle" fill="#00ADD8" font-size="9">FANOUT</text>
+    </g>
+    <g transform="translate(472 4)">
+      <rect width="58" height="56" rx="9" fill="#161B22" stroke="#3FB950"/>
+      <rect x="12" y="13" width="34" height="5" rx="2.5" fill="#3FB950"/><rect x="12" y="23" width="27" height="5" rx="2.5" fill="#3FB950"/><rect x="12" y="33" width="31" height="5" rx="2.5" fill="#3FB950"/>
+      <text x="29" y="50" text-anchor="middle" fill="#3FB950" font-size="8">FEED</text>
+    </g>
+  </g>
+
+  <path d="M22 183H558" stroke="#21262D"/>
+  <text x="22" y="208" fill="#C9D1D9" font-size="11">publish fast · distribute asynchronously</text>
+  <text x="22" y="230" fill="#00ADD8" font-size="10">Go</text><text x="49" y="230" fill="#484F58">·</text><text x="62" y="230" fill="#D29922" font-size="10">Redis Streams</text><text x="141" y="230" fill="#484F58">·</text><text x="154" y="230" fill="#58A6FF" font-size="10">MySQL</text>
+  <text x="558" y="230" text-anchor="end" fill="#8B949E" font-size="10">open repository ↗</text>
+</svg>
