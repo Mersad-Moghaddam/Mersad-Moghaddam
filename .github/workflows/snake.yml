@@ -8,9 +8,14 @@ on:
     branches:
       - main
 
+concurrency:
+  group: profile-telemetry
+  cancel-in-progress: true
+
 jobs:
   build:
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     permissions:
       contents: write
     steps:
@@ -20,6 +25,7 @@ jobs:
       - name: generate GitHub telemetry cards
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          STATS_TOKEN: ${{ secrets.STATS_TOKEN }}
           TARGET_USER: Mersad-Moghaddam
         run: python3 .github/scripts/generate_stats.py
 

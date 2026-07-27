@@ -6,7 +6,7 @@
     <linearGradient id="contact-line" x1="95" y1="0" x2="1100" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#58A6FF"/><stop offset=".5" stop-color="#00ADD8"/><stop offset="1" stop-color="#3FB950"/></linearGradient>
     <filter id="contact-glow" x="-100%" y="-250%" width="300%" height="600%"><feGaussianBlur stdDeviation="7"/></filter>
   </defs>
-  <style>text{font-family:"DejaVu Sans Mono",Consolas,"Liberation Mono",monospace}@media(prefers-reduced-motion:reduce){animate{display:none}}</style>
+  <style>text{font-family:"DejaVu Sans Mono",Consolas,"Liberation Mono",monospace}@media(prefers-reduced-motion:reduce){animate,animateMotion,animateTransform{display:none}}</style>
   <rect width="1200" height="170" fill="#0D1117"/>
   <path d="M1 0H1199V154Q1199 169 1184 169H16Q1 169 1 154Z" fill="url(#contact-bg)" stroke="#30363D" stroke-width="2"/>
   <path d="M1 39H1199" stroke="#30363D"/>

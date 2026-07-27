@@ -10,6 +10,7 @@ This script authenticates with the repo's own GITHUB_TOKEN (5,000 req/hour,
 scoped to the Action run), so it never competes with anyone else's quota.
 
 Env vars:
+  STATS_TOKEN    - optional classic PAT with read:user for contribution data
   GITHUB_TOKEN   - provided automatically by GitHub Actions
   TARGET_USER    - github username to report on (defaults to repo owner)
 
@@ -19,14 +20,16 @@ Output:
   dist/highlights.svg
   dist/github-signal.svg
 """
-import json
-import os
-import urllib.request
 import datetime
+import json
 import math
+import os
+import time
+import urllib.error
+import urllib.request
 
 API = "https://api.github.com"
-TOKEN = os.environ.get("GITHUB_TOKEN", "")
+TOKEN = os.environ.get("STATS_TOKEN") or os.environ.get("GITHUB_TOKEN", "")
 USER = os.environ.get("TARGET_USER") or os.environ.get("GITHUB_REPOSITORY_OWNER", "")
 
 HEADERS = {
@@ -48,10 +51,29 @@ LANG_COLORS = {
 DEFAULT_LANG_COLOR = "#8B949E"
 
 
+def request_json(req):
+    for attempt in range(3):
+        try:
+            with urllib.request.urlopen(req, timeout=15) as resp:
+                return json.loads(resp.read().decode())
+        except urllib.error.HTTPError as error:
+            retry_after = error.headers.get("Retry-After")
+            retryable = error.code in {429, 500, 502, 503, 504} or (
+                error.code == 403 and retry_after
+            )
+            if not retryable or attempt == 2:
+                raise
+            delay = int(retry_after) if retry_after and retry_after.isdigit() else 2 ** attempt
+        except (urllib.error.URLError, TimeoutError):
+            if attempt == 2:
+                raise
+            delay = 2 ** attempt
+        time.sleep(min(delay, 10))
+
+
 def gh(path):
     req = urllib.request.Request(f"{API}{path}", headers=HEADERS)
-    with urllib.request.urlopen(req, timeout=15) as resp:
-        return json.loads(resp.read().decode())
+    return request_json(req)
 
 
 def gh_graphql(query, variables):
@@ -59,8 +81,7 @@ def gh_graphql(query, variables):
     req = urllib.request.Request(
         f"{API}/graphql", data=body, headers={**HEADERS, "Content-Type": "application/json"}
     )
-    with urllib.request.urlopen(req, timeout=15) as resp:
-        payload = json.loads(resp.read().decode())
+    payload = request_json(req)
     if "errors" in payload:
         raise RuntimeError(payload["errors"])
     return payload["data"]
@@ -130,10 +151,7 @@ def fetch_profile():
 
     lang_bytes = {}
     for r in owned:
-        try:
-            langs = gh(f"/repos/{USER}/{r['name']}/languages")
-        except Exception:
-            continue
+        langs = gh(f"/repos/{USER}/{r['name']}/languages")
         for lang, count in langs.items():
             lang_bytes[lang] = lang_bytes.get(lang, 0) + count
 
@@ -155,6 +173,8 @@ def esc(s):
         .replace("&", "&amp;")
         .replace("<", "&lt;")
         .replace(">", "&gt;")
+        .replace('"', "&quot;")
+        .replace("'", "&apos;")
     )
 
 
@@ -168,6 +188,7 @@ def terminal_shell(title, body_svg, width=460, height=230):
     .title    {{ fill:#8B949E; font-size:12px; }}
     .cursor   {{ fill:#58A6FF; animation: blink 1s step-end infinite; }}
     @keyframes blink {{ 0%, 100% {{ opacity:1; }} 50% {{ opacity:0; }} }}
+    @media (prefers-reduced-motion: reduce) {{ .cursor {{ animation:none; }} }}
   </style>
   <rect class="win-body" x="1" y="1" width="{width - 2}" height="{height - 2}" rx="10" />
   <rect class="bar-top"  x="1" y="1" width="{width - 2}" height="34" rx="10" />
@@ -225,7 +246,7 @@ def build_highlights_svg(p):
         (f"{p['public_repos']} repos", "#58A6FF"),
         (f"{p['stars']} stars", "#F1E05A"),
         (f"{p['followers']} followers", "#3FB950"),
-        (f"Go since {p['member_since']}", "#00ADD8"),
+        (f"GitHub since {p['member_since']}", "#00ADD8"),
     ]
     lines, x, y, h = [], 24, 60, 30
     for label, color in chips:
@@ -259,7 +280,7 @@ def build_github_signal_svg(p):
     metadata = [
         ("ORIGINAL", p["owned_repo_count"]),
         ("FOLLOWING", p["following"]),
-        ("SINCE", p["member_since"]),
+        ("GITHUB SINCE", p["member_since"]),
     ]
     metadata_lines = []
     for (label, value), x in zip(metadata, (30, 200, 370)):
@@ -284,10 +305,16 @@ def build_github_signal_svg(p):
         end_x = 720 + radius * math.cos(end_angle)
         end_y = 165 + radius * math.sin(end_angle)
         large_arc = 1 if sweep > math.pi else 0
-        ring_segments.append(
-            f'  <path d="M{start_x:.2f} {start_y:.2f} A{radius} {radius} 0 {large_arc} 1 '
-            f'{end_x:.2f} {end_y:.2f}" fill="none" stroke="{color}" stroke-width="13" />'
-        )
+        if count == total:
+            ring_segments.append(
+                f'  <circle cx="720" cy="165" r="{radius}" fill="none" '
+                f'stroke="{color}" stroke-width="13" />'
+            )
+        else:
+            ring_segments.append(
+                f'  <path d="M{start_x:.2f} {start_y:.2f} A{radius} {radius} 0 {large_arc} 1 '
+                f'{end_x:.2f} {end_y:.2f}" fill="none" stroke="{color}" stroke-width="13" />'
+            )
         start_angle = end_angle
         y = 92 + index * 30
         legend.extend([
@@ -312,7 +339,9 @@ def build_github_signal_svg(p):
   </defs>
   <style>
     text {{ font-family: "DejaVu Sans Mono", Consolas, "Liberation Mono", monospace; }}
-    @media (prefers-reduced-motion: reduce) {{ animate {{ display:none; }} }}
+    @media (prefers-reduced-motion: reduce) {{
+      animate, animateTransform {{ display:none; }}
+    }}
   </style>
   <rect width="{width}" height="{height}" fill="#0D1117" />
   <rect x="1" width="{width - 2}" height="{height}" fill="#0D1117" stroke="#30363D" stroke-width="2" />
@@ -390,6 +419,9 @@ def build_rhythm_svg(total, days):
 
 
 def main():
+    if not USER:
+        raise SystemExit("Set TARGET_USER or GITHUB_REPOSITORY_OWNER before generating telemetry.")
+
     os.makedirs("dist", exist_ok=True)
     p = fetch_profile()
 

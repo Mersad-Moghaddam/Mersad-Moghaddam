@@ -24,7 +24,7 @@
   <style>
     text { font-family:"DejaVu Sans Mono",Consolas,"Liberation Mono",monospace; }
     @media (prefers-reduced-motion: reduce) {
-      animate, animateMotion { display:none; }
+      animate, animateMotion, animateTransform { display:none; }
       .packet { display:none; }
     }
   </style>
@@ -97,7 +97,7 @@
     <path d="M35 42V17M35 42H97" stroke="#8B949E"/>
     <path d="M40 37L53 29L65 33L78 20L93 24" stroke="#00ADD8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
     <circle cx="78" cy="20" r="3" fill="#00ADD8">
-      <animate attributeName="r" values="3;5;3" dur="2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values=".5;1;.5" dur="2s" repeatCount="indefinite"/>
     </circle>
     <text x="65" y="58" text-anchor="middle" fill="#F0F6FC" font-size="10">MEASURE</text>
     <text x="65" y="72" text-anchor="middle" fill="#8B949E" font-size="7">ASK THE DATA</text>

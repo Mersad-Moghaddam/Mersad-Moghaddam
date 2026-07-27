@@ -7,7 +7,7 @@
   </defs>
   <style>
     text { font-family:"DejaVu Sans Mono",Consolas,"Liberation Mono",monospace; }
-    @media (prefers-reduced-motion: reduce) { animate,animateMotion { display:none; } }
+    @media (prefers-reduced-motion: reduce) { animate,animateMotion,animateTransform { display:none; } }
   </style>
   <rect width="580" height="250" fill="#0D1117"/>
   <rect x="1" width="578" height="250" fill="url(#w-bg)" stroke="#30363D" stroke-width="2"/>

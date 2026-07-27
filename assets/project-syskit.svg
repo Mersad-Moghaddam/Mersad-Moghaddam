@@ -14,7 +14,7 @@
   </defs>
   <style>
     text { font-family:"DejaVu Sans Mono",Consolas,"Liberation Mono",monospace; }
-    @media (prefers-reduced-motion: reduce) { animate,animateMotion { display:none; } }
+    @media (prefers-reduced-motion: reduce) { animate,animateMotion,animateTransform { display:none; } }
   </style>
 
   <rect width="580" height="250" fill="#0D1117"/>
@@ -56,7 +56,7 @@
       <path d="M13 18H49M13 29H43M13 40H47" stroke="#3FB950" stroke-width="2" stroke-linecap="round"/>
       <path d="M69 14V45M69 45H109M73 39L82 31L91 35L104 20" stroke="#58A6FF" stroke-linecap="round" stroke-linejoin="round"/>
       <circle cx="104" cy="20" r="3" fill="#58A6FF">
-        <animate attributeName="r" values="3;5;3" dur="2s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values=".5;1;.5" dur="2s" repeatCount="indefinite"/>
       </circle>
       <text x="61" y="62" text-anchor="middle" fill="#3FB950" font-size="8">TABLE · JSON · TUI</text>
     </g>

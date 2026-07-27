@@ -23,7 +23,7 @@
 
   <style>
     text { font-family:"DejaVu Sans Mono",Consolas,"Liberation Mono",monospace; }
-    @media (prefers-reduced-motion: reduce) { animate { display:none; } }
+    @media (prefers-reduced-motion: reduce) { animate,animateMotion,animateTransform { display:none; } }
   </style>
 
   <rect width="1200" height="400" fill="#0D1117"/>

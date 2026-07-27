@@ -38,7 +38,7 @@
     .good { fill: #3FB950; }
     .terminal-line { font-size: 14px; }
     @media (prefers-reduced-motion: reduce) {
-      animate, animateMotion { display: none; }
+      animate, animateMotion, animateTransform { display: none; }
       .packet { display: none; }
     }
   </style>
@@ -165,14 +165,14 @@
       <text x="204" y="0" text-anchor="end" class="good" font-size="11">41</text>
       <rect x="0" y="10" width="204" height="5" rx="2.5" fill="#21262D"/>
       <rect class="metric-bar" x="0" y="10" width="74" height="5" rx="2.5" fill="#3FB950">
-        <animate attributeName="width" values="26;74;74" keyTimes="0;.4;1" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values=".65;1;.65" dur="3.2s" repeatCount="indefinite"/>
       </rect>
 
       <text x="0" y="42" class="muted" font-size="10">P99 LATENCY</text>
       <text x="204" y="42" text-anchor="end" class="good" font-size="11">96ms</text>
       <rect x="0" y="52" width="204" height="5" rx="2.5" fill="#21262D"/>
       <rect class="metric-bar" x="0" y="52" width="108" height="5" rx="2.5" fill="#3FB950">
-        <animate attributeName="width" values="38;108;108" keyTimes="0;.4;1" dur="4s" repeatCount="indefinite"/>
+        <animate attributeName="opacity" values=".65;1;.65" begin="-.8s" dur="3.2s" repeatCount="indefinite"/>
       </rect>
 
       <text x="0" y="84" class="muted" font-size="10">RACE DETECTOR</text>

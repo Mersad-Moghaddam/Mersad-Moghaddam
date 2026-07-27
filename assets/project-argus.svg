@@ -2,7 +2,7 @@
   <title id="ar-title">Argus</title>
   <desc id="ar-desc">A distributed uptime monitor with queued probes and live operational signals.</desc>
   <defs><linearGradient id="ar-bg" x1="12" y1="10" x2="565" y2="245" gradientUnits="userSpaceOnUse"><stop stop-color="#0D1117"/><stop offset="1" stop-color="#101A1A"/></linearGradient></defs>
-  <style>text{font-family:"DejaVu Sans Mono",Consolas,"Liberation Mono",monospace}@media(prefers-reduced-motion:reduce){animate{display:none}}</style>
+  <style>text{font-family:"DejaVu Sans Mono",Consolas,"Liberation Mono",monospace}@media(prefers-reduced-motion:reduce){animate,animateMotion,animateTransform{display:none}}</style>
   <rect width="580" height="250" fill="#0D1117"/>
   <rect x="1" width="578" height="250" fill="url(#ar-bg)" stroke="#30363D" stroke-width="2"/>
   <path d="M1 38H579" stroke="#30363D"/>
