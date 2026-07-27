@@ -24,6 +24,7 @@
     @media (prefers-reduced-motion: reduce) { animate { display:none; } }
   </style>
 
+  <rect width="1200" height="280" fill="#0D1117"/>
   <rect x="1" y="1" width="1198" height="278" rx="15" fill="url(#about-bg)" stroke="#30363D" stroke-width="2"/>
   <rect x="1" y="1" width="1198" height="278" rx="15" fill="url(#about-grid)"/>
   <path d="M1 42H1199" stroke="#30363D"/>

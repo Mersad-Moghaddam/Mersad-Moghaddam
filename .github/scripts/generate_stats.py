@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-Generates three self-hosted, dependency-free SVG cards for a GitHub profile
-README: a stats card, a top-languages card, and a highlights strip.
+Generates self-hosted, dependency-free SVG telemetry for a GitHub profile
+README, including a unified full-width signal console.
 
 Replaces github-readme-stats.vercel.app and github-profile-trophy.vercel.app,
 which are shared free instances subject to GitHub API rate limiting.
@@ -17,6 +17,7 @@ Output:
   dist/stats-card.svg
   dist/top-langs.svg
   dist/highlights.svg
+  dist/github-signal.svg
 """
 import json
 import os
@@ -241,6 +242,68 @@ def build_highlights_svg(p):
     return terminal_shell("highlights", body, width=650, height=y + h + 24)
 
 
+def build_github_signal_svg(p):
+    width, height = 1200, 280
+    rows = [
+        ("Public repos", p["public_repos"]),
+        ("Original repos", p["owned_repo_count"]),
+        ("Followers", p["followers"]),
+        ("Stars earned", p["stars"]),
+        ("Following", p["following"]),
+        ("Member since", p["member_since"]),
+    ]
+
+    stats = []
+    positions = [(38, 120), (300, 120), (38, 165), (300, 165), (38, 210), (300, 210)]
+    for (label, value), (x, y) in zip(rows, positions):
+        stats.append(
+            f'  <text x="{x}" y="{y}" font-size="11" fill="#8B949E">{esc(label).upper()}</text>'
+            f'\n  <text x="{x}" y="{y + 23}" font-size="18" fill="#3FB950">{esc(value)}</text>'
+        )
+
+    total = sum(p["lang_bytes"].values()) or 1
+    top = sorted(p["lang_bytes"].items(), key=lambda item: -item[1])[:6]
+    langs = []
+    y = 86
+    for lang, count in top:
+        pct = count / total * 100
+        color = LANG_COLORS.get(lang, DEFAULT_LANG_COLOR)
+        bar_width = max(4, 310 * pct / 100)
+        langs.extend([
+            f'  <text x="630" y="{y + 9}" font-size="11" fill="#C9D1D9">{esc(lang)}</text>',
+            f'  <rect x="760" y="{y}" width="310" height="10" rx="5" fill="#21262D" />',
+            f'  <rect x="760" y="{y}" width="{bar_width:.1f}" height="10" rx="5" fill="{color}" />',
+            f'  <text x="1148" y="{y + 9}" text-anchor="end" font-size="10" fill="#8B949E">{pct:4.1f}%</text>',
+        ])
+        y += 29
+
+    return f'''<svg width="{width}" height="{height}" viewBox="0 0 {width} {height}" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live GitHub profile and language telemetry for {esc(USER)}">
+  <title>{esc(USER)} — live GitHub signal</title>
+  <style>
+    text {{ font-family: "DejaVu Sans Mono", Consolas, "Liberation Mono", monospace; }}
+    @media (prefers-reduced-motion: reduce) {{ animate {{ display:none; }} }}
+  </style>
+  <rect width="{width}" height="{height}" fill="#0D1117" />
+  <rect x="1" y="1" width="{width - 2}" height="{height - 2}" fill="#0D1117" stroke="#30363D" stroke-width="2" />
+  <path d="M1 42H1199" stroke="#30363D" />
+  <circle cx="22" cy="21" r="6" fill="#FF5F56" />
+  <circle cx="42" cy="21" r="6" fill="#FFBD2E" />
+  <circle cx="62" cy="21" r="6" fill="#3FB950" />
+  <text x="600" y="26" text-anchor="middle" fill="#8B949E" font-size="12">github.signal · live API telemetry</text>
+  <circle cx="1092" cy="21" r="5" fill="#3FB950">
+    <animate attributeName="opacity" values=".45;1;.45" dur="2.5s" repeatCount="indefinite" />
+  </circle>
+  <text x="1105" y="25" fill="#3FB950" font-size="10">REFRESH DAILY</text>
+  <path d="M590 62V254" stroke="#30363D" />
+  <text x="38" y="82" fill="#58A6FF" font-size="13">$ gh profile --user {esc(USER)}</text>
+  <text x="630" y="66" fill="#8B949E" font-size="10">LANGUAGES / PUBLIC ORIGINAL REPOSITORIES / BY BYTES</text>
+{chr(10).join(stats)}
+{chr(10).join(langs)}
+  <text x="38" y="258" fill="#8B949E" font-size="9">source: api.github.com · self-hosted by this repository</text>
+  <text x="1148" y="258" text-anchor="end" fill="#8B949E" font-size="9">shared rate limits: none</text>
+</svg>'''
+
+
 def build_rhythm_svg(total, days):
     current, longest = compute_streaks(days)
 
@@ -296,6 +359,8 @@ def main():
         f.write(build_langs_svg(p["lang_bytes"]))
     with open("dist/highlights.svg", "w", encoding="utf-8") as f:
         f.write(build_highlights_svg(p))
+    with open("dist/github-signal.svg", "w", encoding="utf-8") as f:
+        f.write(build_github_signal_svg(p))
 
     if TOKEN:
         try:

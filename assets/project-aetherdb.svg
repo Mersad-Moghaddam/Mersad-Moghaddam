@@ -3,6 +3,7 @@
   <desc id="a-desc">An embedded mmap-backed key-value storage engine written in Go.</desc>
   <defs><linearGradient id="a-bg" x1="10" y1="12" x2="565" y2="245" gradientUnits="userSpaceOnUse"><stop stop-color="#0D1117"/><stop offset="1" stop-color="#121820"/></linearGradient></defs>
   <style>text{font-family:"DejaVu Sans Mono",Consolas,"Liberation Mono",monospace}@media(prefers-reduced-motion:reduce){animate,animateMotion{display:none}}</style>
+  <rect width="580" height="250" fill="#0D1117"/>
   <rect x="1" y="1" width="578" height="248" rx="14" fill="url(#a-bg)" stroke="#30363D" stroke-width="2"/>
   <path d="M1 38H579" stroke="#30363D"/>
   <circle cx="20" cy="19" r="5" fill="#FF5F56"/><circle cx="37" cy="19" r="5" fill="#FFBD2E"/><circle cx="54" cy="19" r="5" fill="#3FB950"/>

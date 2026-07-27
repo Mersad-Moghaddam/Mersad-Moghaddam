@@ -44,6 +44,7 @@
   </style>
 
   <!-- control-room shell -->
+  <rect width="1200" height="420" fill="#0D1117"/>
   <rect x="1" y="1" width="1198" height="418" rx="16" fill="url(#incident-bg)" stroke="#30363D" stroke-width="2"/>
   <rect x="1" y="1" width="1198" height="418" rx="16" fill="url(#incident-grid)"/>
   <path d="M1 44H1199" stroke="#30363D"/>

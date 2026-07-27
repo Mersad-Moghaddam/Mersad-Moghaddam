@@ -7,6 +7,7 @@
     <filter id="contact-glow" x="-100%" y="-250%" width="300%" height="600%"><feGaussianBlur stdDeviation="7"/></filter>
   </defs>
   <style>text{font-family:"DejaVu Sans Mono",Consolas,"Liberation Mono",monospace}@media(prefers-reduced-motion:reduce){animate{display:none}}</style>
+  <rect width="1200" height="170" fill="#0D1117"/>
   <rect x="1" y="1" width="1198" height="168" rx="15" fill="url(#contact-bg)" stroke="#30363D" stroke-width="2"/>
   <path d="M1 39H1199" stroke="#30363D"/>
   <circle cx="22" cy="20" r="5" fill="#FF5F56"/><circle cx="39" cy="20" r="5" fill="#FFBD2E"/><circle cx="56" cy="20" r="5" fill="#3FB950"/>
