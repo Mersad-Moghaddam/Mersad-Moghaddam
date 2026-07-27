@@ -12,7 +12,7 @@
 <br><br>
 
 <!-- ABOUT -->
-<img src="./assets/about-console.svg" width="100%" alt="About Mersad: backend engineer focused on Go, bounded concurrency, predictable failures, and useful telemetry">
+<img src="./assets/about-console.svg" width="100%" alt="Current engineering focus: runtimes, storage, operations, bounded concurrency, predictable failures, and useful telemetry">
 
 <br><br>
 

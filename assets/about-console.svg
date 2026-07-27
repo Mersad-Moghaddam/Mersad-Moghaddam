@@ -1,6 +1,6 @@
 <svg width="1200" height="280" viewBox="0 0 1200 280" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="about-title about-desc">
-  <title id="about-title">About Mersad Moghaddam</title>
-  <desc id="about-desc">A backend engineer identity console focused on Go, bounded concurrency, predictable failures, and useful signals.</desc>
+  <title id="about-title">Current engineering focus</title>
+  <desc id="about-desc">An engineering focus console spanning runtimes, storage, operations, bounded concurrency, predictable failures, and useful signals.</desc>
   <defs>
     <linearGradient id="about-bg" x1="24" y1="18" x2="1160" y2="270" gradientUnits="userSpaceOnUse">
       <stop stop-color="#0D1117"/>
@@ -30,24 +30,24 @@
   <circle cx="22" cy="21" r="6" fill="#FF5F56"/>
   <circle cx="42" cy="21" r="6" fill="#FFBD2E"/>
   <circle cx="62" cy="21" r="6" fill="#3FB950"/>
-  <text x="600" y="26" text-anchor="middle" fill="#8B949E" font-size="12">identity.service · /about</text>
+  <text x="600" y="26" text-anchor="middle" fill="#8B949E" font-size="12">focus.service · /now</text>
   <text x="1168" y="26" text-anchor="end" fill="#3FB950" font-size="11">● ONLINE</text>
 
   <g transform="translate(38 66)">
     <rect width="690" height="186" rx="11" fill="#090D12" stroke="#21262D"/>
-    <rect x="20" y="20" width="78" height="28" rx="14" fill="#00ADD8" stroke="#00ADD8"/>
-    <text x="59" y="39" text-anchor="middle" fill="#0D1117" font-size="12" font-weight="700">WHOAMI</text>
-    <text x="20" y="86" fill="#F0F6FC" font-family="DejaVu Sans,Arial,sans-serif" font-size="30" font-weight="700">Mersad Moghaddam</text>
-    <text x="20" y="116" fill="#58A6FF" font-size="15">BACKEND ENGINEER · GO DEVELOPER</text>
-    <text x="20" y="150" fill="#C9D1D9" font-size="13">Concurrent services, data-heavy APIs, observable systems.</text>
-    <text x="20" y="174" fill="#8B949E" font-size="12">Mashhad, Iran  /  simple boundaries  /  calm production</text>
+    <rect x="20" y="20" width="128" height="28" rx="14" fill="#00ADD8" stroke="#00ADD8"/>
+    <text x="84" y="39" text-anchor="middle" fill="#0D1117" font-size="11" font-weight="700">CURRENT FOCUS</text>
+    <text x="20" y="86" fill="#F0F6FC" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="700">Runtime → Storage → Operations</text>
+    <text x="20" y="116" fill="#58A6FF" font-size="13">GO SYSTEMS · LINUX INTERNALS · DISTRIBUTED BACKENDS</text>
+    <text x="20" y="150" fill="#C9D1D9" font-size="13">Following data from the request down to the kernel—and back.</text>
+    <text x="20" y="174" fill="#8B949E" font-size="12">learn deeply  /  build simply  /  observe honestly</text>
 
     <g transform="translate(608 34)">
       <circle r="38" fill="#0D1117" stroke="#00ADD8" stroke-width="1.5"/>
       <circle r="31" stroke="#00ADD8" stroke-opacity=".3" stroke-dasharray="3 5">
         <animateTransform attributeName="transform" type="rotate" values="0;360" dur="14s" repeatCount="indefinite"/>
       </circle>
-      <text y="8" text-anchor="middle" fill="#00ADD8" font-family="DejaVu Sans,Arial,sans-serif" font-size="27" font-weight="700">Go</text>
+      <text y="7" text-anchor="middle" fill="#00ADD8" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="700">I/O</text>
     </g>
   </g>
 
