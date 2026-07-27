@@ -59,40 +59,21 @@ func main() {
 
 <br>
 
-## How I actually think about it
-
-```mermaid
-flowchart LR
-    A[Simple paths] --> B[Explicit costs]
-    B --> C[Boring production]
-    C --> D[Everyone sleeps at night]
-    D -. feeds back into .-> A
-
-    style A fill:#0D1117,stroke:#58A6FF,color:#C9D1D9
-    style B fill:#0D1117,stroke:#58A6FF,color:#C9D1D9
-    style C fill:#0D1117,stroke:#58A6FF,color:#C9D1D9
-    style D fill:#0D1117,stroke:#58A6FF,color:#C9D1D9
-```
-
-<br>
-
 ## GitHub signal
 
+<sub>Every card below is self-generated from the real GitHub API by a workflow in this repo — no shared third-party instance, so it can't go down with someone else's rate limit.</sub>
+
 <div align="center">
-<img height="165" src="https://github-readme-stats.vercel.app/api?username=Mersad-Moghaddam&show_icons=true&theme=tokyonight&hide_border=true&count_private=true&cache_seconds=1800" alt="Mersad's GitHub stats" />
-<img height="165" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Mersad-Moghaddam&layout=compact&theme=tokyonight&hide_border=true&cache_seconds=1800" alt="Top languages" />
+<img width="49%" src="https://raw.githubusercontent.com/Mersad-Moghaddam/Mersad-Moghaddam/output/stats-card.svg" alt="GitHub stats" />
+<img width="49%" src="https://raw.githubusercontent.com/Mersad-Moghaddam/Mersad-Moghaddam/output/top-langs.svg" alt="Top languages by bytes" />
 </div>
 
 <div align="center">
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=Mersad-Moghaddam&theme=tokyonight&hide_border=true" alt="GitHub streak stats" />
+<img src="https://raw.githubusercontent.com/Mersad-Moghaddam/Mersad-Moghaddam/output/contribution-rhythm.svg" alt="Contribution heatmap with current and longest streak" width="90%" />
 </div>
 
 <div align="center">
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=Mersad-Moghaddam&theme=tokyo-night&hide_border=true" alt="Contribution activity graph" width="97%" />
-</div>
-
-<div align="center">
-<img src="https://github-profile-trophy.vercel.app/?username=Mersad-Moghaddam&theme=tokyonight&no-frame=true&row=1&column=6" alt="GitHub trophies" />
+<img src="https://raw.githubusercontent.com/Mersad-Moghaddam/Mersad-Moghaddam/output/highlights.svg" alt="Highlights" width="90%" />
 </div>
 
 <br>
