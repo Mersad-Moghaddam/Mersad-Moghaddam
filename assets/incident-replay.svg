@@ -1,56 +1,210 @@
-<svg viewBox="0 0 680 250" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Terminal replay of an incident being resolved">
-  <title>incident.log — live tail</title>
+<svg width="1200" height="420" viewBox="0 0 1200 420" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="incident-title incident-desc">
+  <title id="incident-title">Go backend incident replay</title>
+  <desc id="incident-desc">An animated production control room showing a Go service diagnose an unbounded worker problem, apply backpressure, pass the race detector, and return to healthy operation.</desc>
+
+  <defs>
+    <linearGradient id="incident-bg" x1="20" y1="18" x2="1160" y2="405" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D1117"/>
+      <stop offset=".58" stop-color="#101923"/>
+      <stop offset="1" stop-color="#0D1117"/>
+    </linearGradient>
+    <linearGradient id="go-line" x1="726" y1="180" x2="1138" y2="180" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#58A6FF"/>
+      <stop offset=".5" stop-color="#00ADD8"/>
+      <stop offset="1" stop-color="#3FB950"/>
+    </linearGradient>
+    <radialGradient id="panel-glow" cx="0" cy="0" r="1" gradientTransform="translate(944 192) rotate(90) scale(208 260)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00ADD8" stop-opacity=".1"/>
+      <stop offset="1" stop-color="#00ADD8" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="dot-glow" x="-250%" y="-250%" width="600%" height="600%">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+    <pattern id="incident-grid" width="24" height="24" patternUnits="userSpaceOnUse">
+      <path d="M24 0H0V24" stroke="#8B949E" stroke-opacity=".055"/>
+    </pattern>
+  </defs>
+
   <style>
-    text { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
-    .bar-top    { fill:#161B22; }
-    .win-body   { fill:#0D1117; stroke:#30363D; stroke-width:1; }
-    .title      { fill:#8B949E; font-size:12px; }
-    .ln         { font-size:14px; opacity:0; animation: reveal 9s ease-in-out infinite; }
-    .prompt     { fill:#58A6FF; }
-    .alert      { fill:#F85149; }
-    .trace      { fill:#D29922; }
-    .ok         { fill:#3FB950; }
-    .l1 { animation-delay: 0s; }
-    .l2 { animation-delay: 1.1s; }
-    .l3 { animation-delay: 2.2s; }
-    .l4 { animation-delay: 3.3s; }
-    .l5 { animation-delay: 4.4s; }
-    .l6 { animation-delay: 5.5s; }
-    .l7 { animation-delay: 6.6s; }
-    .cursor { fill:#58A6FF; animation: blink 1s step-end infinite; }
-    @keyframes reveal {
-      0%   { opacity: 0; }
-      5%   { opacity: 1; }
-      84%  { opacity: 1; }
-      95%  { opacity: 0; }
-      100% { opacity: 0; }
+    text {
+      font-family: "DejaVu Sans Mono", Consolas, "Liberation Mono", monospace;
     }
-    @keyframes blink {
-      0%, 100% { opacity: 1; }
-      50%      { opacity: 0; }
-    }
+    .muted { fill: #8B949E; }
+    .text { fill: #C9D1D9; }
+    .blue { fill: #58A6FF; }
+    .go { fill: #00ADD8; }
+    .warn { fill: #D29922; }
+    .bad { fill: #F85149; }
+    .good { fill: #3FB950; }
+    .terminal-line { font-size: 14px; }
     @media (prefers-reduced-motion: reduce) {
-      .ln { opacity: 1; animation: none; }
-      .cursor { animation: none; }
+      animate, animateMotion { display: none; }
+      .packet { display: none; }
     }
   </style>
 
-  <rect class="win-body" x="1" y="1" width="678" height="248" rx="10" />
-  <rect class="bar-top"  x="1" y="1" width="678" height="34" rx="10" />
-  <rect class="bar-top"  x="1" y="18" width="678" height="17" />
+  <!-- control-room shell -->
+  <rect x="1" y="1" width="1198" height="418" rx="16" fill="url(#incident-bg)" stroke="#30363D" stroke-width="2"/>
+  <rect x="1" y="1" width="1198" height="418" rx="16" fill="url(#incident-grid)"/>
+  <path d="M1 44H1199" stroke="#30363D"/>
+  <circle cx="23" cy="22" r="6" fill="#FF5F56"/>
+  <circle cx="43" cy="22" r="6" fill="#FFBD2E"/>
+  <circle cx="63" cy="22" r="6" fill="#3FB950"/>
+  <text x="600" y="27" text-anchor="middle" class="muted" font-size="12">go-backend.incident · live replay</text>
+  <circle cx="1108" cy="22" r="5" fill="#3FB950"/>
+  <text x="1120" y="27" class="good" font-size="11">HEALTHY</text>
 
-  <circle cx="22" cy="18" r="6" fill="#FF5F56" />
-  <circle cx="42" cy="18" r="6" fill="#FFBD2E" />
-  <circle cx="62" cy="18" r="6" fill="#27C93F" />
-  <text x="340" y="23" text-anchor="middle" class="title">incident.log — live tail</text>
+  <!-- terminal -->
+  <g transform="translate(24 64)">
+    <rect width="650" height="330" rx="10" fill="#090D12" stroke="#30363D"/>
+    <path d="M0 36H650" stroke="#21262D"/>
+    <text x="18" y="24" class="muted" font-size="11">~/services/api</text>
+    <rect x="540" y="10" width="92" height="18" rx="9" fill="#161B22" stroke="#30363D"/>
+    <circle cx="553" cy="19" r="3" fill="#00ADD8"/>
+    <text x="562" y="23" class="go" font-size="10">go1.26.5</text>
 
-  <text class="ln l1 prompt" x="24" y="66">$ tail -f /var/log/api.log</text>
-  <text class="ln l2 alert"  x="24" y="94">[ALERT] p99 latency 4.2s · error rate 12%</text>
-  <text class="ln l3 trace"  x="24" y="122">[TRACE] unbounded retry loop on priceFetcher</text>
-  <text class="ln l4 prompt" x="24" y="150">$ patch --jitter --max-attempts=3</text>
-  <text class="ln l5 ok"     x="24" y="178">[OK] circuit breaker: CLOSED</text>
-  <text class="ln l6 prompt" x="24" y="206">$ kubectl rollout status deployment/api</text>
-  <text class="ln l7 ok"     x="24" y="228">[OK] p99 142ms · production saved ✓</text>
+    <g class="terminal-line">
+      <text y="66"><tspan x="18" class="blue">$</tspan><tspan x="34" class="text">go test -race ./internal/worker/...</tspan></text>
+      <g class="pulse-warning">
+        <rect x="12" y="78" width="622" height="26" rx="5" fill="#F85149" fill-opacity=".08" stroke="#F85149" stroke-opacity=".25"/>
+        <circle cx="24" cy="91" r="4" fill="#F85149"/>
+        <text x="36" y="96" class="bad">WARNING: goroutine count rising without bound</text>
+      </g>
+      <text y="126"><tspan x="18" class="warn">trace</tspan><tspan x="76" class="muted">jobs=18,421  goroutines=18,437  queue=unbounded</tspan></text>
+      <text y="152"><tspan x="18" class="warn">cause</tspan><tspan x="76" class="text">go handle(job)</tspan><tspan x="204" class="muted">spawned per request</tspan></text>
+      <text y="188"><tspan x="18" class="blue">$</tspan><tspan x="34" class="text">patch --workers=32 --queue=256 --timeout=2s</tspan></text>
+      <text y="214"><tspan x="18" class="go">diff</tspan><tspan x="76" class="text">pool := worker.New(32, WithBackpressure())</tspan></text>
+      <text y="240"><tspan x="18" class="good">PASS</tspan><tspan x="76" class="muted">race=clean  goroutines=41  p99=96ms</tspan></text>
+      <text y="276"><tspan x="18" class="blue">$</tspan><tspan x="34" class="text">ship --canary=10% &amp;&amp; watch ./signals</tspan></text>
+      <text y="306"><tspan x="18" class="good">✓ stable</tspan><tspan x="96" class="muted">production is boring again</tspan><tspan x="340" class="go">✦</tspan></text>
+      <rect x="505" y="294" width="8" height="14" rx="1" class="cursor" fill="#00ADD8">
+        <animate attributeName="opacity" values="1;1;0;0" keyTimes="0;.46;.47;1" dur="1s" repeatCount="indefinite"/>
+      </rect>
+    </g>
+  </g>
 
-  <rect class="cursor" x="24" y="232" width="8" height="13" />
+  <!-- service topology -->
+  <g transform="translate(698 64)">
+    <rect width="478" height="330" rx="10" fill="#0D1117" fill-opacity=".84" stroke="#30363D"/>
+    <rect width="478" height="330" rx="10" fill="url(#panel-glow)"/>
+    <text x="18" y="26" class="muted" font-size="11">bounded-concurrency.map</text>
+    <text x="460" y="26" text-anchor="end" class="good" font-size="11">backpressure: ON</text>
+
+    <!-- connections -->
+    <path d="M76 112H152" stroke="#30363D" stroke-width="3" stroke-linecap="round"/>
+    <path d="M220 112H278" stroke="#30363D" stroke-width="3" stroke-linecap="round"/>
+    <path d="M368 112H418" stroke="#30363D" stroke-width="3" stroke-linecap="round"/>
+    <path d="M76 112H152M220 112H278M368 112H418" stroke="url(#go-line)" stroke-width="1.5" stroke-dasharray="5 7">
+      <animate attributeName="stroke-dashoffset" values="24;0" dur="2.2s" repeatCount="indefinite"/>
+    </path>
+
+    <!-- moving request packets -->
+    <g class="packet">
+      <circle r="4" fill="#58A6FF">
+        <animateMotion path="M76 112H152" dur="1.25s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="7" fill="#58A6FF" opacity=".3" filter="url(#dot-glow)">
+        <animateMotion path="M76 112H152" dur="1.25s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="4" fill="#00ADD8">
+        <animateMotion path="M220 112H278" dur="1.25s" begin=".42s" repeatCount="indefinite"/>
+      </circle>
+      <circle r="4" fill="#3FB950">
+        <animateMotion path="M368 112H418" dur="1.25s" begin=".84s" repeatCount="indefinite"/>
+      </circle>
+    </g>
+
+    <!-- API node -->
+    <g transform="translate(26 76)">
+      <rect width="50" height="72" rx="10" fill="#161B22" stroke="#58A6FF" stroke-width="1.5"/>
+      <path d="M14 22H36M14 31H31M14 40H34" stroke="#58A6FF" stroke-width="2" stroke-linecap="round"/>
+      <text x="25" y="60" text-anchor="middle" class="blue" font-size="10">API</text>
+    </g>
+
+    <!-- channel node -->
+    <g transform="translate(152 76)">
+      <rect width="68" height="72" rx="10" fill="#161B22" stroke="#D29922" stroke-width="1.5"/>
+      <rect x="12" y="18" width="9" height="20" rx="2" fill="#D29922" opacity=".45"/>
+      <rect x="25" y="18" width="9" height="20" rx="2" fill="#D29922" opacity=".7"/>
+      <rect x="38" y="18" width="9" height="20" rx="2" fill="#D29922"/>
+      <text x="34" y="60" text-anchor="middle" class="warn" font-size="10">CHAN 256</text>
+    </g>
+
+    <!-- worker pool -->
+    <g transform="translate(278 66)">
+      <rect width="90" height="92" rx="12" fill="#161B22" stroke="#00ADD8" stroke-width="1.5"/>
+      <g transform="translate(17 18)">
+        <g class="worker">
+          <animate attributeName="opacity" values=".72;1;.72" dur="2.4s" repeatCount="indefinite"/>
+          <circle cx="10" cy="10" r="10" fill="#00ADD8" fill-opacity=".16" stroke="#00ADD8"/>
+          <text x="10" y="14" text-anchor="middle" class="go" font-size="10">go</text>
+        </g>
+        <g class="worker two" transform="translate(36 0)">
+          <animate attributeName="opacity" values=".72;1;.72" begin="-.8s" dur="2.4s" repeatCount="indefinite"/>
+          <circle cx="10" cy="10" r="10" fill="#00ADD8" fill-opacity=".16" stroke="#00ADD8"/>
+          <text x="10" y="14" text-anchor="middle" class="go" font-size="10">go</text>
+        </g>
+        <g class="worker three" transform="translate(18 27)">
+          <animate attributeName="opacity" values=".72;1;.72" begin="-1.6s" dur="2.4s" repeatCount="indefinite"/>
+          <circle cx="10" cy="10" r="10" fill="#00ADD8" fill-opacity=".16" stroke="#00ADD8"/>
+          <text x="10" y="14" text-anchor="middle" class="go" font-size="10">go</text>
+        </g>
+      </g>
+      <text x="45" y="80" text-anchor="middle" class="go" font-size="10">POOL ×32</text>
+    </g>
+
+    <!-- database -->
+    <g transform="translate(418 78)">
+      <ellipse cx="24" cy="9" rx="24" ry="9" fill="#161B22" stroke="#3FB950" stroke-width="1.5"/>
+      <path d="M0 9V55C0 60 11 64 24 64C37 64 48 60 48 55V9" fill="#161B22" stroke="#3FB950" stroke-width="1.5"/>
+      <path d="M0 29C0 34 11 38 24 38C37 38 48 34 48 29M0 46C0 51 11 55 24 55C37 55 48 51 48 46" stroke="#3FB950" stroke-opacity=".55"/>
+      <text x="24" y="79" text-anchor="middle" class="good" font-size="10">STORE</text>
+    </g>
+
+    <!-- healthy metrics -->
+    <g transform="translate(20 186)">
+      <text x="0" y="0" class="muted" font-size="10">GOROUTINES</text>
+      <text x="204" y="0" text-anchor="end" class="good" font-size="11">41</text>
+      <rect x="0" y="10" width="204" height="5" rx="2.5" fill="#21262D"/>
+      <rect class="metric-bar" x="0" y="10" width="74" height="5" rx="2.5" fill="#3FB950">
+        <animate attributeName="width" values="26;74;74" keyTimes="0;.4;1" dur="4s" repeatCount="indefinite"/>
+      </rect>
+
+      <text x="0" y="42" class="muted" font-size="10">P99 LATENCY</text>
+      <text x="204" y="42" text-anchor="end" class="good" font-size="11">96ms</text>
+      <rect x="0" y="52" width="204" height="5" rx="2.5" fill="#21262D"/>
+      <rect class="metric-bar" x="0" y="52" width="108" height="5" rx="2.5" fill="#3FB950">
+        <animate attributeName="width" values="38;108;108" keyTimes="0;.4;1" dur="4s" repeatCount="indefinite"/>
+      </rect>
+
+      <text x="0" y="84" class="muted" font-size="10">RACE DETECTOR</text>
+      <text x="204" y="84" text-anchor="end" class="good" font-size="11">CLEAN ✓</text>
+    </g>
+
+    <!-- tiny Go gopher, on-call and caffeinated -->
+    <g transform="translate(276 198)">
+      <path d="M46 89C35 84 30 75 31 60C32 38 42 23 62 19C82 23 92 38 93 60C94 75 89 84 78 89" fill="#00ADD8" fill-opacity=".18" stroke="#00ADD8" stroke-width="1.5"/>
+      <circle cx="43" cy="28" r="12" fill="#0D1117" stroke="#00ADD8" stroke-width="1.5"/>
+      <circle cx="81" cy="28" r="12" fill="#0D1117" stroke="#00ADD8" stroke-width="1.5"/>
+      <ellipse cx="50" cy="48" rx="10" ry="13" fill="#F0F6FC"/>
+      <ellipse cx="74" cy="48" rx="10" ry="13" fill="#F0F6FC"/>
+      <circle class="gopher-eye" cx="52" cy="51" r="4" fill="#0D1117"/>
+      <circle class="gopher-eye" cx="72" cy="51" r="4" fill="#0D1117"/>
+      <ellipse cx="62" cy="65" rx="7" ry="5" fill="#0D1117"/>
+      <rect x="57" y="70" width="5" height="8" rx="1" fill="#F0F6FC"/>
+      <rect x="63" y="70" width="5" height="8" rx="1" fill="#F0F6FC"/>
+
+      <g transform="translate(98 52)">
+        <path d="M0 0H34V28C34 35 28 40 17 40C6 40 0 35 0 28V0Z" fill="#161B22" stroke="#D29922" stroke-width="1.5"/>
+        <path d="M34 8H42C48 8 48 25 34 25" stroke="#D29922" stroke-width="1.5"/>
+        <path d="M8 -5C3 -12 13 -14 8 -21M20 -5C15 -12 25 -14 20 -21" stroke="#8B949E" stroke-linecap="round">
+          <animate attributeName="d" values="M8 -5C3 -12 13 -14 8 -21M20 -5C15 -12 25 -14 20 -21;M8 -5C13 -12 3 -14 8 -21M20 -5C25 -12 15 -14 20 -21;M8 -5C3 -12 13 -14 8 -21M20 -5C15 -12 25 -14 20 -21" dur="3s" repeatCount="indefinite"/>
+        </path>
+        <text x="17" y="24" text-anchor="middle" class="warn" font-size="10">GO</text>
+      </g>
+
+      <rect x="0" y="100" width="152" height="24" rx="12" fill="#161B22" stroke="#30363D"/>
+      <text x="76" y="116" text-anchor="middle" class="go" font-size="10">on-call, but chill.</text>
+    </g>
+  </g>
 </svg>

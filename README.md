@@ -23,56 +23,121 @@
 
 ### `00 / mission`
 
-I’m **Mersad**, a backend-focused software engineer from Mashhad, Iran. I build
-concurrent services, data-heavy systems, and APIs designed to remain understandable
-after the first version ships.
+> **I turn complicated backend behavior into systems people can reason about—under
+> load, during failure, and six months after the first release.**
 
-My favorite engineering problems live where **correctness, performance, and
-operability** meet: bounded concurrency, predictable failure modes, useful
-telemetry, and architecture that makes the next change cheaper—not harder.
+I’m **Mersad**, a backend-focused software engineer from Mashhad, Iran. My favorite
+problems live at the intersection of **correctness**, **performance**, and
+**operability**.
+
+<table>
+  <tr>
+    <td width="33%" valign="top">
+      <strong>⚙️ BUILD</strong><br><br>
+      Concurrent services, data-heavy systems, and APIs with clear boundaries.
+    </td>
+    <td width="33%" valign="top">
+      <strong>◎ OBSERVE</strong><br><br>
+      Logs, metrics, traces, and failure modes that explain what the system is doing.
+    </td>
+    <td width="33%" valign="top">
+      <strong>✦ REFINE</strong><br><br>
+      Architecture that makes the next change cheaper instead of merely surviving it.
+    </td>
+  </tr>
+</table>
 
 ```go
-type EngineeringPrinciples struct {
-    Correctness   string
-    Complexity    string
-    Observability string
+type ProductionSystem struct {
+    Concurrency  string
+    FailureMode  string
+    Signal       string
 }
 
-var production = EngineeringPrinciples{
-    Correctness:   "make invalid states difficult to represent",
-    Complexity:    "pay only for what the system actually needs",
-    Observability: "if it can fail, make the failure explain itself",
+var boringAt3AM = ProductionSystem{
+    Concurrency: "bounded",
+    FailureMode: "predictable",
+    Signal:      "useful",
 }
 ```
 
 ### `01 / selected systems`
 
-| System | Engineering problem | Core tools |
-| :--- | :--- | :--- |
-| [**Whisper Social**](https://github.com/Mersad-Moghaddam/WhisperSocial-Backend) | Event-driven social timelines with asynchronous fan-out and independently deployable services | Go · Redis Streams · MySQL |
-| [**AetherDB**](https://github.com/Mersad-Moghaddam/AetherDB) | An embedded key-value storage engine exploring mmap, zero-copy persistence, and lock-free coordination | Go · mmap · CAS |
-| [**Argus**](https://github.com/Mersad-Moghaddam/Argus) | Distributed uptime monitoring with background checks, live operational events, and production-oriented boundaries | Go · Asynq · Redis |
-| [**LinkPulse**](https://github.com/Mersad-Moghaddam/LinkPulse) | URL shortening and analytics with real-time SSE tracking and built-in observability | Go · SSE · Prometheus · Grafana |
+Four different answers to one question: **how do we keep data moving without
+losing control of the system?**
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://github.com/Mersad-Moghaddam/WhisperSocial-Backend"><strong>01 · Whisper Social ↗</strong></a>
+      <br><br>
+      An event-driven social backend where publishing stays fast and timeline
+      fan-out happens asynchronously.
+      <br><br>
+      <code>write → Redis Stream → fan-out → timeline</code>
+      <br><br>
+      <sub><code>Go</code> · <code>Redis Streams</code> · <code>MySQL</code></sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://github.com/Mersad-Moghaddam/AetherDB"><strong>02 · AetherDB ↗</strong></a>
+      <br><br>
+      An embedded key-value engine exploring what happens when storage gets close
+      to the metal.
+      <br><br>
+      <code>key → mmap → zero-copy bytes</code>
+      <br><br>
+      <sub><code>Go</code> · <code>mmap</code> · <code>lock-free CAS</code></sub>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <a href="https://github.com/Mersad-Moghaddam/Argus"><strong>03 · Argus ↗</strong></a>
+      <br><br>
+      A distributed uptime monitor that turns scheduled probes into useful,
+      observable operational events.
+      <br><br>
+      <code>probe → queue → event → signal</code>
+      <br><br>
+      <sub><code>Go</code> · <code>Asynq</code> · <code>Redis</code></sub>
+    </td>
+    <td width="50%" valign="top">
+      <a href="https://github.com/Mersad-Moghaddam/LinkPulse"><strong>04 · LinkPulse ↗</strong></a>
+      <br><br>
+      A short-link platform that treats every redirect as a real-time analytics
+      signal.
+      <br><br>
+      <code>redirect → event → SSE → dashboard</code>
+      <br><br>
+      <sub><code>Go</code> · <code>SSE</code> · <code>Prometheus</code> · <code>Grafana</code></sub>
+    </td>
+  </tr>
+</table>
 
 <div align="right">
 
-[Explore all repositories →](https://github.com/Mersad-Moghaddam?tab=repositories)
+[**Open the full systems catalog →**](https://github.com/Mersad-Moghaddam?tab=repositories)
 
 </div>
 
 ### `02 / operating system`
 
 ```text
-01  Understand the failure modes before choosing the abstraction.
-02  Keep the hot path short, measured, and unsurprising.
-03  Prefer explicit ownership over invisible coupling.
-04  Design retries, timeouts, and shutdown as product behavior.
-05  Optimize when evidence arrives; document why the trade-off exists.
+booting mersad.os ...
+
+[ OK ]  01 / map the failure modes before choosing the abstraction
+[ OK ]  02 / keep the hot path short, measured, and unsurprising
+[ OK ]  03 / make ownership explicit; invisible coupling compounds
+[ OK ]  04 / treat retries, timeouts, and shutdown as product behavior
+[ OK ]  05 / optimize when evidence arrives—and leave the reason behind
+
+status: ready to ship carefully ▮
 ```
 
-My current learning loop goes deeper into Go’s runtime and concurrency model,
-storage internals, CPU and memory behavior, distributed coordination, and the
-small operational details that turn working software into dependable software.
+> **Current trace** · Go runtime & concurrency → storage internals → CPU & memory
+> behavior → distributed coordination → calmer production systems.
+
+The loop never really ends: **learn the machine, build the system, observe reality,
+then simplify what the evidence no longer justifies.**
 
 ### `03 / toolbox`
 
@@ -120,7 +185,7 @@ small operational details that turn working software into dependable software.
 
 <div align="center">
 
-<img src="./assets/incident-replay.svg" width="96%" alt="Animated terminal replay of diagnosing and resolving a retry storm">
+<img src="./assets/incident-replay.svg" width="96%" alt="Animated Go backend replay of diagnosing unbounded goroutines and stabilizing the service with a bounded worker pool">
 
 </div>
 
