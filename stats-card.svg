@@ -1,0 +1,24 @@
+<svg viewBox="0 0 340 258" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Mersad-Moghaddam — github stats">
+  <title>Mersad-Moghaddam — github stats</title>
+  <style>
+    text { font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace; }
+    .bar-top  { fill:#161B22; }
+    .win-body { fill:#0D1117; stroke:#30363D; stroke-width:1; }
+    .title    { fill:#8B949E; font-size:12px; }
+    .cursor   { fill:#58A6FF; animation: blink 1s step-end infinite; }
+    @keyframes blink { 0%, 100% { opacity:1; } 50% { opacity:0; } }
+    @media (prefers-reduced-motion: reduce) { .cursor { animation:none; } }
+  </style>
+  <rect class="win-body" x="1" y="1" width="338" height="256" rx="10" />
+  <rect class="bar-top"  x="1" y="1" width="338" height="34" rx="10" />
+  <rect class="bar-top"  x="1" y="18" width="338" height="17" />
+  <text x="18" y="23" class="title">Mersad-Moghaddam — github stats</text>
+  <text x="24" y="66" font-size="14" fill="#58A6FF">$ gh stats --user Mersad-Moghaddam</text>
+  <text x="24" y="94" font-size="14" fill="#C9D1D9">Public repos</text><text x="300" y="94" font-size="14" fill="#3FB950" text-anchor="end">39</text>
+  <text x="24" y="118" font-size="14" fill="#C9D1D9">Original repos</text><text x="300" y="118" font-size="14" fill="#3FB950" text-anchor="end">30</text>
+  <text x="24" y="142" font-size="14" fill="#C9D1D9">Followers</text><text x="300" y="142" font-size="14" fill="#3FB950" text-anchor="end">31</text>
+  <text x="24" y="166" font-size="14" fill="#C9D1D9">Following</text><text x="300" y="166" font-size="14" fill="#3FB950" text-anchor="end">51</text>
+  <text x="24" y="190" font-size="14" fill="#C9D1D9">Stars earned</text><text x="300" y="190" font-size="14" fill="#3FB950" text-anchor="end">34</text>
+  <text x="24" y="214" font-size="14" fill="#C9D1D9">Member since</text><text x="300" y="214" font-size="14" fill="#3FB950" text-anchor="end">2021</text>
+  <rect class="cursor" x="24" y="226" width="8" height="13" />
+</svg>

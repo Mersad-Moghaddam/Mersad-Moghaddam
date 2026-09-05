@@ -1,0 +1,83 @@
+<svg width="1200" height="300" viewBox="0 0 1200 300" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Live GitHub profile and language telemetry for Mersad-Moghaddam">
+  <title>Mersad-Moghaddam — live GitHub signal</title>
+  <defs>
+    <radialGradient id="signal-glow">
+      <stop offset="0" stop-color="#58A6FF" stop-opacity=".13" />
+      <stop offset="1" stop-color="#58A6FF" stop-opacity="0" />
+    </radialGradient>
+    <pattern id="signal-grid" width="20" height="20" patternUnits="userSpaceOnUse">
+      <path d="M20 0H0V20" stroke="#30363D" stroke-opacity=".22" />
+    </pattern>
+  </defs>
+  <style>
+    text { font-family: "DejaVu Sans Mono", Consolas, "Liberation Mono", monospace; }
+    @media (prefers-reduced-motion: reduce) {
+      animate, animateTransform { display:none; }
+    }
+  </style>
+  <rect width="1200" height="300" fill="#0D1117" />
+  <rect x="1" width="1198" height="300" fill="#0D1117" stroke="#30363D" stroke-width="2" />
+  <path d="M1 42H1199" stroke="#30363D" />
+  <text x="22" y="26" fill="#C9D1D9" font-size="12">github.signal / engineering fingerprint</text>
+  <circle cx="1080" cy="21" r="4" fill="#3FB950">
+    <animate attributeName="opacity" values=".45;1;.45" dur="2.5s" repeatCount="indefinite" />
+  </circle>
+  <text x="1093" y="25" fill="#3FB950" font-size="10">LIVE / 24H</text>
+  <path d="M560 62V272" stroke="#30363D" />
+  <rect x="580" y="55" width="600" height="207" fill="url(#signal-grid)" />
+  <circle cx="720" cy="165" r="108" fill="url(#signal-glow)" />
+  <text x="30" y="70" fill="#58A6FF" font-size="13">$ gh signal --user Mersad-Moghaddam</text>
+  <text x="30" y="85" fill="#6E7681" font-size="9">PROFILE PULSE / VERIFIED PUBLIC DATA</text>
+  <rect x="30" y="94" width="155" height="82" rx="8" fill="#111820" stroke="#30363D" />
+  <path d="M40 94H175" stroke="#58A6FF" stroke-width="2" />
+  <text x="46" y="119" font-size="10" fill="#8B949E">PUBLIC REPOS</text>
+  <text x="46" y="156" font-size="28" font-weight="700" fill="#58A6FF">39</text>
+  <rect x="200" y="94" width="155" height="82" rx="8" fill="#111820" stroke="#30363D" />
+  <path d="M210 94H345" stroke="#D2A8FF" stroke-width="2" />
+  <text x="216" y="119" font-size="10" fill="#8B949E">STARS EARNED</text>
+  <text x="216" y="156" font-size="28" font-weight="700" fill="#D2A8FF">34</text>
+  <rect x="370" y="94" width="155" height="82" rx="8" fill="#111820" stroke="#30363D" />
+  <path d="M380 94H515" stroke="#3FB950" stroke-width="2" />
+  <text x="386" y="119" font-size="10" fill="#8B949E">FOLLOWERS</text>
+  <text x="386" y="156" font-size="28" font-weight="700" fill="#3FB950">31</text>
+  <text x="30" y="211" font-size="9" fill="#6E7681">ORIGINAL</text>
+  <text x="30" y="233" font-size="14" fill="#C9D1D9">30</text>
+  <text x="200" y="211" font-size="9" fill="#6E7681">FOLLOWING</text>
+  <text x="200" y="233" font-size="14" fill="#C9D1D9">51</text>
+  <text x="370" y="211" font-size="9" fill="#6E7681">GITHUB SINCE</text>
+  <text x="370" y="233" font-size="14" fill="#C9D1D9">2021</text>
+  <text x="600" y="70" fill="#8B949E" font-size="10">LANGUAGE FINGERPRINT / ORIGINAL REPOSITORIES</text>
+  <circle cx="720" cy="165" r="54" fill="none" stroke="#21262D" stroke-width="13" />
+  <path d="M720.00 111.00 A54 54 0 1 1 673.30 192.12" fill="none" stroke="#00ADD8" stroke-width="13" />
+  <path d="M673.30 192.12 A54 54 0 0 1 667.24 153.49" fill="none" stroke="#F1E05A" stroke-width="13" />
+  <path d="M667.24 153.49 A54 54 0 0 1 680.76 127.90" fill="none" stroke="#00B4AB" stroke-width="13" />
+  <path d="M680.76 127.90 A54 54 0 0 1 688.70 121.00" fill="none" stroke="#E44D26" stroke-width="13" />
+  <path d="M688.70 121.00 A54 54 0 0 1 696.49 116.39" fill="none" stroke="#3178C6" stroke-width="13" />
+  <path d="M696.49 116.39 A54 54 0 0 1 703.28 113.66" fill="none" stroke="#563D7C" stroke-width="13" />
+  <g transform="translate(720 165)">
+    <circle cy="-77" r="3" fill="#58A6FF" />
+    <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="9s" repeatCount="indefinite" additive="sum" />
+  </g>
+  <text x="720" y="160" text-anchor="middle" font-size="11" fill="#C9D1D9">Go</text>
+  <text x="720" y="180" text-anchor="middle" font-size="12" font-weight="700" fill="#58A6FF">66.6%</text>
+  <circle cx="835" cy="88" r="4" fill="#00ADD8" />
+  <text x="848" y="92" font-size="11" fill="#C9D1D9">Go</text>
+  <text x="1155" y="92" text-anchor="end" font-size="10" fill="#8B949E">66.6%</text>
+  <circle cx="835" cy="118" r="4" fill="#F1E05A" />
+  <text x="848" y="122" font-size="11" fill="#C9D1D9">JavaScript</text>
+  <text x="1155" y="122" text-anchor="end" font-size="10" fill="#8B949E">11.8%</text>
+  <circle cx="835" cy="148" r="4" fill="#00B4AB" />
+  <text x="848" y="152" font-size="11" fill="#C9D1D9">Dart</text>
+  <text x="1155" y="152" text-anchor="end" font-size="10" fill="#8B949E"> 8.6%</text>
+  <circle cx="835" cy="178" r="4" fill="#E44D26" />
+  <text x="848" y="182" font-size="11" fill="#C9D1D9">HTML</text>
+  <text x="1155" y="182" text-anchor="end" font-size="10" fill="#8B949E"> 3.1%</text>
+  <circle cx="835" cy="208" r="4" fill="#3178C6" />
+  <text x="848" y="212" font-size="11" fill="#C9D1D9">TypeScript</text>
+  <text x="1155" y="212" text-anchor="end" font-size="10" fill="#8B949E"> 2.7%</text>
+  <circle cx="835" cy="238" r="4" fill="#563D7C" />
+  <text x="848" y="242" font-size="11" fill="#C9D1D9">CSS</text>
+  <text x="1155" y="242" text-anchor="end" font-size="10" fill="#8B949E"> 2.2%</text>
+  <text x="30" y="278" fill="#6E7681" font-size="9">api.github.com → generated in-repo → refreshed daily</text>
+  <text x="1155" y="278" text-anchor="end" fill="#6E7681" font-size="9">signal stable · no shared counters</text>
+</svg>
