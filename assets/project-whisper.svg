@@ -1,58 +1,95 @@
-<svg width="580" height="250" viewBox="0 0 580 250" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="w-title w-desc">
-  <title id="w-title">Whisper Social</title>
-  <desc id="w-desc">Event-driven social timelines using Go, Redis Streams, and MySQL.</desc>
+<svg width="580" height="270" viewBox="0 0 580 270" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="w-title w-desc">
+  <title id="w-title">Whisper Social — event-driven social timelines</title>
+  <desc id="w-desc">Animated card: posts enter a Redis stream and fan out to follower timelines through a worker.</desc>
+
   <defs>
-    <linearGradient id="w-bg" x1="12" y1="10" x2="560" y2="240" gradientUnits="userSpaceOnUse"><stop stop-color="#0D1117"/><stop offset="1" stop-color="#111A25"/></linearGradient>
-    <filter id="w-glow" x="-250%" y="-250%" width="600%" height="600%"><feGaussianBlur stdDeviation="4"/></filter>
+    <linearGradient id="w-bg" x1="12" y1="10" x2="568" y2="262" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D1117"/>
+      <stop offset="1" stop-color="#101826"/>
+    </linearGradient>
+    <linearGradient id="w-wash" x1="0" y1="92" x2="0" y2="222" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#58A6FF" stop-opacity=".07"/>
+      <stop offset="1" stop-color="#58A6FF" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="w-dots" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#8B949E" fill-opacity=".13"/>
+    </pattern>
   </defs>
+
   <style>
+    text[font-family] { font-family:"DejaVu Sans",Arial,sans-serif; }
     text { font-family:"DejaVu Sans Mono",Consolas,"Liberation Mono",monospace; }
-    @media (prefers-reduced-motion: reduce) { animate,animateMotion,animateTransform { display:none; } }
+    @media (prefers-reduced-motion: reduce) { animate,animateMotion,animateTransform { display:none; } circle:has(animateMotion) { visibility:hidden; } }
   </style>
-  <rect width="580" height="250" fill="#0D1117"/>
-  <rect x="1" width="578" height="250" fill="url(#w-bg)" stroke="#30363D" stroke-width="2"/>
-  <path d="M1 38H579" stroke="#30363D"/>
-  <text x="20" y="24" fill="#8B949E" font-size="11">01 / whisper.social</text>
-  <text x="558" y="24" text-anchor="end" fill="#3FB950" font-size="10">● ONLINE</text>
 
-  <text x="22" y="70" fill="#F0F6FC" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="700">Whisper Social</text>
-  <text x="558" y="69" text-anchor="end" fill="#58A6FF" font-size="10">EVENT-DRIVEN TIMELINES</text>
+  <rect width="580" height="270" fill="#0D1117"/>
+  <rect x="1" y="1" width="578" height="268" rx="12" fill="url(#w-bg)" stroke="#30363D" stroke-width="2"/>
 
-  <g transform="translate(25 92)">
-    <path d="M48 32H144M208 32H296M366 32H472" stroke="#30363D" stroke-width="3" stroke-linecap="round"/>
-    <path d="M48 32H144M208 32H296M366 32H472" stroke="#58A6FF" stroke-width="1.5" stroke-dasharray="5 7">
-      <animate attributeName="stroke-dashoffset" values="24;0" dur="2.5s" repeatCount="indefinite"/>
-    </path>
-    <g>
-      <circle r="4" fill="#58A6FF"><animateMotion path="M48 32H144" dur="1.4s" repeatCount="indefinite"/></circle>
-      <circle r="4" fill="#00ADD8"><animateMotion path="M208 32H296" begin=".45s" dur="1.4s" repeatCount="indefinite"/></circle>
-      <circle r="4" fill="#3FB950"><animateMotion path="M366 32H472" begin=".9s" dur="1.4s" repeatCount="indefinite"/></circle>
-    </g>
-    <g transform="translate(0 4)">
-      <rect width="48" height="56" rx="9" fill="#161B22" stroke="#58A6FF"/>
-      <path d="M13 16H35M13 24H31M13 32H34" stroke="#58A6FF" stroke-width="2" stroke-linecap="round"/>
-      <text x="24" y="48" text-anchor="middle" fill="#58A6FF" font-size="9">POST</text>
-    </g>
-    <g transform="translate(144 4)">
-      <rect width="64" height="56" rx="9" fill="#161B22" stroke="#D29922"/>
-      <path d="M14 16H50M14 24H43M14 32H47" stroke="#D29922" stroke-width="2" stroke-linecap="round"/>
-      <text x="32" y="48" text-anchor="middle" fill="#D29922" font-size="9">STREAM</text>
-    </g>
-    <g transform="translate(296 0)">
-      <rect width="70" height="64" rx="10" fill="#161B22" stroke="#00ADD8"/>
-      <circle cx="20" cy="22" r="8" fill="#0D1117" stroke="#00ADD8"/><circle cx="49" cy="22" r="8" fill="#0D1117" stroke="#00ADD8"/>
-      <path d="M20 30V40M49 30V40M20 40H49" stroke="#00ADD8"/>
-      <text x="35" y="55" text-anchor="middle" fill="#00ADD8" font-size="9">FANOUT</text>
-    </g>
-    <g transform="translate(472 4)">
-      <rect width="58" height="56" rx="9" fill="#161B22" stroke="#3FB950"/>
-      <rect x="12" y="13" width="34" height="5" rx="2.5" fill="#3FB950"/><rect x="12" y="23" width="27" height="5" rx="2.5" fill="#3FB950"/><rect x="12" y="33" width="31" height="5" rx="2.5" fill="#3FB950"/>
-      <text x="29" y="50" text-anchor="middle" fill="#3FB950" font-size="8">FEED</text>
-    </g>
-  </g>
+  <!-- header -->
+  <path d="M1 36H579" stroke="#21262D"/>
+  <text x="22" y="24" fill="#58A6FF" font-size="11" font-weight="700">01</text>
+  <text x="44" y="24" fill="#8B949E" font-size="10">/ whisper-social</text>
+  <text x="468" y="24" text-anchor="end" fill="#6E7681" font-size="8.5" letter-spacing="1.2">EVENT PIPELINES</text>
+  <circle cx="488" cy="20" r="3" fill="#3FB950">
+    <animate attributeName="opacity" values=".45;1;.45" dur="2.4s" repeatCount="indefinite"/>
+  </circle>
+  <text x="497" y="24" fill="#3FB950" font-size="9" letter-spacing="1">ONLINE</text>
 
-  <path d="M22 183H558" stroke="#21262D"/>
-  <text x="22" y="208" fill="#C9D1D9" font-size="11">publish fast · distribute asynchronously</text>
-  <text x="22" y="230" fill="#00ADD8" font-size="10">Go</text><text x="49" y="230" fill="#484F58">·</text><text x="62" y="230" fill="#D29922" font-size="10">Redis Streams</text><text x="141" y="230" fill="#484F58">·</text><text x="154" y="230" fill="#58A6FF" font-size="10">MySQL</text>
-  <text x="558" y="230" text-anchor="end" fill="#8B949E" font-size="10">open repository ↗</text>
+  <!-- title -->
+  <text x="22" y="62" fill="#F0F6FC" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="700">Whisper Social</text>
+  <text x="22" y="80" fill="#8B949E" font-size="11">Event-driven social timelines — async fanout through Redis streams.</text>
+
+  <!-- band -->
+  <rect x="12" y="92" width="556" height="130" rx="9" fill="#0B0F14" stroke="#21262D"/>
+  <rect x="13" y="93" width="554" height="128" rx="8" fill="url(#w-dots)"/>
+  <rect x="13" y="93" width="554" height="128" rx="8" fill="url(#w-wash)"/>
+  <text x="26" y="106" fill="#6E7681" font-size="7.5" letter-spacing="1">POST → STREAM → FANOUT → TIMELINES</text>
+  <text x="554" y="106" text-anchor="end" fill="#58A6FF" font-size="7.5" letter-spacing=".4">async fanout</text>
+
+  <!-- follower lanes -->
+  <path d="M376 164H400L424 142H544" stroke="#21262D"/>
+  <path d="M376 164H544" stroke="#21262D"/>
+  <path d="M376 164H400L424 186H544" stroke="#21262D"/>
+  <circle opacity="0" r="3" fill="#58A6FF">
+    <animateMotion dur="3.6s" begin="0s" repeatCount="indefinite" path="M376 164H400L424 142H544"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.82;1" dur="3.6s" begin="0s" repeatCount="indefinite"/>
+  </circle>
+  <circle opacity="0" r="3" fill="#00ADD8">
+    <animateMotion dur="3.6s" begin="1.2s" repeatCount="indefinite" path="M376 164H544"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.82;1" dur="3.6s" begin="1.2s" repeatCount="indefinite"/>
+  </circle>
+  <circle opacity="0" r="3" fill="#3FB950">
+    <animateMotion dur="3.6s" begin="2.4s" repeatCount="indefinite" path="M376 164H400L424 186H544"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.82;1" dur="3.6s" begin="2.4s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- packets (travel under the nodes) -->
+  <circle opacity="0" r="3" fill="#58A6FF">
+    <animateMotion dur="2.8s" begin="0s" repeatCount="indefinite" path="M30 164H360"/>
+  <animate attributeName="opacity" values="1;1" dur="2s" begin="0s" repeatCount="indefinite"/></circle>
+  <circle opacity="0" r="3" fill="#58A6FF">
+    <animateMotion dur="2.8s" begin="1.4s" repeatCount="indefinite" path="M30 164H360"/>
+  <animate attributeName="opacity" values="1;1" dur="2s" begin="1.4s" repeatCount="indefinite"/></circle>
+
+  <!-- pipeline nodes -->
+  <rect x="26" y="154" width="52" height="20" rx="6" fill="#0D1117" stroke="#58A6FF"/>
+  <text x="52" y="167" text-anchor="middle" fill="#58A6FF" font-size="8.5" font-weight="700" letter-spacing=".7">POST</text>
+  <path d="M78 164H104" stroke="#30363D"/>
+  <rect x="104" y="154" width="64" height="20" rx="6" fill="#0D1117" stroke="#D29922"/>
+  <text x="136" y="167" text-anchor="middle" fill="#D29922" font-size="8.5" font-weight="700" letter-spacing=".7">STREAM</text>
+  <path d="M168 164H194" stroke="#30363D"/>
+  <rect x="194" y="154" width="68" height="20" rx="6" fill="#0D1117" stroke="#00ADD8"/>
+  <text x="228" y="167" text-anchor="middle" fill="#00ADD8" font-size="8.5" font-weight="700" letter-spacing=".7">FANOUT</text>
+  <path d="M262 164H288" stroke="#30363D"/>
+  <rect x="288" y="154" width="88" height="20" rx="6" fill="#0D1117" stroke="#3FB950"/>
+  <text x="332" y="167" text-anchor="middle" fill="#3FB950" font-size="8.5" font-weight="700" letter-spacing=".7">TIMELINES</text>
+
+  <!-- footer -->
+  <rect x="22" y="234" width="29" height="18" rx="9" stroke="#30363D"/>
+  <text x="36.5" y="246" text-anchor="middle" fill="#8B949E" font-size="9">Go</text>
+  <rect x="57" y="234" width="89" height="18" rx="9" stroke="#30363D"/>
+  <text x="101.5" y="246" text-anchor="middle" fill="#8B949E" font-size="9">Redis Streams</text>
+  <rect x="152" y="234" width="45" height="18" rx="9" stroke="#30363D"/>
+  <text x="174.5" y="246" text-anchor="middle" fill="#8B949E" font-size="9">MySQL</text>
+  <text x="554" y="246" text-anchor="end" fill="#58A6FF" font-size="10">repo →</text>
 </svg>

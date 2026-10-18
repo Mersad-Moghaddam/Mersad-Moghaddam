@@ -1,41 +1,84 @@
-<svg width="580" height="250" viewBox="0 0 580 250" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="a-title a-desc">
-  <title id="a-title">AetherDB</title>
-  <desc id="a-desc">An embedded mmap-backed key-value storage engine written in Go.</desc>
-  <defs><linearGradient id="a-bg" x1="10" y1="12" x2="565" y2="245" gradientUnits="userSpaceOnUse"><stop stop-color="#0D1117"/><stop offset="1" stop-color="#121820"/></linearGradient></defs>
-  <style>text{font-family:"DejaVu Sans Mono",Consolas,"Liberation Mono",monospace}@media(prefers-reduced-motion:reduce){animate,animateMotion,animateTransform{display:none}}</style>
-  <rect width="580" height="250" fill="#0D1117"/>
-  <rect x="1" width="578" height="250" fill="url(#a-bg)" stroke="#30363D" stroke-width="2"/>
-  <path d="M1 38H579" stroke="#30363D"/>
-  <text x="20" y="24" fill="#8B949E" font-size="11">02 / aether.db</text>
-  <text x="558" y="24" text-anchor="end" fill="#3FB950" font-size="10">● MOUNTED</text>
-  <text x="22" y="70" fill="#F0F6FC" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="700">AetherDB</text>
-  <text x="558" y="69" text-anchor="end" fill="#D29922" font-size="10">EMBEDDED KV ENGINE</text>
+<svg width="580" height="270" viewBox="0 0 580 270" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="a-title a-desc">
+  <title id="a-title">AetherDB — embedded mmap-backed key-value storage</title>
+  <desc id="a-desc">Animated card: a GET traverses memory-mapped pages while a hot-page highlight cycles across them, then leaves through a zero-copy path.</desc>
 
-  <g transform="translate(24 91)">
-    <g transform="translate(0 7)">
-      <rect width="98" height="52" rx="9" fill="#161B22" stroke="#58A6FF"/>
-      <text x="12" y="21" fill="#8B949E" font-size="9">KEY</text><text x="12" y="40" fill="#58A6FF" font-size="12">user:0042</text>
-    </g>
-    <path d="M98 33H168" stroke="#30363D" stroke-width="3"/><path d="M98 33H168" stroke="#58A6FF" stroke-width="1.5" stroke-dasharray="5 7"><animate attributeName="stroke-dashoffset" values="24;0" dur="2s" repeatCount="indefinite"/></path>
-    <g transform="translate(168 0)">
-      <rect width="154" height="66" rx="10" fill="#161B22" stroke="#D29922"/>
-      <text x="77" y="16" text-anchor="middle" fill="#D29922" font-size="9">MMAP PAGES</text>
-      <g transform="translate(12 25)">
-        <rect width="22" height="25" rx="3" fill="#D29922"/><rect x="27" width="22" height="25" rx="3" fill="#21262D" stroke="#D29922"/><rect x="54" width="22" height="25" rx="3" fill="#21262D" stroke="#D29922"/><rect x="81" width="22" height="25" rx="3" fill="#21262D" stroke="#D29922"/><rect x="108" width="22" height="25" rx="3" fill="#21262D" stroke="#D29922"/>
-        <animateTransform attributeName="transform" type="translate" values="12 25;17 25;12 25" dur="3s" repeatCount="indefinite"/>
-      </g>
-    </g>
-    <path d="M322 33H392" stroke="#30363D" stroke-width="3"/><path d="M322 33H392" stroke="#3FB950" stroke-width="1.5" stroke-dasharray="5 7"><animate attributeName="stroke-dashoffset" values="24;0" dur="2s" repeatCount="indefinite"/></path>
-    <g transform="translate(392 3)">
-      <ellipse cx="58" cy="10" rx="58" ry="10" fill="#161B22" stroke="#3FB950"/>
-      <path d="M0 10V49C0 56 26 61 58 61C90 61 116 56 116 49V10" fill="#161B22" stroke="#3FB950"/>
-      <path d="M0 29C0 36 26 41 58 41C90 41 116 36 116 29" stroke="#3FB950"/>
-      <text x="58" y="34" text-anchor="middle" fill="#3FB950" font-size="10">ZERO COPY</text>
-    </g>
-  </g>
+  <defs>
+    <linearGradient id="a-bg" x1="12" y1="10" x2="568" y2="262" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D1117"/>
+      <stop offset="1" stop-color="#101826"/>
+    </linearGradient>
+    <linearGradient id="a-wash" x1="0" y1="92" x2="0" y2="222" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#00ADD8" stop-opacity=".07"/>
+      <stop offset="1" stop-color="#00ADD8" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="a-dots" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#8B949E" fill-opacity=".13"/>
+    </pattern>
+  </defs>
 
-  <path d="M22 183H558" stroke="#21262D"/>
-  <text x="22" y="208" fill="#C9D1D9" font-size="11">keys close to bytes · latency close to metal</text>
-  <text x="22" y="230" fill="#00ADD8" font-size="10">Go</text><text x="49" y="230" fill="#484F58">·</text><text x="62" y="230" fill="#D29922" font-size="10">mmap</text><text x="98" y="230" fill="#484F58">·</text><text x="111" y="230" fill="#58A6FF" font-size="10">lock-free CAS</text>
-  <text x="558" y="230" text-anchor="end" fill="#8B949E" font-size="10">open repository ↗</text>
+  <style>
+    text[font-family] { font-family:"DejaVu Sans",Arial,sans-serif; }
+    text { font-family:"DejaVu Sans Mono",Consolas,"Liberation Mono",monospace; }
+    @media (prefers-reduced-motion: reduce) { animate,animateMotion,animateTransform { display:none; } circle:has(animateMotion) { visibility:hidden; } }
+  </style>
+
+  <rect width="580" height="270" fill="#0D1117"/>
+  <rect x="1" y="1" width="578" height="268" rx="12" fill="url(#a-bg)" stroke="#30363D" stroke-width="2"/>
+
+  <!-- header -->
+  <path d="M1 36H579" stroke="#21262D"/>
+  <text x="22" y="24" fill="#00ADD8" font-size="11" font-weight="700">02</text>
+  <text x="44" y="24" fill="#8B949E" font-size="10">/ aetherdb</text>
+  <text x="468" y="24" text-anchor="end" fill="#6E7681" font-size="8.5" letter-spacing="1.2">STORAGE ENGINE</text>
+  <circle cx="488" cy="20" r="3" fill="#3FB950">
+    <animate attributeName="opacity" values=".45;1;.45" dur="2.4s" repeatCount="indefinite"/>
+  </circle>
+  <text x="497" y="24" fill="#3FB950" font-size="9" letter-spacing="1">ONLINE</text>
+
+  <!-- title -->
+  <text x="22" y="62" fill="#F0F6FC" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="700">AetherDB</text>
+  <text x="22" y="80" fill="#8B949E" font-size="11">Embedded KV storage in Go — mmap-durable, lock-free CAS index, zero-copy GET.</text>
+
+  <!-- band -->
+  <rect x="12" y="92" width="556" height="130" rx="9" fill="#0B0F14" stroke="#21262D"/>
+  <rect x="13" y="93" width="554" height="128" rx="8" fill="url(#a-dots)"/>
+  <rect x="13" y="93" width="554" height="128" rx="8" fill="url(#a-wash)"/>
+  <text x="26" y="106" fill="#6E7681" font-size="7.5" letter-spacing="1">MMAP PAGES · LOCK-FREE CAS INDEX</text>
+  <text x="554" y="106" text-anchor="end" fill="#00ADD8" font-size="7.5" letter-spacing=".4">zero-copy GET</text>
+
+  <!-- sendfile path -->
+  <path d="M398 164H534" stroke="#21262D"/>
+  <path d="M534 164L526 160V168Z" fill="#21262D"/>
+  <circle opacity="0" r="3" fill="#00ADD8">
+    <animateMotion dur="2.2s" repeatCount="indefinite" path="M400 164H528"/>
+  <animate attributeName="opacity" values="1;1" dur="2s" begin="0s" repeatCount="indefinite"/></circle>
+
+  <!-- get → pages -->
+  <rect x="26" y="154" width="58" height="20" rx="6" fill="#0D1117" stroke="#00ADD8"/>
+  <text x="55" y="167" text-anchor="middle" fill="#00ADD8" font-size="8.5" font-weight="700" letter-spacing=".7">GET k</text>
+  <path d="M84 164H108" stroke="#30363D"/>
+
+  <!-- pages -->
+  <rect x="108" y="146" width="30" height="36" rx="4" fill="#0D1117" stroke="#30363D"/>
+  <rect x="144" y="146" width="30" height="36" rx="4" fill="#0D1117" stroke="#30363D"/>
+  <rect x="180" y="146" width="30" height="36" rx="4" fill="#0D1117" stroke="#30363D"/>
+  <rect x="216" y="146" width="30" height="36" rx="4" fill="#0D1117" stroke="#30363D"/>
+  <rect x="252" y="146" width="30" height="36" rx="4" fill="#0D1117" stroke="#30363D"/>
+  <rect x="288" y="146" width="30" height="36" rx="4" fill="#0D1117" stroke="#30363D"/>
+  <rect x="324" y="146" width="30" height="36" rx="4" fill="#0D1117" stroke="#30363D"/>
+  <rect x="360" y="146" width="30" height="36" rx="4" fill="#0D1117" stroke="#30363D"/>
+
+  <!-- hot page -->
+  <rect x="108" y="146" width="30" height="36" rx="4" fill="#00ADD8" fill-opacity=".16" stroke="#00ADD8">
+    <animate attributeName="x" values="108;144;180;216;252;288;324;360;108" keyTimes="0;.125;.25;.375;.5;.625;.75;.875;1" dur="5.6s" calcMode="discrete" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- footer -->
+  <rect x="22" y="234" width="29" height="18" rx="9" stroke="#30363D"/>
+  <text x="36.5" y="246" text-anchor="middle" fill="#8B949E" font-size="9">Go</text>
+  <rect x="57" y="234" width="40" height="18" rx="9" stroke="#30363D"/>
+  <text x="77" y="246" text-anchor="middle" fill="#8B949E" font-size="9">mmap</text>
+  <rect x="103" y="234" width="88" height="18" rx="9" stroke="#30363D"/>
+  <text x="147" y="246" text-anchor="middle" fill="#8B949E" font-size="9">lock-free CAS</text>
+  <text x="554" y="246" text-anchor="end" fill="#00ADD8" font-size="10">repo →</text>
 </svg>

@@ -1,73 +1,82 @@
-<svg width="580" height="250" viewBox="0 0 580 250" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="s-title s-desc">
-  <title id="s-title">SysKit</title>
-  <desc id="s-desc">A fast, read-only, Linux-first system inspection and resource monitoring CLI built with Go.</desc>
+<svg width="580" height="270" viewBox="0 0 580 270" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="s-title s-desc">
+  <title id="s-title">syskit — native Linux inspection and resource monitoring CLI</title>
+  <desc id="s-desc">Animated card: CPU, memory and IO meters breathe next to a process tree, all read-only from /proc and /sys.</desc>
+
   <defs>
-    <linearGradient id="s-bg" x1="12" y1="10" x2="565" y2="245" gradientUnits="userSpaceOnUse">
+    <linearGradient id="s-bg" x1="12" y1="10" x2="568" y2="262" gradientUnits="userSpaceOnUse">
       <stop stop-color="#0D1117"/>
-      <stop offset="1" stop-color="#101B20"/>
+      <stop offset="1" stop-color="#101826"/>
     </linearGradient>
-    <linearGradient id="s-wire" x1="126" y1="0" x2="452" y2="0" gradientUnits="userSpaceOnUse">
-      <stop stop-color="#D29922"/>
-      <stop offset=".5" stop-color="#00ADD8"/>
-      <stop offset="1" stop-color="#3FB950"/>
+    <linearGradient id="s-wash" x1="0" y1="92" x2="0" y2="222" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#3FB950" stop-opacity=".07"/>
+      <stop offset="1" stop-color="#3FB950" stop-opacity="0"/>
     </linearGradient>
+    <pattern id="s-dots" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#8B949E" fill-opacity=".13"/>
+    </pattern>
   </defs>
+
   <style>
+    text[font-family] { font-family:"DejaVu Sans",Arial,sans-serif; }
     text { font-family:"DejaVu Sans Mono",Consolas,"Liberation Mono",monospace; }
-    @media (prefers-reduced-motion: reduce) { animate,animateMotion,animateTransform { display:none; } }
+    @media (prefers-reduced-motion: reduce) { animate,animateMotion,animateTransform { display:none; } circle:has(animateMotion) { visibility:hidden; } }
   </style>
 
-  <rect width="580" height="250" fill="#0D1117"/>
-  <rect x="1" width="578" height="250" fill="url(#s-bg)" stroke="#30363D" stroke-width="2"/>
-  <path d="M1 38H579" stroke="#30363D"/>
-  <text x="20" y="24" fill="#8B949E" font-size="11">04 / sys.kit</text>
-  <text x="558" y="24" text-anchor="end" fill="#3FB950" font-size="10">● READ-ONLY</text>
+  <rect width="580" height="270" fill="#0D1117"/>
+  <rect x="1" y="1" width="578" height="268" rx="12" fill="url(#s-bg)" stroke="#30363D" stroke-width="2"/>
 
-  <text x="22" y="70" fill="#F0F6FC" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="700">SysKit</text>
-  <text x="558" y="69" text-anchor="end" fill="#00ADD8" font-size="10">NATIVE LINUX INTELLIGENCE</text>
+  <!-- header -->
+  <path d="M1 36H579" stroke="#21262D"/>
+  <text x="22" y="24" fill="#3FB950" font-size="11" font-weight="700">04</text>
+  <text x="44" y="24" fill="#8B949E" font-size="10">/ syskit</text>
+  <text x="468" y="24" text-anchor="end" fill="#6E7681" font-size="8.5" letter-spacing="1.2">LINUX INSPECTION CLI</text>
+  <circle cx="488" cy="20" r="3" fill="#3FB950">
+    <animate attributeName="opacity" values=".45;1;.45" dur="2.4s" repeatCount="indefinite"/>
+  </circle>
+  <text x="497" y="24" fill="#3FB950" font-size="9" letter-spacing="1">READ-ONLY</text>
 
-  <g transform="translate(24 88)">
-    <path d="M112 36H201M319 36H408" stroke="#30363D" stroke-width="3" stroke-linecap="round"/>
-    <path d="M112 36H201M319 36H408" stroke="url(#s-wire)" stroke-width="1.5" stroke-dasharray="5 7">
-      <animate attributeName="stroke-dashoffset" values="24;0" dur="2.2s" repeatCount="indefinite"/>
-    </path>
+  <!-- title -->
+  <text x="22" y="62" fill="#F0F6FC" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="700">syskit</text>
+  <text x="22" y="80" fill="#8B949E" font-size="11">Native Linux intelligence for the terminal — reads /proc and /sys directly.</text>
 
-    <!-- direct Linux kernel sources -->
-    <g transform="translate(0 0)">
-      <rect width="112" height="72" rx="9" fill="#161B22" stroke="#D29922"/>
-      <text x="12" y="18" fill="#8B949E" font-size="8">KERNEL</text>
-      <text x="12" y="36" fill="#D29922" font-size="10">/proc  /sys</text>
-      <text x="12" y="52" fill="#D29922" font-size="10">netlink</text>
-      <text x="12" y="66" fill="#8B949E" font-size="8">cgroups</text>
-    </g>
+  <!-- band -->
+  <rect x="12" y="92" width="556" height="130" rx="9" fill="#0B0F14" stroke="#21262D"/>
+  <rect x="13" y="93" width="554" height="128" rx="8" fill="url(#s-dots)"/>
+  <rect x="13" y="93" width="554" height="128" rx="8" fill="url(#s-wash)"/>
+  <text x="26" y="106" fill="#6E7681" font-size="7.5" letter-spacing="1">LIVE METERS · PROCESS TREE</text>
+  <text x="554" y="106" text-anchor="end" fill="#3FB950" font-size="7.5" letter-spacing=".4">zero shell-outs</text>
 
-    <!-- static Go binary -->
-    <g transform="translate(201 -3)">
-      <rect width="118" height="78" rx="11" fill="#161B22" stroke="#00ADD8" stroke-width="1.5"/>
-      <circle cx="59" cy="28" r="19" fill="#0D1117" stroke="#00ADD8"/>
-      <text x="59" y="34" text-anchor="middle" fill="#00ADD8" font-family="DejaVu Sans,Arial,sans-serif" font-size="18" font-weight="700">Go</text>
-      <text x="59" y="60" text-anchor="middle" fill="#F0F6FC" font-size="10">SYSKIT</text>
-      <text x="59" y="72" text-anchor="middle" fill="#8B949E" font-size="7">ZERO SHELL-OUTS</text>
-    </g>
+  <!-- meters -->
+  <text x="26" y="147" fill="#8B949E" font-size="8">CPU</text>
+  <rect x="64" y="140" width="200" height="8" rx="4" fill="#161B22"/>
+  <rect x="64" y="140" width="60" height="8" rx="4" fill="#3FB950">
+    <animate attributeName="width" values="60;150;90;185;60" dur="5s" repeatCount="indefinite"/>
+  </rect>
 
-    <!-- stable outputs -->
-    <g transform="translate(408 0)">
-      <rect width="122" height="72" rx="9" fill="#161B22" stroke="#3FB950"/>
-      <path d="M13 18H49M13 29H43M13 40H47" stroke="#3FB950" stroke-width="2" stroke-linecap="round"/>
-      <path d="M69 14V45M69 45H109M73 39L82 31L91 35L104 20" stroke="#58A6FF" stroke-linecap="round" stroke-linejoin="round"/>
-      <circle cx="104" cy="20" r="3" fill="#58A6FF">
-        <animate attributeName="opacity" values=".5;1;.5" dur="2s" repeatCount="indefinite"/>
-      </circle>
-      <text x="61" y="62" text-anchor="middle" fill="#3FB950" font-size="8">TABLE · JSON · TUI</text>
-    </g>
-  </g>
+  <text x="26" y="167" fill="#8B949E" font-size="8">MEM</text>
+  <rect x="64" y="160" width="200" height="8" rx="4" fill="#161B22"/>
+  <rect x="64" y="160" width="80" height="8" rx="4" fill="#58A6FF">
+    <animate attributeName="width" values="80;120;170;100;80" dur="6s" repeatCount="indefinite"/>
+  </rect>
 
-  <path d="M22 183H558" stroke="#21262D"/>
-  <text x="22" y="208" fill="#C9D1D9" font-size="11">inspect live Linux state · change nothing</text>
-  <text x="22" y="230" fill="#00ADD8" font-size="10">Go</text>
-  <text x="49" y="230" fill="#484F58">·</text>
-  <text x="62" y="230" fill="#D29922" font-size="10">Linux</text>
-  <text x="104" y="230" fill="#484F58">·</text>
-  <text x="117" y="230" fill="#58A6FF" font-size="10">Netlink</text>
-  <text x="558" y="230" text-anchor="end" fill="#8B949E" font-size="10">open repository ↗</text>
+  <text x="26" y="187" fill="#8B949E" font-size="8">IO</text>
+  <rect x="64" y="180" width="200" height="8" rx="4" fill="#161B22"/>
+  <rect x="64" y="180" width="40" height="8" rx="4" fill="#D29922">
+    <animate attributeName="width" values="40;100;70;160;40" dur="4.2s" repeatCount="indefinite"/>
+  </rect>
+
+  <!-- process tree -->
+  <text x="300" y="147" fill="#8B949E" font-size="8.5">systemd</text>
+  <text x="300" y="167" fill="#6E7681" font-size="8.5">├─ sshd</text>
+  <text x="300" y="187" fill="#6E7681" font-size="8.5">├─ dockerd</text>
+  <text x="300" y="207" fill="#6E7681" font-size="8.5">└─ table · JSON · YAML</text>
+
+  <!-- footer -->
+  <rect x="22" y="234" width="29" height="18" rx="9" stroke="#30363D"/>
+  <text x="36.5" y="246" text-anchor="middle" fill="#8B949E" font-size="9">Go</text>
+  <rect x="57" y="234" width="67" height="18" rx="9" stroke="#30363D"/>
+  <text x="90.5" y="246" text-anchor="middle" fill="#8B949E" font-size="9">read-only</text>
+  <rect x="130" y="234" width="99" height="18" rx="9" stroke="#30363D"/>
+  <text x="179.5" y="246" text-anchor="middle" fill="#8B949E" font-size="9">zero shell-outs</text>
+  <text x="554" y="246" text-anchor="end" fill="#3FB950" font-size="10">repo →</text>
 </svg>

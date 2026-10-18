@@ -53,7 +53,16 @@
     <text x="0" y="198" fill="#C9D1D9" font-size="14">I build concurrent services, Linux-native tools, storage engines,</text>
     <text x="0" y="223" fill="#C9D1D9" font-size="14">and observable backends designed to stay understandable.</text>
 
-    <g transform="translate(0 257)">
+    <g transform="translate(0 236)">
+      <rect width="350" height="24" rx="8" fill="#161B22" stroke="#30363D"/>
+      <circle cx="15" cy="12" r="3.5" fill="#E2563B">
+        <animate attributeName="opacity" values=".4;1;.4" dur="2.2s" repeatCount="indefinite"/>
+      </circle>
+      <text x="26" y="16" fill="#F0F6FC" font-size="10" font-weight="700" letter-spacing=".6">NOW SHIPPING</text>
+      <text x="112" y="16" fill="#8B949E" font-size="10">ClipDeck — clipboard manager for Linux</text>
+    </g>
+
+    <g transform="translate(0 264)">
       <text x="0" y="12" fill="#8B949E" font-size="10">BASED IN</text>
       <text x="78" y="12" fill="#F0F6FC" font-size="12">Mashhad, Iran</text>
       <text x="226" y="12" fill="#484F58" font-size="12">·</text>
@@ -61,7 +70,7 @@
       <text x="292" y="12" fill="#3FB950" font-size="12">building / learning / open source</text>
     </g>
 
-    <g transform="translate(0 299)">
+    <g transform="translate(0 306)">
       <text x="0" y="13" fill="#3FB950" font-size="13">$</text>
       <text x="19" y="13" fill="#8B949E" font-size="12">intent</text>
       <text x="76" y="13" fill="#00ADD8" font-size="12">make complex systems easier to reason about</text>
@@ -91,12 +100,12 @@
       <text x="98" y="84" fill="#C9D1D9" font-size="10">Linux · Distributed Systems · Storage</text>
       <path d="M0 101H379" stroke="#21262D"/>
 
-      <text x="0" y="126" fill="#8B949E" font-size="9">BUILDS</text>
-      <text x="98" y="126" fill="#C9D1D9" font-size="10">APIs · CLIs · Monitoring · Data Systems</text>
+      <text x="0" y="126" fill="#8B949E" font-size="9">FLAGSHIP</text>
+      <text x="98" y="126" fill="#E2A656" font-size="10">ClipDeck — clipboard manager</text>
       <path d="M0 143H379" stroke="#21262D"/>
 
       <text x="0" y="168" fill="#8B949E" font-size="9">PROJECTS</text>
-      <text x="98" y="168" fill="#58A6FF" font-size="10">SysKit · AetherDB · Argus · Whisper</text>
+      <text x="98" y="168" fill="#58A6FF" font-size="10">Whisper · AetherDB · Argus · SysKit</text>
       <path d="M0 185H379" stroke="#21262D"/>
 
       <text x="0" y="210" fill="#8B949E" font-size="9">DEFAULTS</text>

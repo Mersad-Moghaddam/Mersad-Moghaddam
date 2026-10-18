@@ -1,46 +1,90 @@
-<svg width="580" height="250" viewBox="0 0 580 250" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="ar-title ar-desc">
-  <title id="ar-title">Argus</title>
-  <desc id="ar-desc">A distributed uptime monitor with queued probes and live operational signals.</desc>
-  <defs><linearGradient id="ar-bg" x1="12" y1="10" x2="565" y2="245" gradientUnits="userSpaceOnUse"><stop stop-color="#0D1117"/><stop offset="1" stop-color="#101A1A"/></linearGradient></defs>
-  <style>text{font-family:"DejaVu Sans Mono",Consolas,"Liberation Mono",monospace}@media(prefers-reduced-motion:reduce){animate,animateMotion,animateTransform{display:none}}</style>
-  <rect width="580" height="250" fill="#0D1117"/>
-  <rect x="1" width="578" height="250" fill="url(#ar-bg)" stroke="#30363D" stroke-width="2"/>
-  <path d="M1 38H579" stroke="#30363D"/>
-  <text x="20" y="24" fill="#8B949E" font-size="11">03 / argus.monitor</text>
-  <text x="558" y="24" text-anchor="end" fill="#3FB950" font-size="10">● WATCHING</text>
-  <text x="22" y="70" fill="#F0F6FC" font-family="DejaVu Sans,Arial,sans-serif" font-size="20" font-weight="700">Argus</text>
-  <text x="558" y="69" text-anchor="end" fill="#3FB950" font-size="10">DISTRIBUTED UPTIME</text>
+<svg width="580" height="270" viewBox="0 0 580 270" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="ar-title ar-desc">
+  <title id="ar-title">Argus — self-hosted uptime and incident control center</title>
+  <desc id="ar-desc">Animated card: probe dots travel from the Argus node to endpoints that answer healthy, while a heartbeat line redraws.</desc>
 
-  <g transform="translate(24 91)">
-    <g transform="translate(0 5)">
-      <circle cx="31" cy="28" r="27" fill="#161B22" stroke="#58A6FF"/>
-      <path d="M18 28H24L29 17L36 39L42 28H47" stroke="#58A6FF" stroke-width="2" stroke-linejoin="round"/>
-      <text x="31" y="65" text-anchor="middle" fill="#58A6FF" font-size="8">PROBE</text>
-    </g>
-    <path d="M62 33H147" stroke="#30363D" stroke-width="3"/>
-    <g transform="translate(147 4)">
-      <rect width="74" height="58" rx="9" fill="#161B22" stroke="#D29922"/>
-      <rect x="13" y="14" width="48" height="6" rx="3" fill="#D29922"/><rect x="13" y="26" width="39" height="6" rx="3" fill="#D29922"/><rect x="13" y="38" width="45" height="6" rx="3" fill="#D29922"/>
-      <text x="37" y="69" text-anchor="middle" fill="#D29922" font-size="8">QUEUE</text>
-    </g>
-    <path d="M221 33H307" stroke="#30363D" stroke-width="3"/>
-    <g transform="translate(307 3)">
-      <rect width="76" height="60" rx="10" fill="#161B22" stroke="#00ADD8"/>
-      <circle cx="24" cy="25" r="10" fill="#0D1117" stroke="#00ADD8"/><circle cx="51" cy="25" r="10" fill="#0D1117" stroke="#00ADD8"/>
-      <text x="24" y="29" text-anchor="middle" fill="#00ADD8" font-size="8">go</text><text x="51" y="29" text-anchor="middle" fill="#00ADD8" font-size="8">go</text>
-      <text x="38" y="51" text-anchor="middle" fill="#00ADD8" font-size="8">WORKERS</text>
-    </g>
-    <path d="M383 33H444" stroke="#30363D" stroke-width="3"/>
-    <g transform="translate(444 5)">
-      <rect width="65" height="56" rx="9" fill="#161B22" stroke="#3FB950"/>
-      <path d="M9 32H17L22 19L29 42L36 13L43 32H56" stroke="#3FB950" stroke-width="2" stroke-linejoin="round">
-        <animate attributeName="stroke-dasharray" values="0 140;140 0;0 140" dur="3s" repeatCount="indefinite"/>
-      </path>
-      <text x="33" y="50" text-anchor="middle" fill="#3FB950" font-size="8">SIGNAL</text>
-    </g>
-  </g>
-  <path d="M22 183H558" stroke="#21262D"/>
-  <text x="22" y="208" fill="#C9D1D9" font-size="11">probe quietly · alert only when it matters</text>
-  <text x="22" y="230" fill="#00ADD8" font-size="10">Go</text><text x="49" y="230" fill="#484F58">·</text><text x="62" y="230" fill="#D29922" font-size="10">Asynq</text><text x="104" y="230" fill="#484F58">·</text><text x="117" y="230" fill="#F85149" font-size="10">Redis</text>
-  <text x="558" y="230" text-anchor="end" fill="#8B949E" font-size="10">open repository ↗</text>
+  <defs>
+    <linearGradient id="ar-bg" x1="12" y1="10" x2="568" y2="262" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0D1117"/>
+      <stop offset="1" stop-color="#101826"/>
+    </linearGradient>
+    <linearGradient id="ar-wash" x1="0" y1="92" x2="0" y2="222" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#D29922" stop-opacity=".07"/>
+      <stop offset="1" stop-color="#D29922" stop-opacity="0"/>
+    </linearGradient>
+    <pattern id="ar-dots" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="1" cy="1" r="1" fill="#8B949E" fill-opacity=".13"/>
+    </pattern>
+  </defs>
+
+  <style>
+    text[font-family] { font-family:"DejaVu Sans",Arial,sans-serif; }
+    text { font-family:"DejaVu Sans Mono",Consolas,"Liberation Mono",monospace; }
+    @media (prefers-reduced-motion: reduce) { animate,animateMotion,animateTransform { display:none; } circle:has(animateMotion) { visibility:hidden; } }
+  </style>
+
+  <rect width="580" height="270" fill="#0D1117"/>
+  <rect x="1" y="1" width="578" height="268" rx="12" fill="url(#ar-bg)" stroke="#30363D" stroke-width="2"/>
+
+  <!-- header -->
+  <path d="M1 36H579" stroke="#21262D"/>
+  <text x="22" y="24" fill="#D29922" font-size="11" font-weight="700">03</text>
+  <text x="44" y="24" fill="#8B949E" font-size="10">/ argus</text>
+  <text x="468" y="24" text-anchor="end" fill="#6E7681" font-size="8.5" letter-spacing="1.2">UPTIME CONTROL CENTER</text>
+  <circle cx="488" cy="20" r="3" fill="#3FB950">
+    <animate attributeName="opacity" values=".45;1;.45" dur="2.4s" repeatCount="indefinite"/>
+  </circle>
+  <text x="497" y="24" fill="#3FB950" font-size="9" letter-spacing="1">WATCHING</text>
+
+  <!-- title -->
+  <text x="22" y="62" fill="#F0F6FC" font-family="DejaVu Sans,Arial,sans-serif" font-size="17" font-weight="700">Argus</text>
+  <text x="22" y="80" fill="#8B949E" font-size="11">Self-hosted uptime control — HTTP, keyword, heartbeat and TLS checks.</text>
+
+  <!-- band -->
+  <rect x="12" y="92" width="556" height="130" rx="9" fill="#0B0F14" stroke="#21262D"/>
+  <rect x="13" y="93" width="554" height="128" rx="8" fill="url(#ar-dots)"/>
+  <rect x="13" y="93" width="554" height="128" rx="8" fill="url(#ar-wash)"/>
+  <text x="26" y="106" fill="#6E7681" font-size="7.5" letter-spacing="1">PROBES → ENDPOINTS · HEARTBEAT</text>
+  <text x="554" y="106" text-anchor="end" fill="#D29922" font-size="7.5" letter-spacing=".4">incident-aware</text>
+
+  <!-- probe wires -->
+  <path d="M90 164H112L136 142H420" stroke="#30363D"/>
+  <path d="M90 164H420" stroke="#30363D"/>
+  <path d="M90 164H112L136 186H420" stroke="#30363D"/>
+
+  <!-- endpoint labels -->
+  <text x="430" y="145.5" fill="#8B949E" font-size="9">endpoint-01 <tspan fill="#3FB950">✓</tspan></text>
+  <text x="430" y="167.5" fill="#8B949E" font-size="9">endpoint-02 <tspan fill="#3FB950">✓</tspan></text>
+  <text x="430" y="189.5" fill="#8B949E" font-size="9">endpoint-03 <tspan fill="#3FB950">✓</tspan></text>
+
+  <!-- probe dots -->
+  <circle opacity="0" r="3" fill="#D29922">
+    <animateMotion dur="3.2s" begin="0s" repeatCount="indefinite" path="M92 164H112L136 142H416"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="3.2s" begin="0s" repeatCount="indefinite"/>
+  </circle>
+  <circle opacity="0" r="3" fill="#D29922">
+    <animateMotion dur="3.2s" begin=".5s" repeatCount="indefinite" path="M92 164H416"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="3.2s" begin=".5s" repeatCount="indefinite"/>
+  </circle>
+  <circle opacity="0" r="3" fill="#D29922">
+    <animateMotion dur="3.2s" begin="1s" repeatCount="indefinite" path="M92 164H112L136 186H416"/>
+    <animate attributeName="opacity" values="0;1;1;0" keyTimes="0;.1;.85;1" dur="3.2s" begin="1s" repeatCount="indefinite"/>
+  </circle>
+
+  <!-- argus node -->
+  <rect x="26" y="154" width="64" height="20" rx="6" fill="#0D1117" stroke="#D29922"/>
+  <text x="58" y="167" text-anchor="middle" fill="#D29922" font-size="8.5" font-weight="700" letter-spacing=".7">ARGUS</text>
+
+  <!-- heartbeat -->
+  <path d="M26 204H44L52 194L60 212L68 204H86L94 198L102 208L110 204H150" stroke="#3FB950" stroke-width="1.5" fill="none" stroke-dasharray="170">
+    <animate attributeName="stroke-dashoffset" values="0;0;170" keyTimes="0;.7;1" dur="3s" repeatCount="indefinite"/>
+  </path>
+
+  <!-- footer -->
+  <rect x="22" y="234" width="29" height="18" rx="9" stroke="#30363D"/>
+  <text x="36.5" y="246" text-anchor="middle" fill="#8B949E" font-size="9">Go</text>
+  <rect x="57" y="234" width="45" height="18" rx="9" stroke="#30363D"/>
+  <text x="79.5" y="246" text-anchor="middle" fill="#8B949E" font-size="9">MySQL</text>
+  <rect x="108" y="234" width="45" height="18" rx="9" stroke="#30363D"/>
+  <text x="130.5" y="246" text-anchor="middle" fill="#8B949E" font-size="9">Redis</text>
+  <text x="554" y="246" text-anchor="end" fill="#D29922" font-size="10">repo →</text>
 </svg>
