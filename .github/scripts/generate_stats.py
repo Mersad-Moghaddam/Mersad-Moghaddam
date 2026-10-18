@@ -344,9 +344,8 @@ def build_github_signal_svg(p):
     }}
   </style>
   <rect width="{width}" height="{height}" fill="#0D1117" />
-  <rect x="1" width="{width - 2}" height="{height}" fill="#0D1117" stroke="#30363D" stroke-width="2" />
-  <path d="M1 42H1199" stroke="#30363D" />
-  <text x="22" y="26" fill="#C9D1D9" font-size="12">github.signal / engineering fingerprint</text>
+  <path d="M40 1H1160M40 42H1160" stroke="#21262D" />
+  <text x="40" y="26" fill="#8B949E" font-size="12">github.signal / engineering fingerprint</text>
   <circle cx="1080" cy="21" r="4" fill="#3FB950">
     <animate attributeName="opacity" values=".45;1;.45" dur="2.5s" repeatCount="indefinite" />
   </circle>

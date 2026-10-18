@@ -12,9 +12,9 @@ text{font-family:"DejaVu Sans",Arial,sans-serif}.mono{font-family:"DejaVu Sans M
 @keyframes themes{0%,35%,100%{opacity:0}45%,85%{opacity:1}}@keyframes blink{50%{opacity:0}}@keyframes pulse{50%{opacity:.4}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important}.light{opacity:0}}
 </style>
-<rect x="1" y="1" width="1198" height="418" rx="16" fill="url(#bg)" stroke="#30363D" stroke-width="2"/>
-<ellipse cx="900" cy="220" rx="295" ry="195" fill="url(#glow)"/>
-<path d="M24 49H1176" stroke="#30363D"/>
+<rect width="1200" height="420" fill="#0D1117"/>
+<path d="M40 1H1160" stroke="#21262D"/>
+<path d="M40 49H1160" stroke="#21262D"/>
 <circle class="record" cx="40" cy="26" r="4" fill="#E2563B"/>
 <text class="mono" x="54" y="30" fill="#E2A656" font-size="11" letter-spacing="1.1">FLAGSHIP / clipdeck</text>
 <text x="261" y="30" fill="#8B949E" font-size="11">Keyboard-first clipboard manager for Linux</text>

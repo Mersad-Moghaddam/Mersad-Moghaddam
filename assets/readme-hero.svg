@@ -27,14 +27,9 @@
   </style>
 
   <rect width="1200" height="400" fill="#0D1117"/>
-  <path d="M16 1H1184Q1199 1 1199 16V399H1V16Q1 1 16 1Z" fill="url(#hero-bg)" stroke="#30363D" stroke-width="2"/>
-  <rect x="1" y="1" width="1198" height="398" rx="16" fill="url(#hero-grid)"/>
-  <path d="M1 43H1199" stroke="#30363D"/>
+  <path d="M40 43H1160" stroke="#21262D"/>
 
   <!-- terminal chrome -->
-  <circle cx="22" cy="22" r="6" fill="#FF5F56"/>
-  <circle cx="42" cy="22" r="6" fill="#FFBD2E"/>
-  <circle cx="62" cy="22" r="6" fill="#3FB950"/>
   <text x="600" y="27" text-anchor="middle" fill="#8B949E" font-size="12">profile.bootstrap · mersad@github</text>
   <circle cx="1092" cy="22" r="5" fill="#3FB950">
     <animate attributeName="opacity" values=".45;1;.45" dur="2.5s" repeatCount="indefinite"/>
