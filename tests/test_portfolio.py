@@ -45,7 +45,7 @@ class PortfolioTests(unittest.TestCase):
         self.assertIn('mailto:nickmersad81@gmail.com', readme)
         self.assertIn('linkedin.com/in/mersad-moghaddam', readme)
         self.assertIn('x.com/MersadMoghadam', readme)
-        self.assertIn('portfolio.svg', readme)
+        self.assertIn('engineering-approach.svg', readme)
         for old in ['github-signal.svg', 'incident-replay.svg', 'toolkit-rack.svg']:
             self.assertNotIn(old, readme)
         for src in re.findall(r'src="(\./[^"]+)"', readme):
@@ -53,15 +53,29 @@ class PortfolioTests(unittest.TestCase):
 
     def test_mobile_layout_sources(self):
         readme = (ROOT / 'README.md').read_text()
-        self.assertEqual(readme.count('<picture>'), 1)
+        self.assertEqual(readme.count('<picture>'), 4)
         self.assertIn('media="(max-width: 600px)"', readme)
-        self.assertNotIn('width="49%"', readme)
         for src in re.findall(r'srcset="(\./[^"]+)"', readme):
             self.assertTrue((ROOT / src).exists())
 
-    def test_single_continuous_canvas(self):
+    def test_project_images_link_directly_to_repositories(self):
         readme = (ROOT / 'README.md').read_text()
-        self.assertEqual(len(re.findall(r'<img\b', readme)), 1)
+        for slug, repo in [('whisper', 'WhisperSocial-Backend'), ('aetherdb', 'AetherDB'),
+                           ('argus', 'Argus'), ('syskit', 'syskit')]:
+            self.assertRegex(readme, r'<a href="https://github.com/Mersad-Moghaddam/' + repo
+                             + r'"><img src="./assets/project-' + slug + r'\.svg"[^>]+></a>')
+
+    def test_project_diagrams_have_active_motion(self):
+        for slug in ['aetherdb', 'argus', 'syskit']:
+            with self.subTest(project=slug):
+                svg = ET.parse(ROOT / 'assets' / ('project-' + slug + '.svg')).getroot()
+                diagram = svg.find('{http://www.w3.org/2000/svg}svg')
+                style = svg.find('{http://www.w3.org/2000/svg}style').text
+                self.assertIn('@keyframes flow', style)
+                self.assertIn('svg >', style)
+                self.assertIn('animation:none!important', style)
+
+    def test_archived_canvases_keep_unique_ids(self):
         for name in ['portfolio', 'portfolio-mobile']:
             p = ROOT / 'assets' / (name + '.svg')
             self.assertTrue(p.exists())
