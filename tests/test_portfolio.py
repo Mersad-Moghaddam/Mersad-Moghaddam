@@ -11,6 +11,15 @@ FILES += ['portfolio', 'portfolio-mobile']
 
 
 class PortfolioTests(unittest.TestCase):
+    def test_image_tiles_do_not_reserve_baseline_or_side_gaps(self):
+        readme = (ROOT / 'README.md').read_text()
+        images = re.findall(r'<img\b[^>]*>', readme)
+        self.assertEqual(len(images), 8)
+        for image in images:
+            self.assertIn('align="top"', image)
+            if 'project-' in image:
+                self.assertIn('width="50%"', image)
+
     def test_self_contained_accessible_assets(self):
         for name in FILES:
             with self.subTest(name=name):
