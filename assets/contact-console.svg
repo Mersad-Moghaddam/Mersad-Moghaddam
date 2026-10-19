@@ -1,24 +1,4 @@
-<svg width="1200" height="170" viewBox="0 0 1200 170" fill="none" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="contact-title contact-desc">
-  <title id="contact-title">Contact Mersad Moghaddam</title>
-  <desc id="contact-desc">An open communication channel for building reliable backend systems.</desc>
-  <defs>
-    <linearGradient id="contact-bg" x1="20" y1="10" x2="1160" y2="165" gradientUnits="userSpaceOnUse"><stop stop-color="#0D1117"/><stop offset=".52" stop-color="#111B27"/><stop offset="1" stop-color="#0D1117"/></linearGradient>
-    <linearGradient id="contact-line" x1="95" y1="0" x2="1100" y2="0" gradientUnits="userSpaceOnUse"><stop stop-color="#58A6FF"/><stop offset=".5" stop-color="#00ADD8"/><stop offset="1" stop-color="#3FB950"/></linearGradient>
-    <filter id="contact-glow" x="-100%" y="-250%" width="300%" height="600%"><feGaussianBlur stdDeviation="7"/></filter>
-  </defs>
-  <style>text{font-family:"DejaVu Sans Mono",Consolas,"Liberation Mono",monospace}@media(prefers-reduced-motion:reduce){animate,animateMotion,animateTransform{display:none}}</style>
-  <rect width="1200" height="170" fill="#0D1117"/>
-  <path d="M40 1H1160M40 39H1160" stroke="#21262D"/>
-  <text x="40" y="24" fill="#8B949E" font-size="11">communication.channel</text>
-  <circle cx="1117" cy="20" r="5" fill="#3FB950"/>
-  <circle cx="1117" cy="20" r="13" fill="#3FB950" opacity=".1" filter="url(#contact-glow)"><animate attributeName="opacity" values=".08;.3;.08" dur="2.6s" repeatCount="indefinite"/></circle>
-  <text x="1130" y="24" fill="#3FB950" font-size="10">OPEN</text>
-
-  <text x="52" y="82" fill="#58A6FF" font-size="14">$</text>
-  <text x="75" y="82" fill="#C9D1D9" font-size="14">connect --topic</text>
-  <text x="230" y="82" fill="#00ADD8" font-size="14">"reliable backend systems"</text>
-  <rect x="52" y="101" width="1096" height="2" rx="1" fill="url(#contact-line)"/>
-  <text x="52" y="137" fill="#F0F6FC" font-family="DejaVu Sans,Arial,sans-serif" font-size="22" font-weight="700">Let’s build something dependable.</text>
-  <rect x="853" y="116" width="295" height="34" rx="17" fill="#161B22" stroke="#00ADD8"/>
-  <text x="1000" y="138" text-anchor="middle" fill="#00ADD8" font-size="12">nickmersad81@gmail.com  ↗</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="248" viewBox="0 0 1000 248" role="img" aria-labelledby="title desc">
+<title id="title">Contact Mersad Moghaddam</title><desc id="desc">Have something in mind? I’m happy to talk about software, exchange ideas, or hear about an interesting project. Email nickmersad81@gmail.com.</desc>
+<style>text{font-family:Arial,Helvetica,sans-serif}.mono{font-family:'DejaVu Sans Mono',Consolas,monospace}.packet{animation:travel 4s linear infinite}.pulse{animation:pulse 4s ease-in-out infinite}.cursor{animation:blink 1.2s steps(1) infinite}@keyframes travel{to{stroke-dashoffset:-100}}@keyframes pulse{50%{opacity:.35}}@keyframes blink{50%{opacity:0}}@media(prefers-reduced-motion:reduce){*{animation:none!important}}</style>
+<rect width="1000" height="248" fill="#090D15"/><path d="M40 1H960" stroke="#26334B"/><text x="40" y="42" font-size="11" fill="#76DCC0" class="mono">➜ ~/next-conversation</text><text x="40" y="94" font-size="35" fill="#EDF3FC">Have something in mind?</text><text x="40" y="127" font-size="14" fill="#9BACC4">I’m happy to talk about software, exchange ideas, or hear about an interesting project.</text><text x="40" y="168" font-size="15" fill="#83D9CD">nickmersad81@gmail.com ↗</text><path d="M40 196H960" stroke="#26334B"/><text x="40" y="225" font-size="11" fill="#8095B1" class="mono">Mersad Moghaddam / Mashhad, Iran</text></svg>
